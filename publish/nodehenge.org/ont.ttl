@@ -5,11 +5,23 @@
 
 <#AbstractTool> a rdfs:Class.
 <#SpecifiedTool> a rdfs:Class.
-<#DeployedTool> a rdfs:Class.
 
-</examples/exampleAbstractTool> a <#AbstractTool>, skos:Concept;
-    skos:prefLabel "Example Tool"
+
+_:exampleAbstractTool a <#AbstractTool>, skos:Concept;
+    skos:prefLabel "Example Abstract Tool"
 .
+_:exampleSpecifiedTool a <#SpecifiedTool>, skos:Concept;
+    skos:prefLabel "Example Specified Tool";
+    skos:broader _:exampleAbstractTool
+.
+_:ExampleDeployedTool a rdfs:Class, skos:Concept;
+    skos:prefLabel "Example Deployed Tool";
+    skos:broader _:exampleSpecifiedTool
+.
+_:exampleToolExecution a _:ExampleDeployedTool, skos:Concept;
+    skos:prefLabel "Example Tool Execution"
+.
+
 
 
 
