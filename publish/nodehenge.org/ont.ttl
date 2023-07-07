@@ -1,26 +1,61 @@
-@base <http://nodehenge.org/ont>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@base <http://nodehenge.org/ont> .
+@prefix : <http://nodehenge.org/ont#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<#AbstractTool> a rdfs:Class.
-<#SpecifiedTool> a rdfs:Class.
+:ToolRealization a rdfs:Class.
+:AbstractTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+:SpecifiedTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+:DeployedTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+
+:AtrefactRealization a rdfs:Class.
+:AbstractArtefact a rdfs:Class;
+    rdfs:subClassOf :AtrefactRealization.
+:SpecifiedArtefact a rdfs:Class;
+    rdfs:subClassOf :AtrefactRealization.
+
+:input a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:output a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
 
 
-_:exampleAbstractTool a <#AbstractTool>, skos:Concept;
-    skos:prefLabel "Example Abstract Tool"
+
+
+
+#examples instances
+
+_:exampleAbstractTool a :AbstractTool, skos:Concept;
+    skos:prefLabel "Example Abstract Tool";
+    :input _:exampleAbstractArtefact1;
+    :output _:exampleAbstractArtefact2;
 .
-_:exampleSpecifiedTool a <#SpecifiedTool>, skos:Concept;
+_:exampleSpecifiedTool a :SpecifiedTool, skos:Concept;
     skos:prefLabel "Example Specified Tool";
     skos:broader _:exampleAbstractTool
 .
-_:ExampleDeployedTool a rdfs:Class, skos:Concept;
+_:ExampleDeployedTool a :DeployedTool, rdfs:Class, skos:Concept;
     skos:prefLabel "Example Deployed Tool";
     skos:broader _:exampleSpecifiedTool
 .
 _:exampleToolExecution a _:ExampleDeployedTool, skos:Concept;
-    skos:prefLabel "Example Tool Execution"
+    skos:prefLabel "Example Tool Execution";
+    :executionStart "2023-07-12T13:00:00"^^xsd:dateTime;
+    :executionFinish "2023-07-12T13:10:00"^^xsd:dateTime;
 .
+
+_:exampleAbstractArtefact1 a :AbstractArtefact, skos:Concept;
+    skos:prefLabel "Example Abstract Artefact 1"
+.
+_:exampleAbstractArtefact2 a :AbstractArtefact, skos:Concept;
+    skos:prefLabel "Example Abstract Artefact 2"
+.
+
 
 
 
