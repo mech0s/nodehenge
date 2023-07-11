@@ -1,0 +1,385 @@
+@prefix ont: <http://nodehenge.org/ont#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tool: <http://nodehenge.org/inst/tool#> .
+
+<#nick> skos:prefLabel "Nick" .
+
+tool:alertingAndNotification a ont:AbstractTool ;
+    skos:definition """Improve visibility of system events
+Reduce system downtime
+Improve customer service""" ;
+    skos:prefLabel "Alerting and notification" ;
+    skos:scopeNote """Notify security teams and/or administrators about detected events.
+Support automatic remediation of high-priority time-critical events.""" .
+
+tool:artifactRepository a ont:AbstractTool ;
+    skos:definition """Separate binary control from source control to avoid external access to source control system.
+
+Improved build stability by reducing reliance on external repositories.
+
+Better quality software by avoiding outdated artifacts with known issues.""" ;
+    skos:prefLabel "Artifact Repository" ;
+    skos:scopeNote "Binary artifact version control" .
+
+tool:assetInventoryManagement a ont:AbstractTool ;
+    skos:definition "Increase situation awareness" ;
+    skos:prefLabel "Asset inventory management" ;
+    skos:scopeNote "Maintain a “real-time” inventory of all applications, software licenses, libraries, operating systems, and versioning information" .
+
+tool:backupManagement a ont:AbstractTool ;
+    skos:definition "Improve failure recovery" ;
+    skos:prefLabel "Backup management" ;
+    skos:scopeNote """Data backup
+System components (VM or container) snapshot""" .
+
+tool:buildTool a ont:AbstractTool ;
+    skos:definition """Reduces human mistakes;
+Saves time""" ;
+    skos:prefLabel "Build tool" ;
+    skos:scopeNote """Dependency Management;
+Compile;
+Link (if appropriate);
+Built-in lint stylistic checking Integration with IDE""" .
+
+tool:chaosEngineeringTool a ont:AbstractTool ;
+    skos:definition "Build confidence in the system’s capability to withstand turbulent conditions in production." ;
+    skos:prefLabel "Chaos engineering tool" ;
+    skos:scopeNote "Orchestrate scripted changes to the environments, applications, or data related to a test scenario or experiment; collect and analyze results" .
+
+tool:codeQualityReviewTool a ont:AbstractTool ;
+    skos:definition "Automates the review process which in turn minimizes the task of reviewing the code." ;
+    skos:prefLabel "Code quality review tool" ;
+    skos:scopeNote "View code changes, identify defects, reject or approve the changes, and make comments on specific lines. Sets review rules and automatic notifications to ensure that reviews are completed on time." .
+
+tool:complianceAsCode a ont:AbstractTool ;
+    skos:definition "Automated detection and, ideally, remediation of non-compliance within the infrastructure" ;
+    skos:prefLabel "Compliance as Code" ;
+    skos:scopeNote "Monitor the state of compliance of deployed COTS against STIGs" .
+
+tool:complianceMonitor a ont:AbstractTool ;
+    skos:definition "Provide visibility of compliance status" ;
+    skos:prefLabel "Compliance Monitor" ;
+    skos:scopeNote "Monitor the state of compliance of deployed cloud resources and services against NIST SP 800-53 controls" .
+
+tool:configurationAutomationTools a ont:AbstractTool ;
+    skos:definition """Configuration automation
+Consistent provisioning""" ;
+    skos:prefLabel "Configuration automation tools" ;
+    skos:scopeNote "Execute the configuration scripts to provision the infrastructure, security policy, environment, and the application system components." .
+
+tool:configurationManagementDatabaseCmdb a ont:AbstractTool ;
+    skos:definition "Centralized database used by many systems (such as asset management, configuration management, incident management, etc.) during development and operations phases." ;
+    skos:prefLabel "Configuration management database (CMDB)" ;
+    skos:scopeNote """Auto-discovery;
+Dependency mapping;
+Integration with other tools;
+Configuration auditing""" .
+
+tool:configurationManagementTool a ont:AbstractTool ;
+    skos:definition "Maintains integrity of the system" ;
+    skos:prefLabel "Configuration Management Tool" ;
+    skos:scopeNote "Configuration control" .
+
+tool:cyberThreatIntelligenceSubscriptionS a ont:AbstractTool ;
+    skos:definition "Helps with risked-based decisions in a proactive manner in lieu of reactivity when new vulnerabilities are announced" ;
+    skos:prefLabel "Cyber Threat Intelligence Subscription(s)" ;
+    skos:scopeNote "Varying set of tools, from actor activity based detection, tech stack, etc." .
+
+tool:dataMaskingTool a ont:AbstractTool ;
+    skos:definition """Provide data privacy;
+Reduce the risk of data loss during data breach""" ;
+    skos:prefLabel "Data masking tool" ;
+    skos:scopeNote "Shield personally identifiable information or other confidential data" .
+
+tool:dataModelingTool a ont:AbstractTool ;
+    skos:definition "Ensure the required data objects by the system are accurately represented" ;
+    skos:prefLabel "Data modeling tool" ;
+    skos:scopeNote "Model the interrelationship and flows between different data elements" .
+
+tool:databaseAutomationTool a ont:AbstractTool ;
+    skos:definition "Simplify database operations and reduce human errors" ;
+    skos:prefLabel "Database automation tool" ;
+    skos:scopeNote "Automate database tasks, such as deployments, upgrades, discovering and troubleshooting anomalies, recovering from failures, topology changes, running backups, verifying data integrity, and scaling." .
+
+tool:databaseEncryptionTool a ont:AbstractTool ;
+    skos:definition """Provide data privacy and security;
+Prevent data loss""" ;
+    skos:prefLabel "Database encryption tool" ;
+    skos:scopeNote "Encrypt data at rest and in transit" .
+
+tool:databaseMonitoringTool a ont:AbstractTool ;
+    skos:definition "Improve database operations continuity" ;
+    skos:prefLabel "Database monitoring tool" ;
+    skos:scopeNote """Baseline database performance and database traffic;
+Detect anomalies""" .
+
+tool:databaseSecurityAuditTool a ont:AbstractTool ;
+    skos:definition "Enhance database security" ;
+    skos:prefLabel "Database security audit tool" ;
+    skos:scopeNote """Perform user access and data access audit;
+Detect anomalies from events correlation;
+Detect SQL injection;
+Generate alert""" .
+
+tool:databaseSecurityScanAndTestTool a ont:AbstractTool ;
+    skos:definition "Reduce the security risks" ;
+    skos:prefLabel "Database security scan and test tool" ;
+    skos:scopeNote """Find the database common security vulnerabilities, such as weak password, known configuration risks, missing patches; 
+Structured Query Language (SQL) injection test tool;
+Data access control test;
+User access control test;
+Denial of service test""" .
+
+tool:databaseTestToolSuite a ont:AbstractTool ;
+    skos:definition "Automate or semi-automate the database tests" ;
+    skos:prefLabel "Database test tool suite" ;
+    skos:scopeNote """Tools that facilitate database test;
+It includes test data generator, database functional test tool, database load test tool;""" .
+
+tool:dependencyCheckingBillOfMaterialsCheckingTool a ont:AbstractTool ;
+    skos:definition """Secure the overall application;
+Manage the supply chain risk""" ;
+    skos:prefLabel "Dependency checking /Bill of Materials checking tool" ;
+    skos:scopeNote "Identify vulnerabilities in the dependent components based on publicly disclosed open source vulnerabilities" .
+
+tool:dynamicApplicationSecurityTestDastTool a ont:AbstractTool ;
+    skos:definition """Catch the dynamic code weakness in runtime and under certain environment setting.
+Identify and fix issues during continuous integration.""" ;
+    skos:prefLabel "Dynamic Application Security Test (DAST) tool" ;
+    skos:scopeNote "DAST tools analyze a running application dynamically and can identify runtime vulnerabilities and environment related issues." .
+
+tool:infosecContinuousMonitoringIscmTool a ont:AbstractTool ;
+    skos:definition """Detect unauthorized personnel, connections, devices, and software
+Identify cybersecurity vulnerability
+Detect security and compliance violation 
+Verify the effectiveness of protective measures""" ;
+    skos:prefLabel "InfoSec Continuous Monitoring (ISCM) Tool" ;
+    skos:scopeNote """Monitor network security
+Monitor personnel activity
+Monitor configuration changes
+Perform periodical security scan to all system components
+Monitor the IT assets and detect deviations from security, fault tolerance, performance best practices.
+Monitor and analyze log files
+Audit IT asset's configuration compliance
+Detect and block malicious code
+Continuous security vulnerability assessments and scans
+Provide browse, filter, search, visualize, analysis capabilities
+Generate findings, assessments and recommendations.
+Provide recommendations and/or tools for remediating any non-compliant IT asset and/or IT workload.
+""" .
+
+tool:integratedDevelopmentEnvironmentIde a ont:AbstractTool ;
+    skos:definition """Visual representation
+Increase efficiency
+Faster coding with less effort
+Improved bug fixing speed
+Reproducible builds via scripts""" ;
+    skos:prefLabel "Integrated development environment (IDE)" ;
+    skos:scopeNote """Source code editor
+Intelligent code completion
+Compiler or interpreter
+Debugger
+Build automation (integration with a build tool)""" .
+
+tool:integratedDevelopmentEnvironmentIdeSecurityPlugins a ont:AbstractTool ;
+    skos:definition "Address source code weaknesses and aid developers to improve secure coding skills" ;
+    skos:prefLabel "Integrated development environment (IDE) security plugins" ;
+    skos:scopeNote "Scan and analyze the code as the developer writes it, notify developer of potential code weakness and may suggest remediation" .
+
+tool:interactiveApplicationSecurityTestIastTool a ont:AbstractTool ;
+    skos:definition "Provide accurate results for fast triage; pinpoint the source of vulnerabilities" ;
+    skos:prefLabel "Interactive Application Security Test (IAST) tool" ;
+    skos:scopeNote "Analyze code for security vulnerabilities while the application is run by an auto-test, human tester, or any activity “interacting” with the application functionality" .
+
+tool:issueTrackingSystem a ont:AbstractTool ;
+    skos:definition """Easy to detect defect trends
+Improve software product quality
+Reduce cost and improve Return on Investment (ROI)""" ;
+    skos:prefLabel "Issue tracking system" ;
+    skos:scopeNote """Bugs and defect management;
+Feature and change management;
+Prioritization management;
+Assignment management;
+Escalation management;
+Knowledge base management""" .
+
+tool:lintTool a ont:AbstractTool ;
+    skos:definition """Improve code readability;
+Pre-code review;
+Finding (syntax) errors before execution for interpreted languages""" ;
+    skos:prefLabel "Lint tool" ;
+    skos:scopeNote """Analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
+Applicable to both compiled or interpreted languages""" .
+
+tool:logAggregator a ont:AbstractTool ;
+    skos:definition "Improve investigations by correlating logs from multiple sources" ;
+    skos:prefLabel "Log-aggregator" ;
+    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
+
+tool:logAnalysis a ont:AbstractTool ;
+    skos:definition "Reduce effort required to identify threats or inappropriate activity" ;
+    skos:prefLabel "Log analysis" ;
+    skos:scopeNote """Analyze and audit to detect malicious threats / activity;
+Automated alerting and workflows for response
+Forensics for damage assessment. 
+These are typically SIEM and SOAR tools.""" .
+
+tool:logAuditing a ont:AbstractTool ;
+    skos:definition "" ;
+    skos:prefLabel "Log auditing" ;
+    skos:scopeNote "Audit to ensure possession of the logs and that aggregation is performed correctly" .
+
+tool:logPromotion a ont:AbstractTool ;
+    skos:definition "Improve investigations by filtering logs" ;
+    skos:prefLabel "Log promotion" ;
+    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format before pushing the logs to DoD Common Security Services" .
+
+tool:loggingTool a ont:AbstractTool ;
+    skos:definition """Assist troubleshooting the issues.
+Assist detection of advanced persistent threats and forensics.""" ;
+    skos:prefLabel "Logging-tool" ;
+    skos:scopeNote "Logging events for all user, network, application, and data activities" .
+
+tool:networkSecurityTestTool a ont:AbstractTool ;
+    skos:definition """Validate system security; 
+Increase attack readiness; 
+Reduce the risk of system degradation.""" ;
+    skos:prefLabel "Network security test tool" ;
+    skos:scopeNote "Simulate real-world legitimate traffic, distributed denial of service (DDOS), exploits, malware, and fuzzing." .
+
+tool:nonSecurityComplianceScan a ont:AbstractTool ;
+    skos:definition "Ensures compliance with non-security programs" ;
+    skos:prefLabel "Non-security compliance scan " ;
+    skos:scopeNote "Such as Section 508 accessibility compliance" .
+
+tool:operationsDashboard a ont:AbstractTool ;
+    skos:definition "Improve operations management" ;
+    skos:prefLabel "Operations dashboard" ;
+    skos:scopeNote "Provide operators a visual view of operations status, alerts, and actions." .
+
+tool:operationsMonitoring a ont:AbstractTool ;
+    skos:definition """Improve operations continuity
+Identify the area to improve
+Better end-user experience""" ;
+    skos:prefLabel "Operations monitoring" ;
+    skos:scopeNote """Report various performance metrics such as resource utilization rates, number of concurrent user sessions, and Input/Output (IO) rates;
+Provide dashboards to display performance;
+Alert performance issues
+Establish a baseline for comparison""" .
+
+tool:projectManagementSystem a ont:AbstractTool ;
+    skos:definition """Assist project progress tracking
+Optimize resource allocation""" ;
+    skos:prefLabel "Project management system" ;
+    skos:scopeNote """Task management
+Scheduling and time management
+Resource management
+Budget management
+Risk management""" .
+
+tool:releasePackagingTool a ont:AbstractTool ;
+    skos:definition "Release package (such as a bundle of artifacts, self-extracting software installer, software tar file, etc.)" ;
+    skos:prefLabel "Release packaging tool" ;
+    skos:scopeNote """Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, release notes as a package; generate checksum and digital signature for the package.
+
+The package may be prepared for a specific installer or it is a self-extracting installer itself.""" .
+
+tool:requirementsDatabase a ont:AbstractTool ;
+    skos:definition "Tracing requirements make sure all requirements are handled and minimize unwanted extra features that don’t trace to requirements." ;
+    skos:prefLabel "Requirements database" ;
+    skos:scopeNote """Collect and manage requirements; 
+Trace requirements to their source; 
+Trace features or design components to the requirements""" .
+
+tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool a ont:AbstractTool ;
+    skos:definition "SCA allows developers and operators to understand what is contained within the software that is entering or operating within their environment. The automatic nature of SCA products is another strength, developers don't have to manually verify the contents when integrating Open-Source Software (OSS) components. The automation also applies to indirect references to other OSS components within code and artifacts " ;
+    skos:prefLabel "Software Bill of Materials (SBOM) Software Composition Analysis Tool" ;
+    skos:scopeNote "Software composition analysis (SCA) analyzes custom-built software applications to detect embedded software and detect if it is up-to-date, contains vulnerabilities or security flaws, or has licensing requirements" .
+
+tool:softwareLicenseComplianceChecker a ont:AbstractTool ;
+    skos:definition "Software license compliance and software asset management" ;
+    skos:prefLabel "Software license compliance checker" ;
+    skos:scopeNote """Inventory software license;
+Audit the compliance""" .
+
+tool:softwareSystemDesignTool a ont:AbstractTool ;
+    skos:definition """Independent of programming languages
+Helps visualize the software system design""" ;
+    skos:prefLabel "Software system design tool" ;
+    skos:scopeNote "Assist system design, components design, and interface design" .
+
+tool:sourceCodeRepository a ont:AbstractTool ;
+    skos:definition """Compare files, identify differences, and merge the changes if needed before committing.
+Keep track of application builds""" ;
+    skos:prefLabel "Source code repository" ;
+    skos:scopeNote """Source code version control
+Branching and merging
+Collaborative code review""" .
+
+tool:sourceCodeRepositorySecurityPlugin a ont:AbstractTool ;
+    skos:definition "Helps prevent passwords and other sensitive data from being committed into a version control repository" ;
+    skos:prefLabel "Source code repository security plugin" ;
+    skos:scopeNote """Check the changes for suspicious content such as Secure Shell (SSH) keys, authorization tokens, passwords and other sensitive information before pushing the changes to the main repository.
+If it finds suspicious content, it notifies the developer and blocks the commit.""" .
+
+tool:staticApplicationSecurityTestSastTool a ont:AbstractTool ;
+    skos:definition """Catch code weaknesses at an early stage.
+Continuous assessment during development.""" ;
+    skos:prefLabel "Static Application Security Test (SAST) tool" ;
+    skos:scopeNote "SAST analyzes application static codes, such as source code, byte code, binary code, while they are in a non-running state to detect the conditions that indicate code weaknesses." .
+
+tool:teamCollaborationSystem a ont:AbstractTool ;
+    skos:definition "Simplify communication and boost team efficiency" ;
+    skos:prefLabel "Team collaboration system" ;
+    skos:scopeNote """Audio/video conferencing;
+chat/messaging;
+brainstorming;
+discussion board;
+group calendars;
+file sharing;
+Wiki website""" .
+
+tool:testCoverageTool a ont:AbstractTool ;
+    skos:definition "Shows the fidelity of the test results" ;
+    skos:prefLabel "Test coverage tool" ;
+    skos:scopeNote "Measures how much code is exercised while the automated tests are running" .
+
+tool:testDataGenerator a ont:AbstractTool ;
+    skos:definition "Increase test fidelity" ;
+    skos:prefLabel "Test data generator" ;
+    skos:scopeNote "Generates test data for the system (such as network traffic generator, web request generator)" .
+
+tool:testDevelopmentTool a ont:AbstractTool ;
+    skos:definition "Increase the automation and rate of testing" ;
+    skos:prefLabel "Test development tool" ;
+    skos:scopeNote """Assists test scenario, test script, and test data development.
+The specific tool varies, depending on the test activity (such as unit test, penetration test) and the application type (e.g., web application, or Hadoop data analytics)""" .
+
+tool:testManagementTool a ont:AbstractTool ;
+    skos:definition "Increases QA team collaboration and streamlines test processes." ;
+    skos:prefLabel "Test Management Tool" ;
+    skos:scopeNote "Manages requirements, streamlines test case design from requirements, plans test activities, manages test environment, tracks test status and results." .
+
+tool:testToolSuite a ont:AbstractTool ;
+    skos:definition """Increase test automation, 
+speed""" ;
+    skos:prefLabel "Test-tool suite" ;
+    skos:scopeNote """A set of test tools to perform unit test, interface test, system test, integration test, performance test and acceptance test of the software system.
+Generate test report
+Specific tool varies depending on the type of tests, software application, and programming language""" .
+
+tool:threatModelingTool a ont:AbstractTool ;
+    skos:definition "Allows software architects to identify and mitigate potential security issues early." ;
+    skos:prefLabel "Threat modeling tool" ;
+    skos:scopeNote """Document system security design;
+Analyze the design for potential security issues;
+Review and analysis against common attack patterns;
+Suggest and manage mitigation""" .
+
+tool:virtualizationManager a ont:AbstractTool ;
+    skos:definition "Centralized VM instantiation, scaling, and monitoring" ;
+    skos:prefLabel "Virtualization Manager" ;
+    skos:scopeNote """VM instance management
+VM resource monitoring
+(provided on hosting environment)""" .
+
