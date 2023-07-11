@@ -19,9 +19,21 @@
 :SpecifiedArtefact a rdfs:Class;
     rdfs:subClassOf :AtrefactRealization.
 
+:ActivityRealization a rdfs:Class.
+:AbstractActivity a rdfs:Class;
+    rdfs:subClassOf :ActivityRealization.
+:SpecifidActivity a rdfs:Class;
+    rdfs:subClassOf :ActivityRealization.
+
+:Phase a rdfs:Class.
+
 :input a rdfs:Property;
     rdfs:subPropertyOf skos:related.
 :output a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:activityTool a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:phaseActivity a rdfs:Property;
     rdfs:subPropertyOf skos:related.
 
 
