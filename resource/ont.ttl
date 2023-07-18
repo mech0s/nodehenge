@@ -22,7 +22,7 @@
 :ActivityRealization a rdfs:Class.
 :AbstractActivity a rdfs:Class;
     rdfs:subClassOf :ActivityRealization.
-:SpecifidActivity a rdfs:Class;
+:SpecifiedActivity a rdfs:Class;
     rdfs:subClassOf :ActivityRealization.
 
 :Phase a rdfs:Class.
