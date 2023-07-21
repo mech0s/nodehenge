@@ -1,0 +1,38 @@
+@base <http://nodehenge.org/ont> .
+@prefix : <http://nodehenge.org/ont#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ToolRealization a rdfs:Class.
+:AbstractTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+:SpecifiedTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+:DeployedTool a rdfs:Class;
+    rdfs:subClassOf :ToolRealization.
+
+:AtrefactRealization a rdfs:Class.
+:AbstractArtefact a rdfs:Class;
+    rdfs:subClassOf :AtrefactRealization.
+:SpecifiedArtefact a rdfs:Class;
+    rdfs:subClassOf :AtrefactRealization.
+
+:ActivityRealization a rdfs:Class.
+:AbstractActivity a rdfs:Class;
+    rdfs:subClassOf :ActivityRealization.
+:SpecifiedActivity a rdfs:Class;
+    rdfs:subClassOf :ActivityRealization.
+
+:Phase a rdfs:Class.
+
+:input a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:output a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:activityTool a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+:phaseActivity a rdfs:Property;
+    rdfs:subPropertyOf skos:related.
+
