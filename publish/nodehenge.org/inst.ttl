@@ -13,238 +13,6 @@ phase:phasing a skos:OrderedCollection ;
     skos:inScheme inst:dodDsopScheme ;
     skos:memberList ( phase:plan phase:develop phase:build phase:test phase:release phase:deliver phase:deploy phase:operate phase:monitor phase:feedback ) .
 
-tool:alertingAndNotification a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Improve visibility of system events
-Reduce system downtime
-Improve customer service""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Alerting and notification" ;
-    skos:scopeNote """Notify security teams and/or administrators about detected events.
-Support automatic remediation of high-priority time-critical events.""" .
-
-tool:assetInventoryManagement a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Increase situation awareness" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Asset inventory management" ;
-    skos:scopeNote "Maintain a “real-time” inventory of all applications, software licenses, libraries, operating systems, and versioning information" .
-
-tool:complianceAsCodeIsReal a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Automated detection and, ideally, remediation of non-compliance within the infrastructure" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Compliance-as-Code is real" ;
-    skos:scopeNote "Monitor the state of compliance of deployed COTS against STIGs" .
-
-tool:configurationManagementDatabaseCmdb a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Centralized database used by many systems (such as asset management, configuration management, incident management, etc.) during development and operations phases." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Configuration management database (CMDB)" ;
-    skos:scopeNote """Auto-discovery;
-Dependency mapping;
-Integration with other tools;
-Configuration auditing""" .
-
-tool:configurationManagementTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Maintains integrity of the system" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Configuration Management Tool" ;
-    skos:scopeNote "Configuration control" .
-
-tool:cyberThreatIntelligenceSubscriptionS a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Helps with risked-based decisions in a proactive manner in lieu of reactivity when new vulnerabilities are announced" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Cyber Threat Intelligence Subscription(s)" ;
-    skos:scopeNote "Varying set of tools, from actor activity based detection, tech stack, etc." .
-
-tool:dataMaskingTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Provide data privacy;
-Reduce the risk of data loss during data breach""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Data masking tool" ;
-    skos:scopeNote "Shield personally identifiable information or other confidential data" .
-
-tool:databaseEncryptionTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Provide data privacy and security;
-Prevent data loss""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database encryption tool" ;
-    skos:scopeNote "Encrypt data at rest and in transit" .
-
-tool:databaseSecurityScanAndTestTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Reduce the security risks" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database security scan and test tool" ;
-    skos:scopeNote """Find the database common security vulnerabilities, such as weak password, known configuration risks, missing patches; 
-Structured Query Language (SQL) injection test tool;
-Data access control test;
-User access control test;
-Denial of service test""" .
-
-tool:databaseTestToolSuite a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Automate or semi-automate the database tests" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database test tool suite" ;
-    skos:scopeNote """Tools that facilitate database test;
-It includes test data generator, database functional test tool, database load test tool;""" .
-
-tool:dependencyCheckingBillOfMaterialsCheckingTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Secure the overall application;
-Manage the supply chain risk""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Dependency checking /Bill of Materials checking tool" ;
-    skos:scopeNote "Identify vulnerabilities in the dependent components based on publicly disclosed open source vulnerabilities" .
-
-tool:dynamicApplicationSecurityTestDastTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Catch the dynamic code weakness in runtime and under certain environment setting.
-Identify and fix issues during continuous integration.""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Dynamic Application Security Test (DAST) tool" ;
-    skos:scopeNote "DAST tools analyze a running application dynamically and can identify runtime vulnerabilities and environment related issues." .
-
-tool:infosecContinuousMonitoringIscmTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Detect unauthorized personnel, connections, devices, and software
-Identify cybersecurity vulnerability
-Detect security and compliance violation 
-Verify the effectiveness of protective measures""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "InfoSec Continuous Monitoring (ISCM) Tool" ;
-    skos:scopeNote """Monitor network security
-Monitor personnel activity
-Monitor configuration changes
-Perform periodical security scan to all system components
-Monitor the IT assets and detect deviations from security, fault tolerance, performance best practices.
-Monitor and analyze log files
-Audit IT asset's configuration compliance
-Detect and block malicious code
-Continuous security vulnerability assessments and scans
-Provide browse, filter, search, visualize, analysis capabilities
-Generate findings, assessments and recommendations.
-Provide recommendations and/or tools for remediating any non-compliant IT asset and/or IT workload.
-""" .
-
-tool:integratedDevelopmentEnvironmentIde a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Visual representation
-Increase efficiency
-Faster coding with less effort
-Improved bug fixing speed
-Reproducible builds via scripts""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Integrated development environment (IDE)" ;
-    skos:scopeNote """Source code editor
-Intelligent code completion
-Compiler or interpreter
-Debugger
-Build automation (integration with a build tool)""" .
-
-tool:integratedDevelopmentEnvironmentIdeSecurityPlugins a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Address source code weaknesses and aid developers to improve secure coding skills" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Integrated development environment (IDE) security plugins" ;
-    skos:scopeNote "Scan and analyze the code as the developer writes it, notify developer of potential code weakness and may suggest remediation" .
-
-tool:interactiveApplicationSecurityTestIastTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Provide accurate results for fast triage; pinpoint the source of vulnerabilities" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Interactive Application Security Test (IAST) tool" ;
-    skos:scopeNote "Analyze code for security vulnerabilities while the application is run by an auto-test, human tester, or any activity “interacting” with the application functionality" .
-
-tool:logPromotion a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Improve investigations by filtering logs" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log promotion" ;
-    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format before pushing the logs to DoD Common Security Services" .
-
-tool:operationsMonitoring a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Improve operations continuity
-Identify the area to improve
-Better end-user experience""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Operations monitoring" ;
-    skos:scopeNote """Report various performance metrics such as resource utilization rates, number of concurrent user sessions, and Input/Output (IO) rates;
-Provide dashboards to display performance;
-Alert performance issues
-Establish a baseline for comparison""" .
-
-tool:requirementsDatabase a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Tracing requirements make sure all requirements are handled and minimize unwanted extra features that don’t trace to requirements." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Requirements database" ;
-    skos:scopeNote """Collect and manage requirements; 
-Trace requirements to their source; 
-Trace features or design components to the requirements""" .
-
-tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "SCA allows developers and operators to understand what is contained within the software that is entering or operating within their environment. The automatic nature of SCA products is another strength, developers don't have to manually verify the contents when integrating Open-Source Software (OSS) components. The automation also applies to indirect references to other OSS components within code and artifacts " ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Software Bill of Materials (SBOM) Software Composition Analysis Tool" ;
-    skos:scopeNote "Software composition analysis (SCA) analyzes custom-built software applications to detect embedded software and detect if it is up-to-date, contains vulnerabilities or security flaws, or has licensing requirements" .
-
-tool:softwareSystemDesignTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Independent of programming languages
-Helps visualize the software system design""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Software system design tool" ;
-    skos:scopeNote "Assist system design, components design, and interface design" .
-
-tool:staticApplicationSecurityTestSastTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition """Catch code weaknesses at an early stage.
-Continuous assessment during development.""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Static Application Security Test (SAST) tool" ;
-    skos:scopeNote "SAST analyzes application static codes, such as source code, byte code, binary code, while they are in a non-running state to detect the conditions that indicate code weaknesses." .
-
-tool:testDevelopmentTool a ont:AbstractTool,
-        skos:Concept ;
-    skos:definition "Increase the automation and rate of testing" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test development tool" ;
-    skos:scopeNote """Assists test scenario, test script, and test data development.
-The specific tool varies, depending on the test activity (such as unit test, penetration test) and the application type (e.g., web application, or Hadoop data analytics)""" .
-
 act:cyberOtE a ont:AbstractActivity,
         skos:Concept ;
     ont:phaseActivity phase:operate ;
@@ -274,14 +42,34 @@ art:access a ont:AbstractArtifact,
     ont:input act:postDeploymentSecurityScan ;
     skos:inScheme inst:dodDsopScheme .
 
+art:aggregatedFilteredFormattedEventLog a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:logAggregator ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:aggregatedFilteredFormattedEventLogRecord a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:logPromotion ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:aggregatedFilteredLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:alertingAndNotification ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:allApplicationArtifacts a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:operationalTestAndEvaluation ;
     skos:inScheme inst:dodDsopScheme .
 
-art:analysisReport a ont:AbstractArtifact,
+art:analysis a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:sbomSoftwareCompositionAnalysis ;
+    ont:output tool:chaosEngineeringTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:analyzeResults a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:lintTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:apis a ont:AbstractArtifact,
@@ -294,9 +82,9 @@ art:application a ont:AbstractArtifact,
     ont:input act:dynamicApplicationSecurityTestDastAndScan ;
     skos:inScheme inst:dodDsopScheme .
 
-art:applicationActivities a ont:AbstractArtifact,
+art:applicationCode a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:logging ;
+    ont:input tool:testCoverageTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:artifactDownloadRequest a ont:AbstractArtifact,
@@ -319,14 +107,9 @@ art:assessmentResults a ont:AbstractArtifact,
     ont:output act:operationalAssessments ;
     skos:inScheme inst:dodDsopScheme .
 
-art:assessments a ont:AbstractArtifact,
+art:automatedTests a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:systemSecurityMonitoring ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:assetInventory a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:assetInventoryToIncludeSboms ;
+    ont:input tool:testCoverageTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:backlog a ont:AbstractArtifact,
@@ -334,14 +117,34 @@ art:backlog a ont:AbstractArtifact,
     ont:output act:feedbackIncludingOperationalTestAndEvaluationIfAsNeeded ;
     skos:inScheme inst:dodDsopScheme .
 
+art:backupData a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:backupManagement ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:backupSourceAccess a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:backupManagement ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:backups a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:rollForwardRollBack ;
     skos:inScheme inst:dodDsopScheme .
 
+art:bom a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:dependencyCheckingBillOfMaterialsCheckingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:bomList a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:dependencyVulnerabilityChecking ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:bugReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:bugReports a ont:AbstractArtifact,
@@ -364,6 +167,11 @@ art:buildResults a ont:AbstractArtifact,
     ont:input act:buildConfigurationControlAndAudit ;
     skos:inScheme inst:dodDsopScheme .
 
+art:businessLogic a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:dataModelingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:chainInformation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:riskManagement ;
@@ -377,6 +185,11 @@ art:changeManagementPlan a ont:AbstractArtifact,
 art:changeManagementProcess a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:devsecopsProcessDesign ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:changeRequest a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:chaosScripts a ont:AbstractArtifact,
@@ -404,9 +217,19 @@ art:codeBaselines a ont:AbstractArtifact,
     ont:input act:configurationIdentification ;
     skos:inScheme inst:dodDsopScheme .
 
+art:codeComments a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:codeQualityReviewTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:codeCommitLog a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:codeCommitLogging ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:codeTestCoveragePct a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:testCoverageTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:collectedMetrics a ont:AbstractArtifact,
@@ -414,9 +237,14 @@ art:collectedMetrics a ont:AbstractArtifact,
     ont:input act:reviseProductBacklog ;
     skos:inScheme inst:dodDsopScheme .
 
-art:complianceReport a ont:AbstractArtifact,
+art:complianceFindings a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:systemConfigurationMonitoring ;
+    ont:output tool:complianceAsCodeIsReal ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:compliancePolicies a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:complianceAsCodeIsReal ;
     skos:inScheme inst:dodDsopScheme .
 
 art:configurationBaseline a ont:AbstractArtifact,
@@ -424,9 +252,19 @@ art:configurationBaseline a ont:AbstractArtifact,
     ont:input act:systemConfigurationMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-art:configurationItems a ont:AbstractArtifact,
+art:configurationControl a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:configurationIdentification ;
+    ont:output tool:configurationManagementTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:constraints a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:requirementsDatabase ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:containerSnapshot a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:backupManagement ;
     skos:inScheme inst:dodDsopScheme .
 
 art:controlProcedures a ont:AbstractArtifact,
@@ -444,9 +282,19 @@ art:costUtilizationReports a ont:AbstractArtifact,
     ont:input act:businessOperations ;
     skos:inScheme inst:dodDsopScheme .
 
-art:dataActivities a ont:AbstractArtifact,
+art:csrpChangeRecommendations a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:logging ;
+    ont:output tool:cyberThreatIntelligenceSubscriptionS ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:cyberThreatConditionFeed a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:cyberThreatIntelligenceSubscriptionS ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:dashboardDisplay a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:operationsDashboard ;
     skos:inScheme inst:dodDsopScheme .
 
 art:dataDefinition a ont:AbstractArtifact,
@@ -457,16 +305,6 @@ art:dataDefinition a ont:AbstractArtifact,
 art:dataFlowDiagrams a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemDesign ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:dataModel a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:databaseDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:database a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:databaseDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
 art:databaseActivities a ont:AbstractArtifact,
@@ -484,9 +322,24 @@ art:databaseDesignDocument a ont:AbstractArtifact,
     ont:output act:databaseDesign ;
     skos:inScheme inst:dodDsopScheme .
 
+art:databaseEvent a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseAutomationTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:databaseEvents a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:databaseMonitoringAndSecurityAuditing ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:databaseSecurityAuditLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:logAggregator ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:databaseStatus a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseAutomationTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:databaseTraffic a ont:AbstractArtifact,
@@ -509,11 +362,6 @@ art:dependencyCheckingReport a ont:AbstractArtifact,
     ont:input act:buildConfigurationControlAndAudit ;
     skos:inScheme inst:dodDsopScheme .
 
-art:dependencyList a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:dependencyVulnerabilityChecking ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:deploymentPlatform a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemDesign ;
@@ -527,6 +375,16 @@ art:deploymentPlatformSelection a ont:AbstractArtifact,
 art:designDocumentation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:releaseGoNoGoDecision ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:designIdeas a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:softwareSystemDesignTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:designNotes a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:teamCollaborationSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:developedSourceCode a ont:AbstractArtifact,
@@ -559,9 +417,19 @@ art:documentBaselines a ont:AbstractArtifact,
     ont:input act:configurationIdentification ;
     skos:inScheme inst:dodDsopScheme .
 
+art:dynamicCodeScanReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:dynamicApplicationSecurityTestDastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:dynamicCodeWeaknessReport a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:dynamicApplicationSecurityTestDastAndScan ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:eac a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:configurationManagementTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:ecosystemToolSelection a ont:AbstractArtifact,
@@ -572,6 +440,11 @@ art:ecosystemToolSelection a ont:AbstractArtifact,
 art:ecosystemTools a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemDesign ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:encryptedData a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:databaseEncryptionTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:evaluation a ont:AbstractArtifact,
@@ -589,6 +462,11 @@ art:externalDependencies a ont:AbstractArtifact,
     ont:output act:systemTest ;
     skos:inScheme inst:dodDsopScheme .
 
+art:featureRequest a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:featureRequirements a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:softwareRequirementAnalysis ;
@@ -597,6 +475,11 @@ art:featureRequirements a ont:AbstractArtifact,
 art:fips199SystemCategorization a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:missionBasedCyberRiskAssessments ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:functionDesignDocument a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:softwareSystemDesignTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:functionalDesign a ont:AbstractArtifact,
@@ -614,11 +497,6 @@ art:fuzzData a ont:AbstractArtifact,
     ont:input act:dynamicAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
-art:fuzzInputs a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:dynamicApplicationSecurityTestDastAndScan ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:generatedApiDocumentation a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:documentation ;
@@ -627,11 +505,6 @@ art:generatedApiDocumentation a ont:AbstractArtifact,
 art:hostingEnvironment a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:manualSecurityTest ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:iac a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:iacDeployment ;
     skos:inScheme inst:dodDsopScheme .
 
 art:iacArtifacts a ont:AbstractArtifact,
@@ -649,9 +522,9 @@ art:improvements a ont:AbstractArtifact,
     ont:input act:reviseProductBacklog ;
     skos:inScheme inst:dodDsopScheme .
 
-art:incomplianceFindings a ont:AbstractArtifact,
+art:informationSecurityRecommendations a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:systemSecurityMonitoring ;
+    ont:input tool:alertingAndNotification ;
     skos:inScheme inst:dodDsopScheme .
 
 art:informationTypes a ont:AbstractArtifact,
@@ -662,6 +535,11 @@ art:informationTypes a ont:AbstractArtifact,
 art:infrastructureComponents a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:postDeploymentSecurityScan ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:infrastructureConfigurationData a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:configurationAutomationTools ;
     skos:inScheme inst:dodDsopScheme .
 
 art:infrastructureConfigurationPlan a ont:AbstractArtifact,
@@ -679,14 +557,39 @@ art:integrationTestScripts a ont:AbstractArtifact,
     ont:output act:integrationTest ;
     skos:inScheme inst:dodDsopScheme .
 
+art:issueResolutionTrackingHistory a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:issueTicket a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:alertingAndNotification ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:issuesFeatureChangeTickets a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:it a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:infosecContinuousMonitoringIscmTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:itAssets a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:assetInventoryToIncludeSboms ;
     skos:inScheme inst:dodDsopScheme .
 
-art:knownWeaknesses a ont:AbstractArtifact,
+art:itHardwareInformation a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:staticCodeScanBeforeCommit ;
+    ont:input tool:configurationManagementDatabaseCmdb ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:kpi a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:operationsMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:kpiMeasures a ont:AbstractArtifact,
@@ -694,19 +597,24 @@ art:kpiMeasures a ont:AbstractArtifact,
     ont:output act:systemPerformanceMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-art:locallyCommittedSourceCode a ont:AbstractArtifact,
+art:licensing a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:codeCommitScan ;
+    ont:input tool:dependencyCheckingBillOfMaterialsCheckingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:mitigationPlan a ont:AbstractArtifact,
+art:maskedData a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:threatModeling ;
+    ont:output tool:dataMaskingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:networkActivities a ont:AbstractArtifact,
+art:monitoringPolicy a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:logging ;
+    ont:input tool:virtualizationManager ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:network a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:newVmInstance a ont:AbstractArtifact,
@@ -724,6 +632,11 @@ art:nist80053RmfcontrolImplementation a ont:AbstractArtifact,
     ont:input act:missionBasedCyberRiskAssessments ;
     skos:inScheme inst:dodDsopScheme .
 
+art:nonComplianceFindings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:alertingAndNotification ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:observedPerformanceReports a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:performanceTests ;
@@ -739,9 +652,24 @@ art:operationMonitoringFeedback a ont:AbstractArtifact,
     ont:input act:softwareRequirementAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
+art:operationalEnvironment a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:complianceAsCodeIsReal ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:operationalFeedback a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:feedbackIncludingOperationalTestAndEvaluationIfAsNeeded ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:operationalMonitoringAlert a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:operationsDashboard ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:operationalMonitoringStatus a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:operationsDashboard ;
     skos:inScheme inst:dodDsopScheme .
 
 art:operationalStatistics a ont:AbstractArtifact,
@@ -759,9 +687,24 @@ art:organizationalPolicy a ont:AbstractArtifact,
     ont:input act:changeManagementPlanning ;
     skos:inScheme inst:dodDsopScheme .
 
+art:organizedTeamwork a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:teamCollaborationSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:package a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:releasePackaging ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:performanceAlert a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:alertingAndNotification ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:performanceAlerts a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:operationsMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:performanceMetrics a ont:AbstractArtifact,
@@ -772,6 +715,11 @@ art:performanceMetrics a ont:AbstractArtifact,
 art:performanceRequirements a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:softwareRequirementAnalysis ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:personnelActivities a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:productBacklogUpdates a ont:AbstractArtifact,
@@ -794,14 +742,29 @@ art:projectConstraints a ont:AbstractArtifact,
     ont:input act:projectReleasePlanning ;
     skos:inScheme inst:dodDsopScheme .
 
-art:projectPlan a ont:AbstractArtifact,
+art:projectGoal a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:projectReleasePlanning ;
+    ont:input tool:requirementsDatabase ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:properTestScripts a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:releasePackagingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:provisionedAndConfiguredInfrastructure a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:infrastructureProvisioningAutomation ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:provisionedDeploymentInfrastructure a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:configurationAutomationTools ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:purchasedLicenseInfo a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:softwareLicenseComplianceChecker ;
     skos:inScheme inst:dodDsopScheme .
 
 art:recoveredFile a ont:AbstractArtifact,
@@ -814,11 +777,6 @@ art:regressionTestCases a ont:AbstractArtifact,
     ont:input act:regressionTest ;
     skos:inScheme inst:dodDsopScheme .
 
-art:releaseNotes a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:releasePackaging ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:releasePlan a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:projectReleasePlanning ;
@@ -827,6 +785,16 @@ art:releasePlan a ont:AbstractArtifact,
 art:releaseToRepo a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:deliverReleasedArtifacts ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:remediationLog a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:logAnalysis ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:remediationRecommendations a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:complianceAsCodeIsReal ;
     skos:inScheme inst:dodDsopScheme .
 
 art:replicatedArtifacts a ont:AbstractArtifact,
@@ -844,9 +812,9 @@ art:requestedArtifacts a ont:AbstractArtifact,
     ont:output act:artifactDownload ;
     skos:inScheme inst:dodDsopScheme .
 
-art:requirements a ont:AbstractArtifact,
+art:resourceAllocation a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:reviseProductBacklog ;
+    ont:input tool:projectManagementSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:responsibleConfigurationItems a ont:AbstractArtifact,
@@ -864,6 +832,11 @@ art:reviewProcedures a ont:AbstractArtifact,
     ont:output act:changeManagementPlanning ;
     skos:inScheme inst:dodDsopScheme .
 
+art:reviewResults a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:codeQualityReviewTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:riskAssessment a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:missionBasedCyberRiskAssessments ;
@@ -874,19 +847,29 @@ art:riskManagementPlan a ont:AbstractArtifact,
     ont:output act:riskManagement ;
     skos:inScheme inst:dodDsopScheme .
 
+art:rootCauseAnalysis a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:runningApplication a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:manualSecurityTest ;
     skos:inScheme inst:dodDsopScheme .
 
+art:runningOperatingSystem a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:interactiveApplicationSecurityTestIastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:runningVm a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:virtualizationManager ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:sastReport a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:buildConfigurationControlAndAudit ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:sbom a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:sbomSoftwareCompositionAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
 art:sbomSoftwareCompositionAnalysis a ont:AbstractArtifact,
@@ -899,6 +882,16 @@ art:scanReports a ont:AbstractArtifact,
     ont:input act:releaseGoNoGoDecision ;
     skos:inScheme inst:dodDsopScheme .
 
+art:scheduling a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:projectManagementSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:scriptedTestScenarios a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:chaosEngineeringTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:security a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:softwareRequirementAnalysis ;
@@ -907,6 +900,11 @@ art:security a ont:AbstractArtifact,
 art:securityAndOperationsBestPractice a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:configurationManagementCmPlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:securityAuditLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:logPromotion ;
     skos:inScheme inst:dodDsopScheme .
 
 art:securityRisks a ont:AbstractArtifact,
@@ -929,19 +927,14 @@ art:securityWarning a ont:AbstractArtifact,
     ont:input act:codeCommitLogging ;
     skos:inScheme inst:dodDsopScheme .
 
-art:securityWarnings a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:codeCommitScan ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:sla a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:performanceTests ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:smokeTestScenarios a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:postDeploymentCheckout ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:softwareComponentInformation a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:configurationManagementDatabaseCmdb ;
     skos:inScheme inst:dodDsopScheme .
 
 art:softwareDevelopment a ont:AbstractArtifact,
@@ -964,6 +957,11 @@ art:softwareUnit a ont:AbstractArtifact,
     ont:input act:unitTest ;
     skos:inScheme inst:dodDsopScheme .
 
+art:solutions a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:stakeholderInputStakeholderFeedback a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:softwareRequirementAnalysis ;
@@ -977,6 +975,11 @@ art:staticCodeAnalysisReport a ont:AbstractArtifact,
 art:staticCodeWeakness a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:dynamicApplicationSecurityTestDastAndScan ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:statusReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:databaseAutomationTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:supply a ont:AbstractArtifact,
@@ -994,19 +997,19 @@ art:systemConfiguration a ont:AbstractArtifact,
     ont:input act:systemConfigurationMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-art:systemDesignDocuments a ont:AbstractArtifact,
+art:systemDeploymentEnvironmentConfigurationPlan a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:systemDesign ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:systemRequirement a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:databaseDesign ;
+    ont:output tool:softwareSystemDesignTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:systemTestScripts a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemTest ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:systemVmSnapshot a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:backupManagement ;
     skos:inScheme inst:dodDsopScheme .
 
 art:taggingStrategy a ont:AbstractArtifact,
@@ -1017,6 +1020,16 @@ art:taggingStrategy a ont:AbstractArtifact,
 art:taskPlan a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:projectReleasePlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:tasks a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:projectManagementSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:teamMeetings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:teamCollaborationSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:technicalFeedback a ont:AbstractArtifact,
@@ -1037,6 +1050,11 @@ art:testAuditLog a ont:AbstractArtifact,
 art:testCase a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:performanceTest ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:testConfiguration a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:networkSecurityTestTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:testConfigurationAudit a ont:AbstractArtifact,
@@ -1089,14 +1107,29 @@ art:testProcedureDocument a ont:AbstractArtifact,
     ont:output act:testDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
+art:testProgress a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:testManagementTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:testResultReports a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:operationalTestAndEvaluation ;
     skos:inScheme inst:dodDsopScheme .
 
+art:testResultStatistics a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:testManagementTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:testTool a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemDesign ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:testTraffic a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:networkSecurityTestTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:textResults a ont:AbstractArtifact,
@@ -1144,14 +1177,14 @@ art:updatedRequirements a ont:AbstractArtifact,
     ont:output act:feedbackIncludingOperationalTestAndEvaluationIfAsNeeded ;
     skos:inScheme inst:dodDsopScheme .
 
-art:userActivities a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:logging ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:userInput a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:documentation ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:userRequirements a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:softwareSystemDesignTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:userStory a ont:AbstractArtifact,
@@ -1164,19 +1197,9 @@ art:variousOutcomes a ont:AbstractArtifact,
     ont:output act:dynamicAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
-art:versionControlledArtifacts a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:releaseGoNoGoDecision ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:versionControlledBuildReport a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:buildConfigurationControlAndAudit ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:versionControlledDocuments a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:documentationVersionControl ;
     skos:inScheme inst:dodDsopScheme .
 
 art:versionControlledTestReports a ont:AbstractArtifact,
@@ -1189,6 +1212,16 @@ art:versionedControlledArtifacts a ont:AbstractArtifact,
     ont:output act:storeArtifacts ;
     skos:inScheme inst:dodDsopScheme .
 
+art:vmImages a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:releasePackagingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:vmInstanceSpecification a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:virtualizationManager ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:vmParent a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:createLinkedCloneOfVmMasterImage ;
@@ -1199,26 +1232,10 @@ art:vulnerability a ont:AbstractArtifact,
     ont:output act:dynamicApplicationSecurityTestDastAndScan ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:backupManagement a tool:AbstractTool,
-        ont:AbstractTool,
+art:vulnerbilities a ont:AbstractArtifact,
         skos:Concept ;
-    ont:activityTool act:rollForwardRollBack ;
-    skos:definition "Improve failure recovery" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Backup management" ;
-    skos:scopeNote """Data backup
-System components (VM or container) snapshot""" .
-
-tool:chaosEngineeringTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:chaosEngineering ;
-    skos:definition "Build confidence in the system’s capability to withstand turbulent conditions in production." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Chaos engineering tool" ;
-    skos:scopeNote "Orchestrate scripted changes to the environments, applications, or data related to a test scenario or experiment; collect and analyze results" .
+    ont:output tool:infosecContinuousMonitoringIscmTool ;
+    skos:inScheme inst:dodDsopScheme .
 
 tool:cmdb a tool:AbstractTool,
         skos:Concept ;
@@ -1230,46 +1247,15 @@ tool:code a tool:AbstractTool,
     ont:activityTool act:complianceMonitoringCots ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:codeQualityReviewTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeReview ;
-    skos:definition "Automates the review process which in turn minimizes the task of reviewing the code." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Code quality review tool" ;
-    skos:scopeNote "View code changes, identify defects, reject or approve the changes, and make comments on specific lines. Sets review rules and automatic notifications to ensure that reviews are completed on time." .
-
 tool:compliance a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:complianceMonitoringCots ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:complianceMonitor a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:complianceMonitoringResourcesServices ;
-    skos:definition "Provide visibility of compliance status" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Compliance Monitor" ;
-    skos:scopeNote "Monitor the state of compliance of deployed cloud resources and services against NIST SP 800-53 controls" .
-
 tool:configurationAutomationTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:iacDeployment ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:configurationAutomationTools a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:infrastructureProvisioningAutomation ;
-    skos:definition """Configuration automation
-Consistent provisioning""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Configuration automation tools" ;
-    skos:scopeNote "Execute the configuration scripts to provision the infrastructure, security policy, environment, and the application system components." .
 
 tool:cybersecurityTestTools a tool:AbstractTool,
         skos:Concept ;
@@ -1281,43 +1267,14 @@ tool:dastToolOrIastTool a tool:AbstractTool,
     ont:activityTool act:dynamicApplicationSecurityTestDastAndScan ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:dataModelingTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseDesign ;
-    skos:definition "Ensure the required data objects by the system are accurately represented" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Data modeling tool" ;
-    skos:scopeNote "Model the interrelationship and flows between different data elements" .
-
-tool:databaseMonitoringTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
-    skos:definition "Improve database operations continuity" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database monitoring tool" ;
-    skos:scopeNote """Baseline database performance and database traffic;
-Detect anomalies""" .
-
-tool:databaseSecurityAuditTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
-    skos:definition "Enhance database security" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database security audit tool" ;
-    skos:scopeNote """Perform user access and data access audit;
-Detect anomalies from events correlation;
-Detect SQL injection;
-Generate alert""" .
-
 tool:databaseTestTools a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:databaseFunctionalTestOptional ;
+    skos:inScheme inst:dodDsopScheme .
+
+tool:databaseTools a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:dependencyBomCheckingTool a tool:AbstractTool,
@@ -1360,58 +1317,10 @@ tool:inventoryManagement a tool:AbstractTool,
     ont:activityTool act:assetInventoryToIncludeSboms ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:lintTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:build ;
-    skos:definition """Improve code readability;
-Pre-code review;
-Finding (syntax) errors before execution for interpreted languages""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Lint tool" ;
-    skos:scopeNote """Analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
-Applicable to both compiled or interpreted languages""" .
-
-tool:logAnalysis a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:logAuditing ;
-    skos:definition "Reduce effort required to identify threats or inappropriate activity" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log analysis" ;
-    skos:scopeNote """Analyze and audit to detect malicious threats / activity;
-Automated alerting and workflows for response
-Forensics for damage assessment. 
-These are typically SIEM and SOAR tools.""" .
-
-tool:logAuditing a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:logAuditing ;
-    skos:definition "" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log auditing" ;
-    skos:scopeNote "Audit to ensure possession of the logs and that aggregation is performed correctly" .
-
 tool:monitoringToolSuite a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:softwareFactoryRiskContinuousMonitoring ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:networkSecurityTestTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:manualSecurityTest ;
-    skos:definition """Validate system security; 
-Increase attack readiness; 
-Reduce the risk of system degradation.""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Network security test tool" ;
-    skos:scopeNote "Simulate real-world legitimate traffic, distributed denial of service (DDOS), exploits, malware, and fuzzing." .
 
 tool:operationMonitoring a tool:AbstractTool,
         skos:Concept ;
@@ -1428,37 +1337,10 @@ tool:operationalMonitoringTools a tool:AbstractTool,
     ont:activityTool act:performanceTests ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:projectManagementSystem a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:projectReleasePlanning ;
-    skos:definition """Assist project progress tracking
-Optimize resource allocation""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Project management system" ;
-    skos:scopeNote """Task management
-Scheduling and time management
-Resource management
-Budget management
-Risk management""" .
-
 tool:raspTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:runtimeApplicationSelfProtectionRasp ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:releasePackagingTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:releasePackaging ;
-    skos:definition "Release package (such as a bundle of artifacts, self-extracting software installer, software tar file, etc.)" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Release packaging tool" ;
-    skos:scopeNote """Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, release notes as a package; generate checksum and digital signature for the package.
-
-The package may be prepared for a specific installer or it is a self-extracting installer itself.""" .
 
 tool:requirementsManagementTool a tool:AbstractTool,
         skos:Concept ;
@@ -1490,32 +1372,10 @@ tool:serviceTestingTool a tool:AbstractTool,
     ont:activityTool act:serviceFunctionalTest ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:softwareLicenseComplianceChecker a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:complianceScan ;
-    skos:definition "Software license compliance and software asset management" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Software license compliance checker" ;
-    skos:scopeNote """Inventory software license;
-Audit the compliance""" .
-
 tool:softwareSystemDesignTools a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:systemDesign ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:sourceCodeRepositorySecurityPlugin a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeCommitScan ;
-    skos:definition "Helps prevent passwords and other sensitive data from being committed into a version control repository" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Source code repository security plugin" ;
-    skos:scopeNote """Check the changes for suspicious content such as Secure Shell (SSH) keys, authorization tokens, passwords and other sensitive information before pushing the changes to the main repository.
-If it finds suspicious content, it notifies the developer and blocks the commit.""" .
 
 tool:specificTestTool a tool:AbstractTool,
         skos:Concept ;
@@ -1537,16 +1397,6 @@ tool:testAndScanTracker a tool:AbstractTool,
     ont:activityTool act:testConfigurationAudit ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:testDataGenerator a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:performanceTest ;
-    skos:definition "Increase test fidelity" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test data generator" ;
-    skos:scopeNote "Generates test data for the system (such as network traffic generator, web request generator)" .
-
 tool:testEnvironment a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:userStoryReviewAndDemonstration ;
@@ -1555,29 +1405,6 @@ tool:testEnvironment a tool:AbstractTool,
 tool:testScripts a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:postDeploymentCheckout ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:theDatabaseSoftware a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:threatModelingTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:threatModeling ;
-    skos:definition "Allows software architects to identify and mitigate potential security issues early." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Threat modeling tool" ;
-    skos:scopeNote """Document system security design;
-Analyze the design for potential security issues;
-Review and analysis against common attack patterns;
-Suggest and manage mitigation""" .
-
-tool:tools a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:variousPlanningTools a tool:AbstractTool,
@@ -1589,18 +1416,6 @@ tool:variousTools a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:manualSecurityTest ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:virtualizationManager a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:createLinkedCloneOfVmMasterImage ;
-    skos:definition "Centralized VM instantiation, scaling, and monitoring" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Virtualization Manager" ;
-    skos:scopeNote """VM instance management
-VM resource monitoring
-(provided on hosting environment)""" .
 
 act:operationalAssessments a ont:AbstractActivity,
         skos:Concept ;
@@ -1628,10 +1443,34 @@ art:actionItems a ont:AbstractArtifact,
         act:designReview ;
     skos:inScheme inst:dodDsopScheme .
 
-art:complianceStatus a ont:AbstractArtifact,
+art:alertMessages a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:complianceMonitoringCots,
-        act:complianceMonitoringResourcesServices ;
+    ont:output tool:alertingAndNotification,
+        tool:logAnalysis ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:applicationActivities a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:logging,
+        tool:loggingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:assessments a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:systemSecurityMonitoring,
+        tool:infosecContinuousMonitoringIscmTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:assetInventory a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:assetInventoryToIncludeSboms,
+        tool:assetInventoryManagement ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:configurationItems a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:configurationIdentification,
+        tool:configurationManagementDatabaseCmdb ;
     skos:inScheme inst:dodDsopScheme .
 
 art:configurationResults a ont:AbstractArtifact,
@@ -1640,10 +1479,46 @@ art:configurationResults a ont:AbstractArtifact,
     ont:output act:configurationIntegrationTesting ;
     skos:inScheme inst:dodDsopScheme .
 
+art:dataActivities a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:logging,
+        tool:loggingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:dataModel a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:databaseDevelopment ;
+    ont:output tool:dataModelingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:database a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseAutomationTool ;
+    ont:output act:databaseDevelopment ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:databaseLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:logAggregator,
+        tool:logPromotion ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:dependencyList a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:dependencyVulnerabilityChecking,
+        tool:dependencyCheckingBillOfMaterialsCheckingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:designDocuments a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:designReview,
         act:documentationVersionControl ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:emails a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:alertingAndNotification,
+        tool:logAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
 art:goNoGoDecision a ont:AbstractArtifact,
@@ -1652,10 +1527,22 @@ art:goNoGoDecision a ont:AbstractArtifact,
         act:releaseGoNoGoDecision ;
     skos:inScheme inst:dodDsopScheme .
 
-art:itInfrastructureAsset a ont:AbstractArtifact,
+art:iac a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:configurationIdentification,
-        act:configurationManagementCmPlanning ;
+    ont:input act:iacDeployment,
+        tool:sourceCodeRepository ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:incomplianceFindings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:systemSecurityMonitoring,
+        tool:infosecContinuousMonitoringIscmTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:infrastructureConfigurationScripts a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:configurationAutomationTools,
+        tool:releasePackagingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:knownCves a ont:AbstractArtifact,
@@ -1664,10 +1551,16 @@ art:knownCves a ont:AbstractArtifact,
         act:operationalCyberTests ;
     skos:inScheme inst:dodDsopScheme .
 
-art:knownVulnerabilities a ont:AbstractArtifact,
+art:knownWeaknesses a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan ;
+    ont:input act:staticCodeScanBeforeCommit,
+        tool:integratedDevelopmentEnvironmentIdeSecurityPlugins ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:locallyCommittedSourceCode a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:codeCommitScan,
+        tool:sourceCodeRepositorySecurityPlugin ;
     skos:inScheme inst:dodDsopScheme .
 
 art:metrics a ont:AbstractArtifact,
@@ -1676,10 +1569,34 @@ art:metrics a ont:AbstractArtifact,
         act:capacityManagement ;
     skos:inScheme inst:dodDsopScheme .
 
+art:mitigationPlan a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:threatModeling,
+        tool:threatModelingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:networkActivities a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:logging,
+        tool:loggingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:optimizedResourceAllocation a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:businessOperations,
         act:capacityManagement ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:originalData a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:dataMaskingTool,
+        tool:databaseEncryptionTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:performanceStatistics a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:alertingAndNotification ;
+    ont:output tool:operationsMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:plan a ont:AbstractArtifact,
@@ -1694,22 +1611,28 @@ art:plans a ont:AbstractArtifact,
         act:documentationVersionControl ;
     skos:inScheme inst:dodDsopScheme .
 
+art:projectPlan a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:projectReleasePlanning,
+        tool:projectManagementSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:pushGoNoGoDecision a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:deliveryResultsReview,
         act:userStoryReviewAndDemonstration ;
     skos:inScheme inst:dodDsopScheme .
 
-art:recommendedActions a ont:AbstractArtifact,
+art:releaseNotes a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:systemConfigurationMonitoring,
-        act:systemPerformanceMonitoring ;
+    ont:input act:releasePackaging,
+        tool:releasePackagingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:releasePackage a ont:AbstractArtifact,
+art:remediationReport a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:deliverReleasedArtifacts,
-        act:operationsTeamAcceptance ;
+    ont:output tool:alertingAndNotification,
+        tool:logAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
 art:remediationReports a ont:AbstractArtifact,
@@ -1724,10 +1647,34 @@ art:report a ont:AbstractArtifact,
         act:sustainanbilityAndChaosTesting ;
     skos:inScheme inst:dodDsopScheme .
 
+art:requirements a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:reviseProductBacklog,
+        tool:testManagementTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:reviewComments a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:codeReview,
         act:designReview ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:runningDatabase a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseMonitoringTool,
+        tool:databaseSecurityAuditTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:runningSoftwareApplication a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:dynamicApplicationSecurityTestDastTool,
+        tool:interactiveApplicationSecurityTestIastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:sbom a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:sbomSoftwareCompositionAnalysis,
+        tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:schedule a ont:AbstractArtifact,
@@ -1736,28 +1683,22 @@ art:schedule a ont:AbstractArtifact,
     ont:output act:projectReleasePlanning ;
     skos:inScheme inst:dodDsopScheme .
 
-art:scripts a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:releasePackaging,
-        act:storeArtifacts ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:securityFindings a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:codeCommitLogging ;
-    ont:output act:codeCommitScan ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:securityRequirements a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:developmentalCyberTests,
         act:operationalCyberTests ;
     skos:inScheme inst:dodDsopScheme .
 
-art:softwareInstances a ont:AbstractArtifact,
+art:securityWarnings a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:complianceScan,
-        act:interactiveApplicationSecurityTestsIast ;
+    ont:output act:codeCommitScan,
+        tool:sourceCodeRepositorySecurityPlugin ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:sla a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:performanceTests,
+        tool:operationsMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:softwareSystem a ont:AbstractArtifact,
@@ -1770,18 +1711,6 @@ art:softwareSystemComponents a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:configurationIdentification,
         act:configurationManagementCmPlanning ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:sourceCodeWeaknessFindings a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:codeCommitLogging ;
-    ont:output act:staticCodeScanBeforeCommit ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:staticCodeScanReport a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan ;
     skos:inScheme inst:dodDsopScheme .
 
 art:system a ont:AbstractArtifact,
@@ -1802,6 +1731,18 @@ art:systemComponents a ont:AbstractArtifact,
         act:postDeploymentSecurityScan ;
     skos:inScheme inst:dodDsopScheme .
 
+art:systemDesignDocuments a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:systemDesign,
+        tool:softwareSystemDesignTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:systemRequirement a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:databaseDesign,
+        tool:dataModelingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:test a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:functionalTest,
@@ -1812,6 +1753,12 @@ art:testPlans a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:operationalTestAndEvaluation ;
     ont:output act:testPlan ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:testScenario a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseTestToolSuite,
+        tool:testDataGenerator ;
     skos:inScheme inst:dodDsopScheme .
 
 art:theSoftwareUnits a ont:AbstractArtifact,
@@ -1832,22 +1779,28 @@ art:underlyingOs a ont:AbstractArtifact,
         act:manualSecurityTest ;
     skos:inScheme inst:dodDsopScheme .
 
-art:versionControlledSourceCode a ont:AbstractArtifact,
+art:userActivities a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:codeCommitLogging ;
-    ont:output act:codeCommit ;
+    ont:input act:logging,
+        tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:vulnerabilityReport a ont:AbstractArtifact,
+art:versionControlledArtifacts a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:dependencyVulnerabilityChecking,
-        act:manualSecurityTest ;
+    ont:input act:releaseGoNoGoDecision ;
+    ont:output tool:artifactRepository ;
     skos:inScheme inst:dodDsopScheme .
 
-art:weaknesses a ont:AbstractArtifact,
+art:versionControlledDocuments a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan ;
+    ont:output act:documentationVersionControl,
+        tool:teamCollaborationSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:vulnerabilityFindings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:alertingAndNotification ;
+    ont:output tool:databaseSecurityScanAndTestTool ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:artifacts a tool:AbstractTool,
@@ -1856,20 +1809,14 @@ tool:artifacts a tool:AbstractTool,
         act:deliverReleasedArtifacts ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:buildTool a tool:AbstractTool,
-        ont:AbstractTool,
+tool:assetInventoryManagement a ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:build,
-        act:documentation ;
-    skos:definition """Reduces human mistakes;
-Saves time""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:input art:itInfrastructureAsset ;
+    ont:output art:assetInventory ;
+    skos:definition "Increase situation awareness" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Build tool" ;
-    skos:scopeNote """Dependency Management;
-Compile;
-Link (if appropriate);
-Built-in lint stylistic checking Integration with IDE""" .
+    skos:prefLabel "Asset inventory management" ;
+    skos:scopeNote "Maintain a “real-time” inventory of all applications, software licenses, libraries, operating systems, and versioning information" .
 
 tool:ciCdOrchestrator a tool:AbstractTool,
         skos:Concept ;
@@ -1877,40 +1824,63 @@ tool:ciCdOrchestrator a tool:AbstractTool,
         act:releaseGoNoGoDecision ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:cyberThreatIntelligenceSubscriptionS a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:cyberThreatConditionFeed ;
+    ont:output art:csrpChangeRecommendations ;
+    skos:definition "Helps with risked-based decisions in a proactive manner in lieu of reactivity when new vulnerabilities are announced" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Cyber Threat Intelligence Subscription(s)" ;
+    skos:scopeNote "Varying set of tools, from actor activity based detection, tech stack, etc." .
+
+tool:dataMaskingTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:originalData ;
+    ont:output art:maskedData ;
+    skos:definition """Provide data privacy;
+Reduce the risk of data loss during data breach""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Data masking tool" ;
+    skos:scopeNote "Shield personally identifiable information or other confidential data" .
+
+tool:databaseEncryptionTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:originalData ;
+    ont:output art:encryptedData ;
+    skos:definition """Provide data privacy and security;
+Prevent data loss""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database encryption tool" ;
+    skos:scopeNote "Encrypt data at rest and in transit" .
+
 tool:iac a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:iacDeployment,
         act:infrastructureProvisioningAutomation ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:integratedDevelopmentEnvironmentIde a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:codeDevelopmentInput ;
+    ont:output art:sourceCode ;
+    skos:definition """Visual representation
+Increase efficiency
+Faster coding with less effort
+Improved bug fixing speed
+Reproducible builds via scripts""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Integrated development environment (IDE)" ;
+    skos:scopeNote """Source code editor
+Intelligent code completion
+Compiler or interpreter
+Debugger
+Build automation (integration with a build tool)""" .
+
 tool:iscm a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:systemConfigurationMonitoring,
         act:systemSecurityMonitoring ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:logAggregator a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:logAnalysisAuditing,
-        act:logAuditing ;
-    skos:definition "Improve investigations by correlating logs from multiple sources" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log-aggregator" ;
-    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
-
-tool:loggingTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeCommitLogging,
-        act:logging ;
-    skos:definition """Assist troubleshooting the issues.
-Assist detection of advanced persistent threats and forensics.""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Logging-tool" ;
-    skos:scopeNote "Logging events for all user, network, application, and data activities" .
 
 tool:sastTool a tool:AbstractTool,
         skos:Concept ;
@@ -1923,20 +1893,6 @@ tool:securityComplianceTool a tool:AbstractTool,
     ont:activityTool act:complianceScan,
         act:postDeploymentSecurityScan ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:sourceCodeRepository a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeCommit,
-        act:configurationIdentification ;
-    skos:definition """Compare files, identify differences, and merge the changes if needed before committing.
-Keep track of application builds""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Source code repository" ;
-    skos:scopeNote """Source code version control
-Branching and merging
-Collaborative code review""" .
 
 tool:testingTool a tool:AbstractTool,
         skos:Concept ;
@@ -1964,32 +1920,39 @@ art:acceptanceCriteria a ont:AbstractArtifact,
     ont:output act:systemDesign ;
     skos:inScheme inst:dodDsopScheme .
 
-art:binaryArtifacts a ont:AbstractArtifact,
+art:analysisReport a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:releasePackaging,
-        act:storeArtifacts ;
-    ont:output act:build ;
+    ont:output act:sbomSoftwareCompositionAnalysis,
+        tool:interactiveApplicationSecurityTestIastTool,
+        tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:codeDevelopmentInput a ont:AbstractArtifact,
+art:complianceReport a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:applicationCodeDevelopment,
-        act:infrastructureCodeDevelopment,
-        act:securityCodeDevelopment ;
+    ont:output act:systemConfigurationMonitoring,
+        tool:nonSecurityComplianceScanTool,
+        tool:softwareLicenseComplianceChecker ;
     skos:inScheme inst:dodDsopScheme .
 
-art:complianceReports a ont:AbstractArtifact,
+art:complianceStatus a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:complianceMonitoringCots,
+    ont:input act:complianceMonitoringCots,
         act:complianceMonitoringResourcesServices,
-        act:complianceScan ;
+        tool:complianceMonitor ;
     skos:inScheme inst:dodDsopScheme .
 
-art:documentation a ont:AbstractArtifact,
+art:eventLog a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:releasePackaging,
-        act:storeArtifacts ;
-    ont:output act:documentation ;
+    ont:input tool:logAggregator,
+        tool:logPromotion ;
+    ont:output tool:loggingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:fuzzInputs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:dynamicApplicationSecurityTestDastAndScan,
+        tool:dynamicApplicationSecurityTestDastTool,
+        tool:interactiveApplicationSecurityTestIastTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:integrationTestInput a ont:AbstractArtifact,
@@ -1999,6 +1962,13 @@ art:integrationTestInput a ont:AbstractArtifact,
         act:securityCodeDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
+art:itInfrastructureAsset a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:configurationIdentification,
+        act:configurationManagementCmPlanning,
+        tool:assetInventoryManagement ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:otherTestInput a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:applicationCodeDevelopment,
@@ -2006,18 +1976,25 @@ art:otherTestInput a ont:AbstractArtifact,
         act:securityCodeDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
-art:potentialThreats a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:developmentalCyberTests,
-        act:operationalCyberTests ;
-    ont:output act:threatModeling ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:privacyRequirements a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:developmentalCyberTests,
         act:operationalCyberTests ;
     ont:output act:softwareRequirementAnalysis ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:recommendedActions a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:operationsDashboard ;
+    ont:output act:systemConfigurationMonitoring,
+        act:systemPerformanceMonitoring ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:releasePackage a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:deliverReleasedArtifacts,
+        act:operationsTeamAcceptance ;
+    ont:output tool:releasePackagingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:runningDatabaseSystem a ont:AbstractArtifact,
@@ -2034,18 +2011,46 @@ art:runningSystem a ont:AbstractArtifact,
         act:systemSecurityMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
+art:scripts a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:releasePackaging,
+        act:storeArtifacts,
+        tool:lintTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:securityFindings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:codeCommitLogging ;
+    ont:output act:codeCommitScan,
+        tool:sourceCodeRepositorySecurityPlugin ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:softwareInstances a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:complianceScan,
+        act:interactiveApplicationSecurityTestsIast,
+        tool:softwareLicenseComplianceChecker ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:sourceCodeWeaknessFindings a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:codeCommitLogging ;
+    ont:output act:staticCodeScanBeforeCommit,
+        tool:integratedDevelopmentEnvironmentIdeSecurityPlugins ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:staticCodeScanReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        tool:staticApplicationSecurityTestSastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:testInputData a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:unitTest ;
     ont:output act:integrationTest,
         act:systemTest ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:testScripts a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:postDeploymentCheckout ;
-    ont:output act:databaseDevelopment,
-        act:testDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
 art:unitTestInput a ont:AbstractArtifact,
@@ -2062,12 +2067,71 @@ art:vulnerabilities a ont:AbstractArtifact,
     ont:output act:systemSecurityMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
+art:vulnerabilityReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:dependencyVulnerabilityChecking,
+        act:manualSecurityTest,
+        tool:dependencyCheckingBillOfMaterialsCheckingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:weaknesses a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        tool:staticApplicationSecurityTestSastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 phase:feedback a ont:Phase,
         skos:Concept ;
     ont:phaseActivity act:reviseProductBacklog,
         act:userEvaluationFeedback ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Feedback" .
+
+tool:complianceMonitor a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:complianceMonitoringResourcesServices ;
+    ont:input art:complianceStatus ;
+    ont:output art:complianceReports ;
+    skos:definition "Provide visibility of compliance status" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Compliance Monitor" ;
+    skos:scopeNote "Monitor the state of compliance of deployed cloud resources and services against NIST SP 800-53 controls" .
+
+tool:configurationManagementDatabaseCmdb a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:itHardwareInformation,
+        art:softwareComponentInformation ;
+    ont:output art:configurationItems ;
+    skos:definition "Centralized database used by many systems (such as asset management, configuration management, incident management, etc.) during development and operations phases." ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Configuration management database (CMDB)" ;
+    skos:scopeNote """Auto-discovery;
+Dependency mapping;
+Integration with other tools;
+Configuration auditing""" .
+
+tool:configurationManagementTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:eac,
+        art:sourceCode ;
+    ont:output art:configurationControl ;
+    skos:definition "Maintains integrity of the system" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Configuration Management Tool" ;
+    skos:scopeNote "Configuration control" .
+
+tool:databaseTestToolSuite a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:testData,
+        art:testScenario ;
+    ont:output art:testResults ;
+    skos:definition "Automate or semi-automate the database tests" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database test tool suite" ;
+    skos:scopeNote """Tools that facilitate database test;
+It includes test data generator, database functional test tool, database load test tool;""" .
 
 tool:encryptionTool a tool:AbstractTool,
         skos:Concept ;
@@ -2076,29 +2140,61 @@ tool:encryptionTool a tool:AbstractTool,
         act:databaseSchemaInstallation ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:nonSecurityComplianceScanTool a tool:AbstractTool,
-        ont:AbstractTool,
+tool:integratedDevelopmentEnvironmentIdeSecurityPlugins a ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:complianceScan,
-        act:operationalReadinessTest,
-        act:suitabilityTest ;
-    skos:definition "Ensures compliance with non-security programs" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:input art:knownWeaknesses,
+        art:sourceCode ;
+    ont:output art:sourceCodeWeaknessFindings ;
+    skos:definition "Address source code weaknesses and aid developers to improve secure coding skills" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Non-security-compliance-scan tool " ;
-    skos:scopeNote "Such as Section 508 accessibility compliance" .
+    skos:prefLabel "Integrated development environment (IDE) security plugins" ;
+    skos:scopeNote "Scan and analyze the code as the developer writes it, notify developer of potential code weakness and may suggest remediation" .
 
-tool:testCoverageTool a tool:AbstractTool,
+tool:logAuditing a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:componentTest,
-        act:databaseComponentTest,
-        act:unitTest ;
-    skos:definition "Shows the fidelity of the test results" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:activityTool act:logAuditing ;
+    ont:input art:logs ;
+    ont:output art:auditLogs ;
+    skos:definition "" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test coverage tool" ;
-    skos:scopeNote "Measures how much code is exercised while the automated tests are running" .
+    skos:prefLabel "Log auditing" ;
+    skos:scopeNote "Audit to ensure possession of the logs and that aggregation is performed correctly" .
+
+tool:networkSecurityTestTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:manualSecurityTest ;
+    ont:input art:testConfiguration ;
+    ont:output art:testTraffic ;
+    skos:definition """Validate system security; 
+Increase attack readiness; 
+Reduce the risk of system degradation.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Network security test tool" ;
+    skos:scopeNote "Simulate real-world legitimate traffic, distributed denial of service (DDOS), exploits, malware, and fuzzing." .
+
+tool:requirementsDatabase a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:constraints,
+        art:projectGoal ;
+    ont:output art:requirementsDocuments ;
+    skos:definition "Tracing requirements make sure all requirements are handled and minimize unwanted extra features that don’t trace to requirements." ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Requirements database" ;
+    skos:scopeNote """Collect and manage requirements; 
+Trace requirements to their source; 
+Trace features or design components to the requirements""" .
+
+tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:sbom ;
+    ont:output art:analysisReport,
+        art:mitigationRecommendations ;
+    skos:definition "SCA allows developers and operators to understand what is contained within the software that is entering or operating within their environment. The automatic nature of SCA products is another strength, developers don't have to manually verify the contents when integrating Open-Source Software (OSS) components. The automation also applies to indirect references to other OSS components within code and artifacts " ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Software Bill of Materials (SBOM) Software Composition Analysis Tool" ;
+    skos:scopeNote "Software composition analysis (SCA) analyzes custom-built software applications to detect embedded software and detect if it is up-to-date, contains vulnerabilities or security flaws, or has licensing requirements" .
 
 act:artifactDownload a ont:AbstractActivity,
         skos:Concept ;
@@ -2284,6 +2380,30 @@ act:testConfigurationAudit a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: PO 3.3" .
 
+art:auditLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:logAggregator,
+        tool:logPromotion ;
+    ont:output tool:databaseSecurityAuditTool,
+        tool:logAuditing ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:codeDevelopmentInput a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:applicationCodeDevelopment,
+        act:infrastructureCodeDevelopment,
+        act:securityCodeDevelopment,
+        tool:integratedDevelopmentEnvironmentIde ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:complianceReports a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:complianceMonitoringCots,
+        act:complianceMonitoringResourcesServices,
+        act:complianceScan,
+        tool:complianceMonitor ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:expectedOutputData a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:unitTest ;
@@ -2292,44 +2412,28 @@ art:expectedOutputData a ont:AbstractArtifact,
         act:systemTest ;
     skos:inScheme inst:dodDsopScheme .
 
-art:mitigationRecommendations a ont:AbstractArtifact,
+art:knownVulnerabilities a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:dynamicApplicationSecurityTestDastAndScan,
-        act:manualSecurityTest,
-        act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan ;
+    ont:input act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        tool:infosecContinuousMonitoringIscmTool,
+        tool:staticApplicationSecurityTestSastTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:recommendations a ont:AbstractArtifact,
+art:potentialThreats a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:deliveryResultsReview ;
-    ont:output act:developmentalCyberTests,
-        act:operationalCyberTests,
-        act:systemSecurityMonitoring ;
+    ont:input act:developmentalCyberTests,
+        act:operationalCyberTests ;
+    ont:output act:threatModeling,
+        tool:threatModelingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:systemDesign a ont:AbstractArtifact,
+art:versionControlledSourceCode a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:databaseDesign,
-        act:devsecopsProcessDesign,
-        act:testPlan,
-        act:threatModeling ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:testReport a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:operationalReadinessTest,
-        act:regressionTest,
-        act:suitabilityTest,
-        act:unitTest ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:warnings a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:databaseMonitoringAndSecurityAuditing,
-        act:systemConfigurationMonitoring,
-        act:systemPerformanceMonitoring,
-        act:systemSecurityMonitoring ;
+    ont:input act:codeCommitLogging,
+        tool:buildTool ;
+    ont:output act:codeCommit,
+        tool:sourceCodeRepository ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:alertingNotificationSystem a tool:AbstractTool,
@@ -2340,18 +2444,191 @@ tool:alertingNotificationSystem a tool:AbstractTool,
         act:systemSecurityMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:databaseAutomationTool a tool:AbstractTool,
+tool:codeQualityReviewTool a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:artifactDeployment,
-        act:databaseArtifactDeployment,
-        act:databaseSchemaInstallation,
-        act:rollForwardRollBack ;
-    skos:definition "Simplify database operations and reduce human errors" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:activityTool act:codeReview ;
+    ont:input art:sourceCode ;
+    ont:output art:codeComments,
+        art:reviewResults ;
+    skos:definition "Automates the review process which in turn minimizes the task of reviewing the code." ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database automation tool" ;
-    skos:scopeNote "Automate database tasks, such as deployments, upgrades, discovering and troubleshooting anomalies, recovering from failures, topology changes, running backups, verifying data integrity, and scaling." .
+    skos:prefLabel "Code quality review tool" ;
+    skos:scopeNote "View code changes, identify defects, reject or approve the changes, and make comments on specific lines. Sets review rules and automatic notifications to ensure that reviews are completed on time." .
+
+tool:configurationAutomationTools a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:infrastructureProvisioningAutomation ;
+    ont:input art:infrastructureConfigurationData,
+        art:infrastructureConfigurationScripts ;
+    ont:output art:provisionedDeploymentInfrastructure ;
+    skos:definition """Configuration automation
+Consistent provisioning""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Configuration automation tools" ;
+    skos:scopeNote "Execute the configuration scripts to provision the infrastructure, security policy, environment, and the application system components." .
+
+tool:dataModelingTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseDesign ;
+    ont:input art:businessLogic,
+        art:systemRequirement ;
+    ont:output art:dataModel ;
+    skos:definition "Ensure the required data objects by the system are accurately represented" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Data modeling tool" ;
+    skos:scopeNote "Model the interrelationship and flows between different data elements" .
+
+tool:databaseSecurityScanAndTestTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:testData,
+        art:testScenarios ;
+    ont:output art:mitigationRecommendations,
+        art:vulnerabilityFindings ;
+    skos:definition "Reduce the security risks" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database security scan and test tool" ;
+    skos:scopeNote """Find the database common security vulnerabilities, such as weak password, known configuration risks, missing patches; 
+Structured Query Language (SQL) injection test tool;
+Data access control test;
+User access control test;
+Denial of service test""" .
+
+tool:dependencyCheckingBillOfMaterialsCheckingTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:bom,
+        art:dependencyList,
+        art:licensing ;
+    ont:output art:vulnerabilityReport ;
+    skos:definition """Secure the overall application;
+Manage the supply chain risk""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Dependency checking /Bill of Materials checking tool" ;
+    skos:scopeNote "Identify vulnerabilities in the dependent components based on publicly disclosed open source vulnerabilities" .
+
+tool:dynamicApplicationSecurityTestDastTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:fuzzInputs,
+        art:runningSoftwareApplication ;
+    ont:output art:dynamicCodeScanReport,
+        art:mitigationRecommendations ;
+    skos:definition """Catch the dynamic code weakness in runtime and under certain environment setting.
+Identify and fix issues during continuous integration.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Dynamic Application Security Test (DAST) tool" ;
+    skos:scopeNote "DAST tools analyze a running application dynamically and can identify runtime vulnerabilities and environment related issues." .
+
+tool:lintTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:build ;
+    ont:input art:scripts,
+        art:sourceCode ;
+    ont:output art:analyzeResults ;
+    skos:definition """Improve code readability;
+Pre-code review;
+Finding (syntax) errors before execution for interpreted languages""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Lint tool" ;
+    skos:scopeNote """Analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
+Applicable to both compiled or interpreted languages""" .
+
+tool:operationsMonitoring a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:kpi,
+        art:sla ;
+    ont:output art:performanceAlerts,
+        art:performanceStatistics ;
+    skos:definition """Improve operations continuity
+Identify the area to improve
+Better end-user experience""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Operations monitoring" ;
+    skos:scopeNote """Report various performance metrics such as resource utilization rates, number of concurrent user sessions, and Input/Output (IO) rates;
+Provide dashboards to display performance;
+Alert performance issues
+Establish a baseline for comparison""" .
+
+tool:softwareLicenseComplianceChecker a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:complianceScan ;
+    ont:input art:purchasedLicenseInfo,
+        art:softwareInstances ;
+    ont:output art:complianceReport ;
+    skos:definition "Software license compliance and software asset management" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Software license compliance checker" ;
+    skos:scopeNote """Inventory software license;
+Audit the compliance""" .
+
+tool:sourceCodeRepositorySecurityPlugin a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommitScan ;
+    ont:input art:locallyCommittedSourceCode ;
+    ont:output art:securityFindings,
+        art:securityWarnings ;
+    skos:definition "Helps prevent passwords and other sensitive data from being committed into a version control repository" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Source code repository security plugin" ;
+    skos:scopeNote """Check the changes for suspicious content such as Secure Shell (SSH) keys, authorization tokens, passwords and other sensitive information before pushing the changes to the main repository.
+If it finds suspicious content, it notifies the developer and blocks the commit.""" .
+
+tool:testDataGenerator a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:performanceTest ;
+    ont:input art:testData,
+        art:testScenario ;
+    ont:output art:testData ;
+    skos:definition "Increase test fidelity" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test data generator" ;
+    skos:scopeNote "Generates test data for the system (such as network traffic generator, web request generator)" .
+
+tool:testDevelopmentTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:testPlan ;
+    ont:output art:testData,
+        art:testScenarios,
+        art:testScripts ;
+    skos:definition "Increase the automation and rate of testing" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test development tool" ;
+    skos:scopeNote """Assists test scenario, test script, and test data development.
+The specific tool varies, depending on the test activity (such as unit test, penetration test) and the application type (e.g., web application, or Hadoop data analytics)""" .
+
+tool:threatModelingTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:threatModeling ;
+    ont:input art:systemDesign ;
+    ont:output art:mitigationPlan,
+        art:potentialThreats ;
+    skos:definition "Allows software architects to identify and mitigate potential security issues early." ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Threat modeling tool" ;
+    skos:scopeNote """Document system security design;
+Analyze the design for potential security issues;
+Review and analysis against common attack patterns;
+Suggest and manage mitigation""" .
+
+tool:virtualizationManager a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:createLinkedCloneOfVmMasterImage ;
+    ont:input art:monitoringPolicy,
+        art:vmInstanceSpecification ;
+    ont:output art:runningVm ;
+    skos:definition "Centralized VM instantiation, scaling, and monitoring" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Virtualization Manager" ;
+    skos:scopeNote """VM instance management
+VM resource monitoring
+(provided on hosting environment)""" .
 
 act:businessOperations a ont:AbstractActivity,
         skos:Concept ;
@@ -2652,13 +2929,31 @@ act:threatModeling a ont:AbstractActivity,
         "Relevance: Security",
         "SSDF: PW.1.1, PW.2.1, RV.2.1" .
 
-art:logs a ont:AbstractArtifact,
+art:binaryArtifacts a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:capacityManagement,
-        act:logAnalysisAuditing,
-        act:logAuditing ;
-    ont:output act:databaseMonitoringAndSecurityAuditing,
-        act:logging ;
+    ont:input act:releasePackaging,
+        act:storeArtifacts,
+        tool:releasePackagingTool ;
+    ont:output act:build,
+        tool:buildTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:documentation a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:releasePackaging,
+        act:storeArtifacts,
+        tool:releasePackagingTool,
+        tool:teamCollaborationSystem ;
+    ont:output act:documentation ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:recommendations a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:deliveryResultsReview ;
+    ont:output act:developmentalCyberTests,
+        act:operationalCyberTests,
+        act:systemSecurityMonitoring,
+        tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:requirementsDatabase a ont:AbstractArtifact,
@@ -2670,14 +2965,202 @@ art:requirementsDatabase a ont:AbstractArtifact,
         act:testPlan ;
     skos:inScheme inst:dodDsopScheme .
 
-art:testCases a ont:AbstractArtifact,
+art:systemDesign a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:apiSecurityTests,
-        act:componentTest,
-        act:databaseComponentTest,
-        act:regressionTestIncludesSmokeTests,
-        act:softwareIntegrationTest ;
+    ont:input act:databaseDesign,
+        act:devsecopsProcessDesign,
+        act:testPlan,
+        act:threatModeling,
+        tool:threatModelingTool ;
     skos:inScheme inst:dodDsopScheme .
+
+art:testReport a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:operationalReadinessTest,
+        act:regressionTest,
+        act:suitabilityTest,
+        act:unitTest,
+        tool:testToolSuite ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:testScripts a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:postDeploymentCheckout,
+        tool:testToolSuite ;
+    ont:output act:databaseDevelopment,
+        act:testDevelopment,
+        tool:testDevelopmentTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+tool:backupManagement a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:rollForwardRollBack ;
+    ont:input art:backupSourceAccess ;
+    ont:output art:backupData,
+        art:containerSnapshot,
+        art:systemVmSnapshot ;
+    skos:definition "Improve failure recovery" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Backup management" ;
+    skos:scopeNote """Data backup
+System components (VM or container) snapshot""" .
+
+tool:buildTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:build,
+        act:documentation ;
+    ont:input art:artifacts,
+        art:versionControlledSourceCode ;
+    ont:output art:binaryArtifacts ;
+    skos:definition """Reduces human mistakes;
+Saves time""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Build tool" ;
+    skos:scopeNote """Dependency Management;
+Compile;
+Link (if appropriate);
+Built-in lint stylistic checking Integration with IDE""" .
+
+tool:chaosEngineeringTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:chaosEngineering ;
+    ont:input art:scriptedTestScenarios,
+        art:testData ;
+    ont:output art:analysis,
+        art:testResults ;
+    skos:definition "Build confidence in the system’s capability to withstand turbulent conditions in production." ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Chaos engineering tool" ;
+    skos:scopeNote "Orchestrate scripted changes to the environments, applications, or data related to a test scenario or experiment; collect and analyze results" .
+
+tool:complianceAsCodeIsReal a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:compliancePolicies,
+        art:operationalEnvironment ;
+    ont:output art:complianceFindings,
+        art:logs,
+        art:remediationRecommendations ;
+    skos:definition "Automated detection and, ideally, remediation of non-compliance within the infrastructure" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Compliance-as-Code is real" ;
+    skos:scopeNote "Monitor the state of compliance of deployed COTS against STIGs" .
+
+tool:databaseMonitoringTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
+    ont:input art:runningDatabase ;
+    ont:output art:alerts,
+        art:logs,
+        art:warnings ;
+    skos:definition "Improve database operations continuity" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database monitoring tool" ;
+    skos:scopeNote """Baseline database performance and database traffic;
+Detect anomalies""" .
+
+tool:databaseSecurityAuditTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
+    ont:input art:runningDatabase ;
+    ont:output art:alerts,
+        art:auditLogs,
+        art:warnings ;
+    skos:definition "Enhance database security" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database security audit tool" ;
+    skos:scopeNote """Perform user access and data access audit;
+Detect anomalies from events correlation;
+Detect SQL injection;
+Generate alert""" .
+
+tool:interactiveApplicationSecurityTestIastTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:fuzzInputs,
+        art:runningOperatingSystem,
+        art:runningSoftwareApplication ;
+    ont:output art:analysisReport,
+        art:mitigationRecommendations ;
+    skos:definition "Provide accurate results for fast triage; pinpoint the source of vulnerabilities" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Interactive Application Security Test (IAST) tool" ;
+    skos:scopeNote "Analyze code for security vulnerabilities while the application is run by an auto-test, human tester, or any activity “interacting” with the application functionality" .
+
+tool:logPromotion a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:auditLogs,
+        art:databaseLogs,
+        art:eventLog,
+        art:securityAuditLogs ;
+    ont:output art:aggregatedFilteredFormattedEventLogRecord ;
+    skos:definition "Improve investigations by filtering logs" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Log promotion" ;
+    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format before pushing the logs to DoD Common Security Services" .
+
+tool:nonSecurityComplianceScanTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:complianceScan,
+        act:operationalReadinessTest,
+        act:suitabilityTest ;
+    ont:input art:artifacts ;
+    ont:output art:complianceReport ;
+    skos:definition "Ensures compliance with non-security programs" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Non-security-compliance-scan tool " ;
+    skos:scopeNote "Such as Section 508 accessibility compliance" .
+
+tool:projectManagementSystem a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:projectReleasePlanning ;
+    ont:input art:resourceAllocation,
+        art:scheduling,
+        art:tasks ;
+    ont:output art:projectPlan ;
+    skos:definition """Assist project progress tracking
+Optimize resource allocation""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Project management system" ;
+    skos:scopeNote """Task management
+Scheduling and time management
+Resource management
+Budget management
+Risk management""" .
+
+tool:sourceCodeRepository a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommit,
+        act:configurationIdentification ;
+    ont:input art:iac,
+        art:sourceCode ;
+    ont:output art:versionControlledSourceCode ;
+    skos:definition """Compare files, identify differences, and merge the changes if needed before committing.
+Keep track of application builds""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Source code repository" ;
+    skos:scopeNote """Source code version control
+Branching and merging
+Collaborative code review""" .
+
+tool:staticApplicationSecurityTestSastTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:knownVulnerabilities,
+        art:sourceCode,
+        art:weaknesses ;
+    ont:output art:mitigationRecommendations,
+        art:staticCodeScanReport ;
+    skos:definition """Catch code weaknesses at an early stage.
+Continuous assessment during development.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Static Application Security Test (SAST) tool" ;
+    skos:scopeNote "SAST analyzes application static codes, such as source code, byte code, binary code, while they are in a non-running state to detect the conditions that indicate code weaknesses." .
 
 act:capacityManagement a ont:AbstractActivity,
         skos:Concept ;
@@ -3039,6 +3522,16 @@ act:testDeployment a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: PW.1.3" .
 
+art:testCases a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:apiSecurityTests,
+        act:componentTest,
+        act:databaseComponentTest,
+        act:regressionTestIncludesSmokeTests,
+        act:softwareIntegrationTest,
+        tool:testManagementTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:ide a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:applicationCodeDevelopment,
@@ -3049,20 +3542,50 @@ tool:ide a tool:AbstractTool,
         act:testDevelopment ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:operationsDashboard a tool:AbstractTool,
+tool:logAnalysis a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:businessOperations,
-        act:capacityManagement,
-        act:databaseMonitoringAndSecurityAuditing,
-        act:systemConfigurationMonitoring,
-        act:systemPerformanceMonitoring,
-        act:systemSecurityMonitoring ;
-    skos:definition "Improve operations management" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:activityTool act:logAuditing ;
+    ont:input art:logs ;
+    ont:output art:alertMessages,
+        art:emails,
+        art:remediationLog,
+        art:remediationReport ;
+    skos:definition "Reduce effort required to identify threats or inappropriate activity" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Operations dashboard" ;
-    skos:scopeNote "Provide operators a visual view of operations status, alerts, and actions." .
+    skos:prefLabel "Log analysis" ;
+    skos:scopeNote """Analyze and audit to detect malicious threats / activity;
+Automated alerting and workflows for response
+Forensics for damage assessment. 
+These are typically SIEM and SOAR tools.""" .
+
+tool:softwareSystemDesignTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:designIdeas,
+        art:userRequirements ;
+    ont:output art:functionDesignDocument,
+        art:systemDeploymentEnvironmentConfigurationPlan,
+        art:systemDesignDocuments,
+        art:testPlan ;
+    skos:definition """Independent of programming languages
+Helps visualize the software system design""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Software system design tool" ;
+    skos:scopeNote "Assist system design, components design, and interface design" .
+
+tool:testCoverageTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:componentTest,
+        act:databaseComponentTest,
+        act:unitTest ;
+    ont:input art:applicationCode,
+        art:automatedTests ;
+    ont:output art:codeTestCoveragePct ;
+    skos:definition "Shows the fidelity of the test results" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test coverage tool" ;
+    skos:scopeNote "Measures how much code is exercised while the automated tests are running" .
 
 act:artifactDeployment a ont:AbstractActivity,
         skos:Concept ;
@@ -3397,16 +3920,47 @@ act:userStoryReviewAndDemonstration a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: " .
 
-art:requirementsDocuments a ont:AbstractArtifact,
+art:warnings a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:functionalTest,
-        act:integrationTest,
-        act:performanceTests,
-        act:systemDesign,
-        act:systemTest,
-        act:testPlan ;
-    ont:output act:softwareRequirementAnalysis ;
+    ont:output act:databaseMonitoringAndSecurityAuditing,
+        act:systemConfigurationMonitoring,
+        act:systemPerformanceMonitoring,
+        act:systemSecurityMonitoring,
+        tool:databaseAutomationTool,
+        tool:databaseMonitoringTool,
+        tool:databaseSecurityAuditTool ;
     skos:inScheme inst:dodDsopScheme .
+
+tool:logAggregator a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:logAnalysisAuditing,
+        act:logAuditing ;
+    ont:input art:auditLogs,
+        art:databaseLogs,
+        art:databaseSecurityAuditLogs,
+        art:eventLog ;
+    ont:output art:aggregatedFilteredFormattedEventLog ;
+    skos:definition "Improve investigations by correlating logs from multiple sources" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Log-aggregator" ;
+    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
+
+tool:loggingTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommitLogging,
+        act:logging ;
+    ont:input art:applicationActivities,
+        art:dataActivities,
+        art:networkActivities,
+        art:userActivities ;
+    ont:output art:eventLog ;
+    skos:definition """Assist troubleshooting the issues.
+Assist detection of advanced persistent threats and forensics.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Logging-tool" ;
+    skos:scopeNote "Logging events for all user, network, application, and data activities" .
 
 act:apiSecurityTests a ont:AbstractActivity,
         skos:Concept ;
@@ -3715,58 +4269,65 @@ act:unitTest a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: PW.8.1, PW.8.2" .
 
-art:alerts a ont:AbstractArtifact,
+art:requirementsDocuments a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:databaseMonitoringAndSecurityAuditing,
-        act:logAnalysisAuditing,
-        act:persistentCyberOperationsTests,
-        act:runtimeApplicationSelfProtectionRasp,
-        act:softwareFactoryRiskContinuousMonitoring,
-        act:systemConfigurationMonitoring,
-        act:systemPerformanceMonitoring,
-        act:systemSecurityMonitoring ;
+    ont:input act:functionalTest,
+        act:integrationTest,
+        act:performanceTests,
+        act:systemDesign,
+        act:systemTest,
+        act:testPlan ;
+    ont:output act:softwareRequirementAnalysis,
+        tool:requirementsDatabase ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:artifactRepository a tool:AbstractTool,
+tool:infosecContinuousMonitoringIscmTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:it,
+        art:knownVulnerabilities,
+        art:network,
+        art:personnelActivities ;
+    ont:output art:assessments,
+        art:incomplianceFindings,
+        art:recommendations,
+        art:vulnerbilities ;
+    skos:definition """Detect unauthorized personnel, connections, devices, and software
+Identify cybersecurity vulnerability
+Detect security and compliance violation 
+Verify the effectiveness of protective measures""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "InfoSec Continuous Monitoring (ISCM) Tool" ;
+    skos:scopeNote """Monitor network security
+Monitor personnel activity
+Monitor configuration changes
+Perform periodical security scan to all system components
+Monitor the IT assets and detect deviations from security, fault tolerance, performance best practices.
+Monitor and analyze log files
+Audit IT asset's configuration compliance
+Detect and block malicious code
+Continuous security vulnerability assessments and scans
+Provide browse, filter, search, visualize, analysis capabilities
+Generate findings, assessments and recommendations.
+Provide recommendations and/or tools for remediating any non-compliant IT asset and/or IT workload.
+""" .
+
+tool:releasePackagingTool a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool act:artifactDeployment,
-        act:artifactDownload,
-        act:build,
-        act:configurationIdentification,
-        act:databaseArtifactDeployment,
-        act:databaseSchemaInstallation,
-        act:storeArtifacts,
-        act:userStoryReviewAndDemonstration ;
-    skos:definition """Separate binary control from source control to avoid external access to source control system.
-
-Improved build stability by reducing reliance on external repositories.
-
-Better quality software by avoiding outdated artifacts with known issues.""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
+    ont:activityTool act:releasePackaging ;
+    ont:input art:binaryArtifacts,
+        art:documentation,
+        art:infrastructureConfigurationScripts,
+        art:properTestScripts,
+        art:releaseNotes,
+        art:vmImages ;
+    ont:output art:releasePackage ;
+    skos:definition "Release package (such as a bundle of artifacts, self-extracting software installer, software tar file, etc.)" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Artifact Repository" ;
-    skos:scopeNote "Binary artifact version control" .
+    skos:prefLabel "Release packaging tool" ;
+    skos:scopeNote """Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, release notes as a package; generate checksum and digital signature for the package.
 
-tool:testToolSuite a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:apiSecurityTests,
-        act:componentTest,
-        act:databaseComponentTest,
-        act:operationalReadinessTest,
-        act:performanceTest,
-        act:regressionTest,
-        act:suitabilityTest,
-        act:unitTest ;
-    skos:definition """Increase test automation, 
-speed""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test-tool suite" ;
-    skos:scopeNote """A set of test tools to perform unit test, interface test, system test, integration test, performance test and acceptance test of the software system.
-Generate test report
-Specific tool varies depending on the type of tests, software application, and programming language""" .
+The package may be prepared for a specific installer or it is a self-extracting installer itself.""" .
 
 act:changeManagementPlanning a ont:AbstractActivity,
         skos:Concept ;
@@ -3928,56 +4489,31 @@ act:sbomSoftwareCompositionAnalysis a ont:AbstractActivity,
         "Relevance: Security",
         "SSDF: PS.3.2" .
 
-art:data a ont:AbstractArtifact,
+art:logs a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:artifactDeployment,
-        act:complianceTests,
-        act:databaseArtifactDeployment,
-        act:databaseSchemaInstallation,
-        act:formalQualificationTests,
-        act:humanSystemsIntegrationTests,
-        act:interoperabilityTests,
-        act:missionOrientedDevelopmentalTests,
-        act:performanceTests ;
+    ont:input act:capacityManagement,
+        act:logAnalysisAuditing,
+        act:logAuditing,
+        tool:logAnalysis,
+        tool:logAuditing ;
+    ont:output act:databaseMonitoringAndSecurityAuditing,
+        act:logging,
+        tool:complianceAsCodeIsReal,
+        tool:databaseMonitoringTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:testPlan a ont:AbstractArtifact,
+art:mitigationRecommendations a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:apiSecurityTests,
-        act:componentTest,
-        act:databaseComponentTest,
-        act:functionalTest,
-        act:integrationTest,
-        act:regressionTestIncludesSmokeTests,
-        act:softwareIntegrationTest,
-        act:systemTest,
-        act:testDevelopment ;
+    ont:output act:dynamicApplicationSecurityTestDastAndScan,
+        act:manualSecurityTest,
+        act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        tool:databaseSecurityScanAndTestTool,
+        tool:dynamicApplicationSecurityTestDastTool,
+        tool:interactiveApplicationSecurityTestIastTool,
+        tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool,
+        tool:staticApplicationSecurityTestSastTool ;
     skos:inScheme inst:dodDsopScheme .
-
-tool:issueTrackingSystem a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:buildConfigurationControlAndAudit,
-        act:changeManagementPlanning,
-        act:configurationManagementCmPlanning,
-        act:databaseMonitoringAndSecurityAuditing,
-        act:softwareRequirementAnalysis,
-        act:systemConfigurationMonitoring,
-        act:systemDesign,
-        act:systemPerformanceMonitoring,
-        act:systemSecurityMonitoring ;
-    skos:definition """Easy to detect defect trends
-Improve software product quality
-Reduce cost and improve Return on Investment (ROI)""" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Issue tracking system" ;
-    skos:scopeNote """Bugs and defect management;
-Feature and change management;
-Prioritization management;
-Assignment management;
-Escalation management;
-Knowledge base management""" .
 
 act:buildConfigurationControlAndAudit a ont:AbstractActivity,
         skos:Concept ;
@@ -4049,6 +4585,20 @@ Detect anomalies""" ;
 PO.3.2, 
 PO.3.3""" .
 
+art:data a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:artifactDeployment,
+        act:complianceTests,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation,
+        act:formalQualificationTests,
+        act:humanSystemsIntegrationTests,
+        act:interoperabilityTests,
+        act:missionOrientedDevelopmentalTests,
+        act:performanceTests,
+        tool:databaseAutomationTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 phase:deliver a ont:Phase,
         skos:Concept ;
     ont:phaseActivity act:configurationIntegrationTesting,
@@ -4077,6 +4627,66 @@ phase:release a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Release" .
 
+tool:alertingAndNotification a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:aggregatedFilteredLogs,
+        art:informationSecurityRecommendations,
+        art:nonComplianceFindings,
+        art:performanceAlert,
+        art:performanceStatistics,
+        art:vulnerabilityFindings ;
+    ont:output art:alertMessages,
+        art:emails,
+        art:issueTicket,
+        art:remediationReport ;
+    skos:definition """Improve visibility of system events
+Reduce system downtime
+Improve customer service""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Alerting and notification" ;
+    skos:scopeNote """Notify security teams and/or administrators about detected events.
+Support automatic remediation of high-priority time-critical events.""" .
+
+tool:artifactRepository a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:artifactDeployment,
+        act:artifactDownload,
+        act:build,
+        act:configurationIdentification,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation,
+        act:storeArtifacts,
+        act:userStoryReviewAndDemonstration ;
+    ont:input art:artifacts ;
+    ont:output art:versionControlledArtifacts ;
+    skos:definition """Separate binary control from source control to avoid external access to source control system.
+
+Improved build stability by reducing reliance on external repositories.
+
+Better quality software by avoiding outdated artifacts with known issues.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Artifact Repository" ;
+    skos:scopeNote "Binary artifact version control" .
+
+tool:operationsDashboard a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:businessOperations,
+        act:capacityManagement,
+        act:databaseMonitoringAndSecurityAuditing,
+        act:systemConfigurationMonitoring,
+        act:systemPerformanceMonitoring,
+        act:systemSecurityMonitoring ;
+    ont:input art:operationalMonitoringAlert,
+        art:operationalMonitoringStatus,
+        art:recommendedActions ;
+    ont:output art:dashboardDisplay ;
+    skos:definition "Improve operations management" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Operations dashboard" ;
+    skos:scopeNote "Provide operators a visual view of operations status, alerts, and actions." .
+
 act:configurationIdentification a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:artifactRepository,
@@ -4099,6 +4709,31 @@ Establish system baselines""" ;
     skos:scopeNote "Baseline: REQUIRED",
         "Relevance: Configuration Management",
         "SSDF: PO.2.1, PS.1.1, PW.2.1, PW.4.1, PW.4.2, PW.6.2" .
+
+act:databaseDevelopment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:databaseTools,
+        tool:ide ;
+    ont:input art:dataModel ;
+    ont:output art:dataDefinition,
+        art:database,
+        art:definitions,
+        art:testData,
+        art:testDataGenerationScripts,
+        art:testScripts,
+        art:triggers ;
+    ont:phaseActivity phase:develop ;
+    skos:definition """Implement the data model using data definition language or data structure supported by the database;
+Implement triggers, views or applicable scripts;
+Implement test scripts, test data generation scripts.""" ;
+    skos:editorialNote "Unused Outputs text:: artifacts (including , , view , ,  generation scripts, , etc.)",
+        "Unused Tools text:: or tools come with the database software",
+        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database development" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        "SSDF: PO.3.1" .
 
 act:systemConfigurationMonitoring a ont:AbstractActivity,
         skos:Concept ;
@@ -4126,35 +4761,54 @@ act:systemConfigurationMonitoring a ont:AbstractActivity,
 PO.3.2, 
 PO.3.3""" .
 
-art:artifacts a ont:AbstractArtifact,
+art:alerts a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:artifactDeployment,
-        act:artifactsReplication,
-        act:complianceScan,
-        act:complianceTests,
-        act:databaseArtifactDeployment,
-        act:databaseSchemaInstallation,
-        act:formalQualificationTests,
-        act:humanSystemsIntegrationTests,
-        act:interoperabilityTests,
-        act:missionOrientedDevelopmentalTests,
-        act:performanceTests ;
+    ont:output act:databaseMonitoringAndSecurityAuditing,
+        act:logAnalysisAuditing,
+        act:persistentCyberOperationsTests,
+        act:runtimeApplicationSelfProtectionRasp,
+        act:softwareFactoryRiskContinuousMonitoring,
+        act:systemConfigurationMonitoring,
+        act:systemPerformanceMonitoring,
+        act:systemSecurityMonitoring,
+        tool:databaseAutomationTool,
+        tool:databaseMonitoringTool,
+        tool:databaseSecurityAuditTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:sourceCode a ont:AbstractArtifact,
+art:testPlan a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:build,
-        act:codeCommit,
-        act:codeReview,
-        act:dynamicAnalysis,
-        act:staticAnalysis,
-        act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan,
-        act:staticCodeScanBeforeCommit ;
-    ont:output act:applicationCodeDevelopment,
-        act:infrastructureCodeDevelopment,
-        act:securityCodeDevelopment ;
+    ont:input act:apiSecurityTests,
+        act:componentTest,
+        act:databaseComponentTest,
+        act:functionalTest,
+        act:integrationTest,
+        act:regressionTestIncludesSmokeTests,
+        act:softwareIntegrationTest,
+        act:systemTest,
+        act:testDevelopment,
+        tool:testDevelopmentTool ;
+    ont:output tool:softwareSystemDesignTool ;
     skos:inScheme inst:dodDsopScheme .
+
+tool:databaseAutomationTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:artifactDeployment,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation,
+        act:rollForwardRollBack ;
+    ont:input art:data,
+        art:database,
+        art:databaseEvent,
+        art:databaseStatus ;
+    ont:output art:alerts,
+        art:statusReport,
+        art:warnings ;
+    skos:definition "Simplify database operations and reduce human errors" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database automation tool" ;
+    skos:scopeNote "Automate database tasks, such as deployments, upgrades, discovering and troubleshooting anomalies, recovering from failures, topology changes, running backups, verifying data integrity, and scaling." .
 
 act:configurationManagementCmPlanning a ont:AbstractActivity,
         skos:Concept ;
@@ -4181,32 +4835,6 @@ Identify configurations items""" ;
     skos:scopeNote "Baseline: REQUIRED",
         "Relevance: Configuration Management",
         "SSDF: PO.3.1, PO.3.3, PO.4.1, PO.4.2, PW.2.1" .
-
-act:databaseDevelopment a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:ide,
-        tool:theDatabaseSoftware,
-        tool:tools ;
-    ont:input art:dataModel ;
-    ont:output art:dataDefinition,
-        art:database,
-        art:definitions,
-        art:testData,
-        art:testDataGenerationScripts,
-        art:testScripts,
-        art:triggers ;
-    ont:phaseActivity phase:develop ;
-    skos:definition """Implement the data model using data definition language or data structure supported by the database;
-Implement triggers, views or applicable scripts;
-Implement test scripts, test data generation scripts.""" ;
-    skos:editorialNote "Unused Outputs text:: artifacts (including , , view , ,  generation scripts, , etc.)",
-        "Unused Tools text:: or  come with ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database development" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        "SSDF: PO.3.1" .
 
 act:databaseMonitoringAndSecurityAuditing a ont:AbstractActivity,
         skos:Concept ;
@@ -4320,27 +4948,6 @@ PO.5.1,
 PO.5.2, 
 RV.1.1""" .
 
-tool:testManagementTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:complianceTests,
-        act:formalQualificationTests,
-        act:humanSystemsIntegrationTests,
-        act:interoperabilityTests,
-        act:missionOrientedDevelopmentalTests,
-        act:operationalTestAndEvaluation,
-        act:performanceTests,
-        act:regressionTestIncludesSmokeTests,
-        act:softwareIntegrationTest,
-        act:sustainanbilityAndChaosTesting,
-        act:systemTest,
-        act:testAudit ;
-    skos:definition "Increases QA team collaboration and streamlines test processes." ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test Management Tool" ;
-    skos:scopeNote "Manages requirements, streamlines test case design from requirements, plans test activities, manages test environment, tracks test status and results." .
-
 act:testAudit a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:testManagementTool ;
@@ -4381,6 +4988,30 @@ PW.1.2,
 PW.2.1""",
         """SSDF: PO.2.1, 
 PS.2.1, PW.1.2, PW.2.1""" .
+
+tool:testToolSuite a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:apiSecurityTests,
+        act:componentTest,
+        act:databaseComponentTest,
+        act:operationalReadinessTest,
+        act:performanceTest,
+        act:regressionTest,
+        act:suitabilityTest,
+        act:unitTest ;
+    ont:input art:testData,
+        art:testScenarios,
+        art:testScripts ;
+    ont:output art:testReport,
+        art:testResults ;
+    skos:definition """Increase test automation, 
+speed""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test-tool suite" ;
+    skos:scopeNote """A set of test tools to perform unit test, interface test, system test, integration test, performance test and acceptance test of the software system.
+Generate test report
+Specific tool varies depending on the type of tests, software application, and programming language""" .
 
 act:missionBasedCyberRiskAssessments a ont:AbstractActivity,
         skos:Concept ;
@@ -4431,34 +5062,23 @@ RV.3.3, """,
         "SSDF: PW.7.2, RV.1.1, RV.1.2, RV.2.1, RV.3.1, RV.3.2, RV.3.3 ",
         "SSDF: PW.7.2, RV.1.1, RV.1.2, RV.2.1, RV.3.1, RV.3.2, RV.3.3, " .
 
-tool:teamCollaborationSystem a tool:AbstractTool,
-        ont:AbstractTool,
+art:artifacts a ont:AbstractArtifact,
         skos:Concept ;
-    ont:activityTool act:buildConfigurationControlAndAudit,
-        act:changeManagementPlanning,
-        act:configurationIdentification,
-        act:configurationManagementCmPlanning,
-        act:designReview,
-        act:devsecopsProcessDesign,
-        act:documentationVersionControl,
-        act:projectReleasePlanning,
-        act:projectTeamOnboardingPlanning,
-        act:riskManagement,
-        act:softwareRequirementAnalysis,
-        act:systemDesign,
-        act:testDeployment,
-        act:testPlan ;
-    skos:definition "Simplify communication and boost team efficiency" ;
-    skos:editorialNote "InputsText and OutputText source fields need cleansed and turned into related Atrifact entities" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Team collaboration system" ;
-    skos:scopeNote """Audio/video conferencing;
-chat/messaging;
-brainstorming;
-discussion board;
-group calendars;
-file sharing;
-Wiki website""" .
+    ont:input act:artifactDeployment,
+        act:artifactsReplication,
+        act:complianceScan,
+        act:complianceTests,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation,
+        act:formalQualificationTests,
+        act:humanSystemsIntegrationTests,
+        act:interoperabilityTests,
+        act:missionOrientedDevelopmentalTests,
+        act:performanceTests,
+        tool:artifactRepository,
+        tool:buildTool,
+        tool:nonSecurityComplianceScanTool ;
+    skos:inScheme inst:dodDsopScheme .
 
 act:functionalTest a ont:AbstractActivity,
         skos:Concept ;
@@ -4583,6 +5203,37 @@ phase:monitor a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Monitor" .
 
+tool:issueTrackingSystem a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:buildConfigurationControlAndAudit,
+        act:changeManagementPlanning,
+        act:configurationManagementCmPlanning,
+        act:databaseMonitoringAndSecurityAuditing,
+        act:softwareRequirementAnalysis,
+        act:systemConfigurationMonitoring,
+        act:systemDesign,
+        act:systemPerformanceMonitoring,
+        act:systemSecurityMonitoring ;
+    ont:input art:bugReport,
+        art:changeRequest,
+        art:featureRequest,
+        art:rootCauseAnalysis,
+        art:solutions ;
+    ont:output art:issueResolutionTrackingHistory,
+        art:issuesFeatureChangeTickets ;
+    skos:definition """Easy to detect defect trends
+Improve software product quality
+Reduce cost and improve Return on Investment (ROI)""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Issue tracking system" ;
+    skos:scopeNote """Bugs and defect management;
+Feature and change management;
+Prioritization management;
+Assignment management;
+Escalation management;
+Knowledge base management""" .
+
 act:systemDesign a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:issueTrackingSystem,
@@ -4612,25 +5263,51 @@ act:systemDesign a ont:AbstractActivity,
         "Relevance: ",
         "SSDF: PO.1.1, PO.1.2, PO.1.3" .
 
-art:testScenarios a ont:AbstractArtifact,
+tool:testManagementTool a tool:AbstractTool,
+        ont:AbstractTool,
         skos:Concept ;
-    ont:input act:chaosEngineering,
-        act:complianceTests,
-        act:databaseFunctionalTestOptional,
-        act:databaseSecurityTest,
+    ont:activityTool act:complianceTests,
         act:formalQualificationTests,
-        act:functionalTest,
         act:humanSystemsIntegrationTests,
-        act:interactiveApplicationSecurityTestsIast,
         act:interoperabilityTests,
         act:missionOrientedDevelopmentalTests,
+        act:operationalTestAndEvaluation,
         act:performanceTests,
-        act:persistentCyberOperationsTests,
-        act:runtimeApplicationSelfProtectionRasp,
-        act:serviceFunctionalTest,
-        act:serviceSecurityTest,
+        act:regressionTestIncludesSmokeTests,
         act:softwareIntegrationTest,
-        act:systemTest ;
+        act:sustainanbilityAndChaosTesting,
+        act:systemTest,
+        act:testAudit ;
+    ont:input art:requirements,
+        art:testCases,
+        art:testResults ;
+    ont:output art:testProgress,
+        art:testResultStatistics ;
+    skos:definition "Increases QA team collaboration and streamlines test processes." ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test Management Tool" ;
+    skos:scopeNote "Manages requirements, streamlines test case design from requirements, plans test activities, manages test environment, tracks test status and results." .
+
+art:sourceCode a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:build,
+        act:codeCommit,
+        act:codeReview,
+        act:dynamicAnalysis,
+        act:staticAnalysis,
+        act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        act:staticCodeScanBeforeCommit,
+        tool:codeQualityReviewTool,
+        tool:configurationManagementTool,
+        tool:integratedDevelopmentEnvironmentIdeSecurityPlugins,
+        tool:lintTool,
+        tool:sourceCodeRepository,
+        tool:staticApplicationSecurityTestSastTool ;
+    ont:output act:applicationCodeDevelopment,
+        act:infrastructureCodeDevelopment,
+        act:securityCodeDevelopment,
+        tool:integratedDevelopmentEnvironmentIde ;
     skos:inScheme inst:dodDsopScheme .
 
 phase:test a ont:Phase,
@@ -4655,29 +5332,6 @@ phase:test a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test" .
 
-art:testData a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:apiSecurityTests,
-        act:chaosEngineering,
-        act:componentTest,
-        act:databaseComponentTest,
-        act:databaseFunctionalTestOptional,
-        act:databaseSecurityTest,
-        act:functionalTest,
-        act:interactiveApplicationSecurityTestsIast,
-        act:operationalReadinessTest,
-        act:performanceTest,
-        act:persistentCyberOperationsTests,
-        act:regressionTestIncludesSmokeTests,
-        act:runtimeApplicationSelfProtectionRasp,
-        act:serviceFunctionalTest,
-        act:serviceSecurityTest,
-        act:softwareIntegrationTest,
-        act:suitabilityTest,
-        act:systemTest ;
-    ont:output act:databaseDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
 phase:plan a ont:Phase,
         skos:Concept ;
     ont:phaseActivity act:changeManagementPlanning,
@@ -4700,6 +5354,63 @@ phase:plan a ont:Phase,
         act:threatModeling ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Plan" .
+
+tool:teamCollaborationSystem a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:buildConfigurationControlAndAudit,
+        act:changeManagementPlanning,
+        act:configurationIdentification,
+        act:configurationManagementCmPlanning,
+        act:designReview,
+        act:devsecopsProcessDesign,
+        act:documentationVersionControl,
+        act:projectReleasePlanning,
+        act:projectTeamOnboardingPlanning,
+        act:riskManagement,
+        act:softwareRequirementAnalysis,
+        act:systemDesign,
+        act:testDeployment,
+        act:testPlan ;
+    ont:input art:designNotes,
+        art:documentation,
+        art:teamMeetings ;
+    ont:output art:organizedTeamwork,
+        art:versionControlledDocuments ;
+    skos:definition "Simplify communication and boost team efficiency" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Team collaboration system" ;
+    skos:scopeNote """Audio/video conferencing;
+chat/messaging;
+brainstorming;
+discussion board;
+group calendars;
+file sharing;
+Wiki website""" .
+
+art:testScenarios a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:chaosEngineering,
+        act:complianceTests,
+        act:databaseFunctionalTestOptional,
+        act:databaseSecurityTest,
+        act:formalQualificationTests,
+        act:functionalTest,
+        act:humanSystemsIntegrationTests,
+        act:interactiveApplicationSecurityTestsIast,
+        act:interoperabilityTests,
+        act:missionOrientedDevelopmentalTests,
+        act:performanceTests,
+        act:persistentCyberOperationsTests,
+        act:runtimeApplicationSelfProtectionRasp,
+        act:serviceFunctionalTest,
+        act:serviceSecurityTest,
+        act:softwareIntegrationTest,
+        act:systemTest,
+        tool:databaseSecurityScanAndTestTool,
+        tool:testToolSuite ;
+    ont:output tool:testDevelopmentTool ;
+    skos:inScheme inst:dodDsopScheme .
 
 phase:develop a ont:Phase,
         skos:Concept ;
@@ -4754,11 +5465,42 @@ phase:deploy a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Deploy" .
 
+art:testData a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:apiSecurityTests,
+        act:chaosEngineering,
+        act:componentTest,
+        act:databaseComponentTest,
+        act:databaseFunctionalTestOptional,
+        act:databaseSecurityTest,
+        act:functionalTest,
+        act:interactiveApplicationSecurityTestsIast,
+        act:operationalReadinessTest,
+        act:performanceTest,
+        act:persistentCyberOperationsTests,
+        act:regressionTestIncludesSmokeTests,
+        act:runtimeApplicationSelfProtectionRasp,
+        act:serviceFunctionalTest,
+        act:serviceSecurityTest,
+        act:softwareIntegrationTest,
+        act:suitabilityTest,
+        act:systemTest,
+        tool:chaosEngineeringTool,
+        tool:databaseSecurityScanAndTestTool,
+        tool:databaseTestToolSuite,
+        tool:testDataGenerator,
+        tool:testToolSuite ;
+    ont:output act:databaseDevelopment,
+        tool:testDataGenerator,
+        tool:testDevelopmentTool ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:testResults a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:operationsTeamAcceptance,
         act:testAudit,
-        act:testConfigurationAudit ;
+        act:testConfigurationAudit,
+        tool:testManagementTool ;
     ont:output act:apiSecurityTests,
         act:applicationCodeDevelopment,
         act:chaosEngineering,
@@ -4781,12 +5523,15 @@ art:testResults a ont:AbstractArtifact,
         act:serviceFunctionalTest,
         act:serviceSecurityTest,
         act:softwareIntegrationTest,
-        act:systemTest ;
+        act:systemTest,
+        tool:chaosEngineeringTool,
+        tool:databaseTestToolSuite,
+        tool:testToolSuite ;
     skos:inScheme inst:dodDsopScheme .
 
 inst:dodDsopScheme a skos:ConceptScheme ;
     dcterms:source <https://dodcio.defense.gov/Portals/0/Documents/Library/DevSecOpsActivitesToolsGuidebookTables.xlsx> ;
     dcterms:title "DoD DevSecOps Abstract Phase Activites and Tools Scheme" .
 
-[] rdfs:label "Script Version: 16" .
+[] rdfs:label "Script Version: 17" .
 
