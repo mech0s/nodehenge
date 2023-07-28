@@ -27,7 +27,7 @@ act:cyberOtE a ont:AbstractActivity,
         skos:Concept ;
     ont:phaseActivity phase:operate ;
     skos:definition "Cyber OT&E evaluates the operational effectiveness, suitability, survivability, and lethality of DoD systems in operationally relevant and representative contested cyberspace" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Cyber OT&E" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -74,7 +74,7 @@ act:interoperabilityCertifications a ont:AbstractActivity,
         skos:Concept ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Interoperability Certification, especially relevant for flight and weapon systems" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Interoperability Certifications" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -1657,7 +1657,7 @@ act:operationalAssessments a ont:AbstractActivity,
     ont:output art:assessmentResults ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Evaluation of a minimal capability fielding or early fielding capability in the unique theater of employment and/or for tailored use to support preliminary evaluation of operational effectiveness and suitability, while taking into equal consideration survivability and lethality effects" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Operational Assessments" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -1698,7 +1698,7 @@ art:alertMessages a ont:AbstractArtifact,
 art:applicationActivities a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:logging,
-        tool:loggingToolTool ;
+        tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:assessments a ont:AbstractArtifact,
@@ -1728,7 +1728,7 @@ art:configurationResults a ont:AbstractArtifact,
 art:dataActivities a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:logging,
-        tool:loggingToolTool ;
+        tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:dataModel a ont:AbstractArtifact,
@@ -1824,7 +1824,7 @@ art:mitigationPlan a ont:AbstractArtifact,
 art:networkActivities a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:logging,
-        tool:loggingToolTool ;
+        tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:optimizedResourceAllocation a ont:AbstractArtifact,
@@ -2028,7 +2028,7 @@ art:underlyingOs a ont:AbstractArtifact,
 art:userActivities a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:logging,
-        tool:loggingToolTool ;
+        tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:versionControlledArtifacts a ont:AbstractArtifact,
@@ -2128,12 +2128,6 @@ tool:iscm a tool:AbstractTool,
         act:systemSecurityMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:loggingTool a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeCommitLogging,
-        act:logging ;
-    skos:inScheme inst:dodDsopScheme .
-
 tool:notification a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:systemConfigurationMonitoring,
@@ -2226,7 +2220,7 @@ art:eventLog a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:logAggregator,
         tool:logPromotion ;
-    ont:output tool:loggingToolTool ;
+    ont:output tool:loggingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:fuzzInputs a ont:AbstractArtifact,
@@ -2499,7 +2493,7 @@ act:artifactDownload a ont:AbstractActivity,
     ont:output art:requestedArtifacts ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Download newly release artifacts from the artifact repository" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Artifact download" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -2516,7 +2510,7 @@ act:artifactsReplication a ont:AbstractActivity,
     skos:definition "Replicate newly release artifacts to all regional artifact repositories" ;
     skos:editorialNote "Unused Outputs text::Artifacts in all regional artifact repositories",
         "Unused Tools text::Artifacts repositories (release, regional)",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Artifacts replication" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -2531,8 +2525,7 @@ act:assetInventoryToIncludeSboms a ont:AbstractActivity,
     ont:phaseActivity phase:monitor ;
     skos:definition "Continuous CM-related activity.",
         "Inventory system IT assets" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Asset Inventory to include SBOMs",
         "Asset inventory to include SBOMs" ;
@@ -2550,8 +2543,7 @@ act:codeCommit a ont:AbstractActivity,
     ont:phaseActivity phase:develop ;
     skos:definition "Commit source code into version control system",
         "Continuous CM-related activity." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Code commit" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2567,8 +2559,7 @@ act:codeReview a ont:AbstractActivity,
     ont:phaseActivity phase:develop ;
     skos:definition "Continuous CM-related activity.",
         "Perform code review to all source code. Note that pair programming counts." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Code review" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -2584,8 +2575,7 @@ act:configurationIntegrationTesting a ont:AbstractActivity,
     ont:phaseActivity phase:deliver ;
     skos:definition "Continuous Test-related activity.",
         "Testing the fully integrated system to ensure that it meets requirements" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Configuration Integration Testing" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2602,7 +2592,7 @@ act:deliverReleasedArtifacts a ont:AbstractActivity,
     skos:definition "Push released artifacts to the artifact repository" ;
     skos:editorialNote "Unused Outputs text::New release in the artifact repository",
         "Unused Tools text::Artifacts repository",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Deliver released artifacts" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2616,7 +2606,7 @@ act:projectTeamOnboardingPlanning a ont:AbstractActivity,
     ont:output art:onboardingPlan ;
     ont:phaseActivity phase:plan ;
     skos:definition "Plan the project team onboarding process, interface, access control policy" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Project team onboarding planning" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2630,7 +2620,7 @@ act:staticAnalysis a ont:AbstractActivity,
     ont:output art:staticCodeAnalysisReport ;
     ont:phaseActivity phase:develop ;
     skos:definition "Static code analysis examines code to identify issues within the logic and techniques." ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Static analysis" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2646,8 +2636,7 @@ act:testConfigurationAudit a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Track test and security scan results" ;
     skos:editorialNote "Unused Tools text::Track test and security scan results",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test Configuration Audit",
         "Test configuration audit" ;
@@ -2944,7 +2933,7 @@ act:businessOperations a ont:AbstractActivity,
     ont:output art:optimizedResourceAllocation ;
     ont:phaseActivity phase:operate ;
     skos:definition "Continuously manage resource usage and billing" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Business Operations" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2960,8 +2949,7 @@ act:chaosEngineering a ont:AbstractActivity,
     ont:phaseActivity phase:operate ;
     skos:definition "Chaos Engineering is practice that explores how systems operate when presented with previously unexpected actions or scenarios. It may include injecting faults into systems (such as high CPU consumption, network latency, or dependency loss), changing data (fuzzing), removing capabilities, or otherwise altering the operational environment, observing how the systems respond, and then using that knowledge to initiate improvements. Chaos Engineering is also defined as \"experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.\"",
         "Continuous Security-related activity." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Chaos engineering" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -2980,8 +2968,7 @@ act:codeCommitScan a ont:AbstractActivity,
 If it finds suspicious content, it notifies the developer and blocks the commit.""",
         "Continuous Security-related activity." ;
     skos:editorialNote "Unused Outputs text:: and warnings",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Code commit scan" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -2997,7 +2984,7 @@ act:createLinkedCloneOfVmMasterImage a ont:AbstractActivity,
     ont:output art:newVmInstance ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Instantiate VM by creating a link clone of parent VM with master image" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Create linked clone of VM master image" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3013,7 +3000,7 @@ act:databaseFunctionalTestOptional a ont:AbstractActivity,
     ont:output art:testResults ;
     ont:phaseActivity phase:develop ;
     skos:definition "Perform unit test and functional test to database to verify the data definition, triggers, constrains are implemented as expected" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database functional test (optional)" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3029,7 +3016,7 @@ act:deliveryResultsReview a ont:AbstractActivity,
     ont:phaseActivity phase:deliver ;
     skos:definition "Review of the release package and all associated artifacts, configuration results, and recommendations" ;
     skos:editorialNote "Unused Inputs text:: and ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Delivery Results Review" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3047,8 +3034,7 @@ act:dependencyVulnerabilityChecking a ont:AbstractActivity,
         "Identify vulnerabilities in the open source dependent components" ;
     skos:editorialNote "Unused Inputs text:: or ",
         "Unused Tools text::Dependency checking / BOM checking tool",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Dependency vulnerability checking" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3071,8 +3057,7 @@ act:documentationVersionControl a ont:AbstractActivity,
     skos:definition "Continuous CM-related activity.",
         "Track design changes" ;
     skos:editorialNote "Unused Inputs text:: and ;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Documentation version control" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3091,7 +3076,7 @@ act:logAnalysisAuditing a ont:AbstractActivity,
 Analyze and correlate logs""" ;
     skos:editorialNote "Unused Outputs text:: and remediation reports",
         "Unused Tools text::Log aggregator",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Log Analysis & auditing" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3109,8 +3094,7 @@ act:operationsTeamAcceptance a ont:AbstractActivity,
     ont:phaseActivity phase:deliver ;
     skos:definition "Continuous Test-related activity.",
         "Testing on the delivered artifacts to ensure that they meet operational requirements" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Operations Team Acceptance" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3128,8 +3112,7 @@ act:postDeploymentCheckout a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Run automated test to make sure the important functions of system are working, including Early Operational Test; Interoperability Test; Performance Test; and Compliance Test" ;
     skos:editorialNote "Unused Inputs text:: and ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Post-deployment checkout" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3147,7 +3130,7 @@ act:regressionTest a ont:AbstractActivity,
     skos:definition "A type of software testing to confirm that a recent program or code change has not adversely affected existing features." ;
     skos:editorialNote "Unused Inputs text::Functional and non-functional regression test cases; The software system",
         "Unused Tools text::Test tool suite",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Regression test" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3163,7 +3146,7 @@ act:serviceFunctionalTest a ont:AbstractActivity,
     ont:output art:testResults ;
     ont:phaseActivity phase:develop ;
     skos:definition "Perform unit test and functional test to services " ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Service functional test" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3179,8 +3162,7 @@ act:staticCodeScanBeforeCommit a ont:AbstractActivity,
     ont:phaseActivity phase:develop ;
     skos:definition "Continuous Security-related activity.",
         "Scan and analyze the code as the developer writes it. Notify developers of potential code weakness and suggest remediation." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Static code scan before commit" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3197,7 +3179,7 @@ act:sustainanbilityAndChaosTesting a ont:AbstractActivity,
     ont:phaseActivity phase:operate ;
     skos:definition "Create the capability to continuously, but randomly, cause failures in the production system to test resiliency" ;
     skos:editorialNote "Unused Outputs text:: and ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Sustainanbility and Chaos Testing" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3214,8 +3196,7 @@ act:threatModeling a ont:AbstractActivity,
     skos:definition "Continuous Security-related activity.",
         "Identify potential threats, weaknesses and vulnerabilities. Define the mitigation plan" ;
     skos:editorialNote "Unused Outputs text:: and ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Threat modeling" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3396,19 +3377,6 @@ tool:logPromotion a ont:AbstractTool,
     skos:prefLabel "Log promotion" ;
     skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format before pushing the logs to DoD Common Security Services" .
 
-tool:loggingToolTool a ont:AbstractTool,
-        skos:Concept ;
-    ont:input art:applicationActivities,
-        art:dataActivities,
-        art:networkActivities,
-        art:userActivities ;
-    ont:output art:eventLog ;
-    skos:definition """Assist troubleshooting the issues.
-Assist detection of advanced persistent threats and forensics.""" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Logging-tool-tool" ;
-    skos:scopeNote "Logging events for all user, network, application, and data activities" .
-
 tool:projectManagementSystem a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -3465,7 +3433,7 @@ act:capacityManagement a ont:AbstractActivity,
     ont:output art:optimizedResourceAllocation ;
     ont:phaseActivity phase:operate ;
     skos:definition "Continuously manage CSP service configuration parameters" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Capacity Management" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3482,8 +3450,7 @@ act:complianceMonitoringResourcesServices a ont:AbstractActivity,
     ont:phaseActivity phase:monitor ;
     skos:definition "Continuous Security-related activity.",
         "Monitor the state of compliance of deployed cloud resources and services against NIST SP 800-53 controls" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Compliance Monitoring (resources & services)" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3503,7 +3470,7 @@ act:complianceTests a ont:AbstractActivity,
     ont:phaseActivity phase:deploy ;
     skos:definition " Testing to determine whether a deliverable complies with the requirements of a specification, technical standard, contract, or regulation" ;
     skos:editorialNote "Unused Inputs text:: in the repository;;",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Compliance Tests" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3523,7 +3490,7 @@ act:databaseDesign a ont:AbstractActivity,
     skos:definition """Data modeling; 
 Database selection;
 Database deployment topology""" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database design" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3541,8 +3508,7 @@ act:designReview a ont:AbstractActivity,
     skos:definition "Continuous CM-related activity.",
         "Review and approve plans and documents" ;
     skos:editorialNote "Unused Inputs text:: and ;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Design review" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3560,7 +3526,7 @@ act:developmentalCyberTests a ont:AbstractActivity,
     ont:phaseActivity phase:release ;
     skos:definition "Testing the system in development and operational environments" ;
     skos:editorialNote "Unused Inputs text::, , , and ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Developmental Cyber Tests" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3577,7 +3543,7 @@ act:feedbackIncludingOperationalTestAndEvaluationIfAsNeeded a ont:AbstractActivi
     ont:phaseActivity phase:monitor ;
     skos:definition "The Second Way:  Feedback" ;
     skos:editorialNote "Unused Inputs text:: as to “is the system built right” and operational feedback as to “was the right system built”",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Feedback, including Operational Test and Evaluation (if/as needed)" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3594,7 +3560,7 @@ act:formalQualificationTests a ont:AbstractActivity,
     ont:phaseActivity phase:deploy ;
     skos:definition "Tests to assess appropriateness or qualifications of deliverables with contractual requirements." ;
     skos:editorialNote "Unused Inputs text:: in the repository;;",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Formal Qualification Tests" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -3613,7 +3579,7 @@ act:humanSystemsIntegrationTests a ont:AbstractActivity,
     ont:phaseActivity phase:deploy ;
     skos:definition "" ;
     skos:editorialNote "Unused Inputs text:: in the repository;;",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Human Systems Integration Tests" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -3633,7 +3599,7 @@ act:iacDeployment a ont:AbstractActivity,
     skos:definition "Deploy infrastructure and set up environment using Infrastructure as Code" ;
     skos:editorialNote "Unused Inputs text::Artifacts (Infrastructure as Code)Infrastructure as Code",
         "Unused Outputs text:: ready",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "IaC deployment" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3650,8 +3616,7 @@ act:infrastructureProvisioningAutomation a ont:AbstractActivity,
     ont:phaseActivity phase:deploy ;
     skos:definition "Continuous CM-related activity.",
         "Infrastructure systems auto provisioning (such as software defined networking, firewalls, DNS, auditing and logging system, user/group permissions, etc.)" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Infrastructure provisioning automation" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3672,7 +3637,7 @@ act:interoperabilityTests a ont:AbstractActivity,
     ont:phaseActivity phase:deploy ;
     skos:definition "Testing of the communication and cooperation between multiple software and system capabilities." ;
     skos:editorialNote "Unused Inputs text:: in the repository;;",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Interoperability Tests" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3691,7 +3656,7 @@ act:logAuditing a ont:AbstractActivity,
     ont:phaseActivity phase:monitor ;
     skos:definition "Ensure possession of the logs and that aggregation is performed correctly" ;
     skos:editorialNote "Unused Tools text::Log aggregatorLog analysis & auditing",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Log auditing" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3709,7 +3674,7 @@ act:operationalCyberTests a ont:AbstractActivity,
     ont:phaseActivity phase:deliver ;
     skos:definition "Testing the system in operational environments" ;
     skos:editorialNote "Unused Inputs text::, , , and ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel " Operational Cyber Tests" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3727,8 +3692,7 @@ act:postDeploymentSecurityScan a ont:AbstractActivity,
     skos:definition "Continuous Security-related activity.",
         "System and infrastructure security scan" ;
     skos:editorialNote "Unused Inputs text:: to  and  ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Post-deployment security scan" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3750,7 +3714,7 @@ act:rollForwardRollBack a ont:AbstractActivity,
     skos:definition "Continuously validate procedures to roll forward/roll back" ;
     skos:editorialNote "Unused Inputs text::, after-",
         "Unused Outputs text::Point-in-time recovered file",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Roll Forward/Roll Back" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3858,7 +3822,7 @@ act:artifactDeployment a ont:AbstractActivity,
     skos:definition "Artifacts deployment and data loading" ;
     skos:editorialNote "Unused Inputs text:: in the repository;",
         "Unused Tools text::;;Data masking or  if needed",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Artifact deployment" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3878,8 +3842,7 @@ act:complianceMonitoringCots a ont:AbstractActivity,
     skos:definition "Continuous Security-related activity.",
         "Monitor the state of compliance of deployed COTS against STIGs" ;
     skos:editorialNote "Unused Tools text:: as ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Compliance Monitoring (COTS)" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -3901,7 +3864,7 @@ act:databaseArtifactDeployment a ont:AbstractActivity,
     skos:definition "Database artifacts deployment and data loading" ;
     skos:editorialNote "Unused Inputs text:: in the repository;",
         "Unused Tools text::;;Data masking or  if needed",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database artifact deployment" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3921,7 +3884,7 @@ act:databaseSchemaInstallation a ont:AbstractActivity,
     skos:definition "Database software schema deploy/update." ;
     skos:editorialNote "Unused Inputs text:: in the repository;",
         "Unused Tools text::;;Data masking or  if needed",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database Schema installation " ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3944,8 +3907,7 @@ act:databaseSecurityTest a ont:AbstractActivity,
         """Perform security scan;
 Security test""" ;
     skos:editorialNote "Unused Tools text::Vulnerability findings;Recommended mitigation actions",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database Security Test",
         "Database security test" ;
@@ -3968,8 +3930,7 @@ act:dynamicAnalysis a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Dynamic code analysis involves running code and examining the outcome." ;
     skos:editorialNote "Unused Outputs text:: depending on ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Dynamic Analysis",
         "Dynamic analysis" ;
@@ -3989,8 +3950,7 @@ act:interactiveApplicationSecurityTestsIast a ont:AbstractActivity,
     ont:phaseActivity phase:test ;
     skos:definition "Continuous Security-related activity.",
         "IAST (interactive application security testing) analyzes code for security vulnerabilities while the app is run by an automated test, human tester, or any activity “interacting” with the application functionality." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Interactive Application Security Tests (IAST)" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4016,7 +3976,7 @@ act:logging a ont:AbstractActivity,
     skos:definition "Log system events" ;
     skos:editorialNote "Unused Inputs text::All user, network, application, and ",
         "Unused Tools text::Logging",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Logging" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4036,8 +3996,7 @@ act:missionOrientedDevelopmentalTests a ont:AbstractActivity,
         "Tests to evaluate and validate the performance of new or existing systems, equipment, or technology in real-world mission scenarios. These tests are conducted to determine the ability of the system to meet its intended objectives and to identify any potential issues or areas for improvement." ;
     skos:editorialNote "Unused Inputs text:: in the repository;;",
         "Unused Tools text::Test tool suite",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Mission-Oriented Developmental Tests" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4059,7 +4018,7 @@ act:operationalReadinessTest a ont:AbstractActivity,
     skos:definition "Suitability and effectiveness test of the entire system" ;
     skos:editorialNote "Unused Inputs text::Supporting ",
         "Unused Tools text::Test tool suite, Non-security compliance scan",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Operational Readiness Test" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4080,8 +4039,7 @@ act:performanceTest a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text::, , and the software system",
         "Unused Tools text::Test tool suite, ",
         "Unused Tools text::Test tool suite; ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Performance Test",
         "Performance test" ;
@@ -4103,8 +4061,7 @@ act:persistentCyberOperationsTests a ont:AbstractActivity,
     ont:phaseActivity phase:operate ;
     skos:definition "Continuous Security-related activity.",
         "Tests that are incorporated into the operational environment and may be used to assess cybersecurity controls at any time, often continuously." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Persistent Cyber Operations Tests" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -4124,8 +4081,7 @@ act:regressionTestIncludesSmokeTests a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Regression testing is re-running functional and non-functional tests to ensure that previously developed and tested software still performs as expected after a change." ;
     skos:editorialNote "Unused Tools text::Test tool suite",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Regression Test (includes smoke tests)" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4144,7 +4100,7 @@ act:riskManagement a ont:AbstractActivity,
     ont:output art:riskManagementPlan ;
     ont:phaseActivity phase:plan ;
     skos:definition "Risk assessment" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Risk management" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4162,7 +4118,7 @@ act:runtimeApplicationSelfProtectionRasp a ont:AbstractActivity,
     ont:phaseActivity phase:monitor ;
     skos:definition "Runtime application self-protection (RASP) is a security technology that uses runtime instrumentation to detect and block computer attacks by taking advantage of information from inside the running software. The technology differs from perimeter-based protections such as firewalls, that can only detect and block attacks by using network information without contextual awareness." ;
     skos:editorialNote "Unused Outputs text:: and remediation reports",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Runtime Application Self Protection (RASP)" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4183,8 +4139,7 @@ act:serviceSecurityTest a ont:AbstractActivity,
         """Perform security scan;
 Security test""" ;
     skos:editorialNote "Unused Tools text::Vulnerability findings;Recommended mitigation actions",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Service Security Test",
         "Service security test" ;
@@ -4206,7 +4161,7 @@ act:staticApplicationSecurityTestAndScan a ont:AbstractActivity,
     skos:definition "Perform SAST to the software system" ;
     skos:editorialNote "Unused Inputs text::;  and ",
         "Unused Outputs text::Static code scan report and recommended mitigation.",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Static application security test and scan" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4229,7 +4184,7 @@ act:staticApplicationSecurityTestSastAndScan a ont:AbstractActivity,
     skos:definition "Perform Static Application Security Tests (SAST) on the software system." ;
     skos:editorialNote "Unused Inputs text::,  and ",
         "Unused Outputs text::Static code scan report and recommended mitigation",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Static application security test (SAST) and scan" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4251,8 +4206,7 @@ act:storeArtifacts a ont:AbstractActivity,
     ont:phaseActivity phase:build ;
     skos:definition "Continuous CM-related activity.",
         "Store artifacts to the artifact repository" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Store artifacts" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4279,7 +4233,7 @@ compatibility test
 supportability and maintainability""" ;
     skos:editorialNote "Unused Inputs text::Supporting ",
         "Unused Tools text::Test tool suite, Non-security compliance scan",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Suitability test" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4296,7 +4250,7 @@ act:testDevelopment a ont:AbstractActivity,
         art:testScripts ;
     ont:phaseActivity phase:develop ;
     skos:definition "Develop detailed test procedures, test data, test scripts, test scenario configuration on the specific test tool" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test development" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4314,8 +4268,7 @@ act:userEvaluationFeedback a ont:AbstractActivity,
         phase:operate ;
     skos:definition "Collect and analyze user evaluations and/or feedback",
         "Continuous Test-related activity." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "User Evaluation / Feedback" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4350,6 +4303,22 @@ tool:logAggregator a tool:AbstractTool,
     skos:prefLabel "Log-aggregator" ;
     skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
 
+tool:loggingTool a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommitLogging,
+        act:logging ;
+    ont:input art:applicationActivities,
+        art:dataActivities,
+        art:networkActivities,
+        art:userActivities ;
+    ont:output art:eventLog ;
+    skos:definition """Assist troubleshooting the issues.
+Assist detection of advanced persistent threats and forensics.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Logging-tool" ;
+    skos:scopeNote "Logging events for all user, network, application, and data activities" .
+
 act:applicationCodeDevelopment a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:ide ;
@@ -4362,7 +4331,7 @@ act:applicationCodeDevelopment a ont:AbstractActivity,
     ont:phaseActivity phase:develop ;
     skos:definition "Application coding" ;
     skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Application code development" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4380,7 +4349,7 @@ act:build a ont:AbstractActivity,
         art:buildReport ;
     ont:phaseActivity phase:build ;
     skos:definition "Compile and link" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Build" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4403,7 +4372,7 @@ act:codeCommitLogging a ont:AbstractActivity,
     skos:definition "Logging of successful code commits, or analysis of rejected commits, which will have benefits to security and insider threat protections" ;
     skos:editorialNote "Unused Inputs text::- Review Comments- - -  and Warnings",
         "Unused Tools text::Logging tool",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Code Commit Logging" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4424,8 +4393,7 @@ act:complianceScan a ont:AbstractActivity,
         "Continuous Test-related activity." ;
     skos:editorialNote "Unused Tools text::Non-security compliance scan; ; ",
         "Unused Tools text::Non-security compliance scan;;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Compliance Scan",
         "Compliance scan" ;
@@ -4447,8 +4415,7 @@ act:databaseComponentTest a ont:AbstractActivity,
     skos:definition "Closed-box database testing, evaluating the behavior of the database without considering the details of the underlying code",
         "Continuous Test-related activity." ;
     skos:editorialNote "Unused Tools text::Test tool suite, ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database Component Test" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4469,7 +4436,7 @@ act:documentation a ont:AbstractActivity,
     skos:definition "Detailed implementation documentation" ;
     skos:editorialNote "Unused Outputs text::;- Auto generated Application Programming Interface (API) documentation",
         "Unused Tools text:: or document editor or build tool",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Documentation" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4489,7 +4456,7 @@ act:infrastructureCodeDevelopment a ont:AbstractActivity,
     skos:definition """System components and infrastructure orchestration coding
 Individual component configuration script coding.  Includes Database deploy and high availability configuration""" ;
     skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Infrastructure code development" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4508,7 +4475,7 @@ act:releasePackaging a ont:AbstractActivity,
     ont:phaseActivity phase:build ;
     skos:definition "Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, checksum, digital signatures, and release notes as a package." ;
     skos:editorialNote "Unused Outputs text::Released  with ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Release packaging" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4529,7 +4496,7 @@ act:reviseProductBacklog a ont:AbstractActivity,
     ont:phaseActivity phase:feedback ;
     skos:definition "Update the product backlog with new features, improvements, bugs, vulnerabiliy remediations, and performance improvements based upon collected metrics " ;
     skos:editorialNote "Unused Outputs text::Updates to the Product Backlog",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Revise Product Backlog" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4549,8 +4516,7 @@ act:securityCodeDevelopment a ont:AbstractActivity,
     skos:definition "Continuous Security-related activity.",
         "Security policy enforcement script coding" ;
     skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Security code development" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4571,8 +4537,7 @@ act:testDeployment a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Deploy test infrastructure" ;
     skos:editorialNote "Unused Inputs text::s and infrastructure",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test Deployment" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4596,8 +4561,7 @@ act:unitTest a ont:AbstractActivity,
         "Unused Outputs text:: to determine whether the individual software unit performs as designed.",
         "Unused Tools text::Test tool suite, ",
         "Unused Tools text::Test tool suite; ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Unit Test",
         "Unit test" ;
@@ -4680,8 +4644,7 @@ act:apiSecurityTests a ont:AbstractActivity,
     skos:definition "Closed-box test, evaluating the Application Programming Interfaces' compliance with security requirements",
         "Continuous Security-related activity." ;
     skos:editorialNote "Unused Tools text::Test tool suite",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "API Security Tests" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4707,7 +4670,7 @@ act:changeManagementPlanning a ont:AbstractActivity,
     skos:definition "Plan the change control process" ;
     skos:editorialNote "Unused Outputs text::Change ;;;Change management plan",
         "Unused Tools text::;Issue tracking system",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Change management planning" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4728,8 +4691,7 @@ act:componentTest a ont:AbstractActivity,
     skos:definition "Closed-box testing, evaluating the behavior of the program without considering the details of the underlying code",
         "Continuous Test-related activity." ;
     skos:editorialNote "Unused Tools text::Test tool suite, ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Component Test" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4754,7 +4716,7 @@ act:dynamicApplicationSecurityTestDastAndScan a ont:AbstractActivity,
     skos:definition "Perform DAST or IAST testing to the software system" ;
     skos:editorialNote "Unused Inputs text::Running  and ; ",
         "Unused Outputs text::,  and/or  and recommended mitigation",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Dynamic application security test (DAST) and scan" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4783,8 +4745,7 @@ CI/CD orchestrator does not automate the test, but the test results can be a con
     skos:editorialNote "Unused Inputs text::, , and ",
         "Unused Outputs text:: and recommended mitigation",
         "Unused Tools text:: and  (may include )",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Manual Security Test",
         "Manual security test" ;
@@ -4815,8 +4776,7 @@ act:operationalTestAndEvaluation a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text::,  and .",
         "Unused Outputs text::Reports of test results",
         "Unused Tools text:: to capture  to include  (as needed).",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Operational Test and Evaluation" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -4839,7 +4799,7 @@ act:projectReleasePlanning a ont:AbstractActivity,
     ont:phaseActivity phase:plan ;
     skos:definition """Project task management
 Release planning""" ;
-    skos:editorialNote "skos:scopeNote currently holding three fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Project/Release planning" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4860,7 +4820,7 @@ act:releaseGoNoGoDecision a ont:AbstractActivity,
     skos:definition "Decision on whether to release artifacts to the artifact repository for the production environment." ;
     skos:editorialNote "Unused Inputs text::; ; ; and ",
         "Unused Outputs text::go / no-go decision; Artifacts are tagged with release tag if go decision is made",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Release go / no-go decision" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4882,8 +4842,7 @@ act:softwareFactoryRiskContinuousMonitoring a ont:AbstractActivity,
         "Monitor Software Factory controls" ;
     skos:editorialNote "Unused Inputs text::Software Factory controls",
         "Unused Tools text::Monitoring tool suite",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Software Factory Risk Continuous Monitoring" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4906,8 +4865,7 @@ act:testPlan a ont:AbstractActivity,
         "Plan testing, including validating Acceptance Criteria, specifying Component Tests, Component integration Tests, and Software Integration Tests" ;
     skos:editorialNote "Unused Inputs text:: or documents, ",
         "Unused Tools text::Test tool suite, ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test Plan" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4929,8 +4887,7 @@ act:userStoryReviewAndDemonstration a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Review of the user story, including description and acceptance criteria, and a demonstration of the completed work." ;
     skos:editorialNote "Unused Inputs text::, , and .",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "User Story Review and Demonstration" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -4978,7 +4935,7 @@ act:devsecopsProcessDesign a ont:AbstractActivity,
     ont:phaseActivity phase:plan ;
     skos:definition "Design the DevSecOps process workflows that are specific to this project" ;
     skos:editorialNote "Unused Inputs text::Change management process;;Release  & ",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "DevSecOps process design" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5000,8 +4957,7 @@ act:sbomSoftwareCompositionAnalysis a ont:AbstractActivity,
     skos:definition "Collect and analyze provenance data for all components of each release",
         "Continuous Security-related activity." ;
     skos:editorialNote "Unused Inputs text::Software Bill of Materials",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "SBOM Software Composition Analysis" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5025,8 +4981,7 @@ act:softwareIntegrationTest a ont:AbstractActivity,
         "Testing where software modules are integrated logically and tested as a group",
         "Tests where individual software modules are combined and tested as a group" ;
     skos:editorialNote "Unused Tools text:: about  performed as designed.",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Software Integration Test" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5134,8 +5089,7 @@ act:buildConfigurationControlAndAudit a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text::;;Dependency checking report",
         "Unused Tools text::; Issue ; CI/CD orchestrator",
         "Unused Tools text::;Issue tracking system;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Build configuration control and audit" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5160,8 +5114,7 @@ act:configurationIdentification a ont:AbstractActivity,
         """Discover or manual input configuration items into CMDB;
 Establish system baselines""" ;
     skos:editorialNote "Unused Inputs text::IT infrastructure asset; (include );;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Configuration identification" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5187,7 +5140,7 @@ Implement triggers, views or applicable scripts;
 Implement test scripts, test data generation scripts.""" ;
     skos:editorialNote "Unused Outputs text:: artifacts (including , , view , ,  generation scripts, , etc.)",
         "Unused Tools text:: or tools come with the database software",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database development" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -5262,7 +5215,7 @@ Identify configurations items""" ;
     skos:editorialNote "Unused Inputs text::, ;IT infrastructure asset;",
         "Unused Outputs text:: and ;;;",
         "Unused Tools text::;Issue tracking system",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Configuration management (CM) planning" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5289,8 +5242,7 @@ act:integrationTest a ont:AbstractActivity,
         "Unused Outputs text::,  under ,  input data, and expected output data",
         "Unused Tools text::Includes  & ",
         "Unused Tools text::Test results documenting the functioning of the system.",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Integration Test",
         "Integration test" ;
@@ -5319,7 +5271,7 @@ act:performanceTests a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text:: and/or database; Service Level Agreements",
         "Unused Inputs text:: in the repository;;",
         "Unused Outputs text::Reports of observed performance",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Performance Tests" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -5347,7 +5299,7 @@ act:softwareRequirementAnalysis a ont:AbstractActivity,
     skos:definition "Gather the requirements from all stakeholders" ;
     skos:editorialNote "Unused Inputs text::Stakeholder inputs or feedback;;",
         "Unused Outputs text:::-  requirments",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Software requirement analysis" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5375,8 +5327,7 @@ Detect anomalies""" ;
     skos:editorialNote "Unused Outputs text::Performance KPI measures;; or ",
         "Unused Tools text::Issue tracking systemAlerting and notification",
         "Unused Tools text::Operation monitoring; ;  and ; Operations dashboard",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System performance monitoring" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -5430,8 +5381,7 @@ act:databaseMonitoringAndSecurityAuditing a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text::, event, and activities",
         "Unused Outputs text::; and ",
         "Unused Tools text::;;Issue tracking system;Alerting and notification;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Database monitoring and security auditing" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -5462,8 +5412,7 @@ Security vulnerability assessment
 System security compliance scan""" ;
     skos:editorialNote "Unused Outputs text::;; and ; and ",
         "Unused Tools text::;Issue tracking system;Alerting and notification;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System Security monitoring" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5495,8 +5444,7 @@ act:testAudit a ont:AbstractActivity,
         "Continuous Test-related activity.",
         "Test audit keeps who performs what test at what time and test results in records" ;
     skos:editorialNote "Unused Inputs text:: and ",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Test Audit" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5561,8 +5509,7 @@ act:missionBasedCyberRiskAssessments a ont:AbstractActivity,
         "Continuous Security-related activity." ;
     skos:editorialNote "Unused Inputs text::NIST 800-53 RMF Control ImplementationsFIPS 199 system categorization",
         "Unused Inputs text::NIST 800-53 RMF Control ImplementationsFIPS 199 system categorizationCNSSI 1253",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Mission Based Cyber Risk Assessments",
         "Mission-Based Cyber Risk Assessments" ;
@@ -5616,8 +5563,7 @@ act:systemConfigurationMonitoring a ont:AbstractActivity,
         "Unused Outputs text::;; and ",
         "Unused Tools text::;  ;  and ; ",
         "Unused Tools text::;Issue tracking system;Alerting and notification;",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System configuration monitoring" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -5669,8 +5615,7 @@ act:functionalTest a ont:AbstractActivity,
     skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; ",
         "Unused Outputs text::,  under ,  input, and expected output data",
         "Unused Tools text::Test report documenting the performance of the integrated unit.",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Functional Test",
         "Functional test" ;
@@ -5743,7 +5688,7 @@ act:systemDesign a ont:AbstractActivity,
     skos:definition "Design the system based on the requirements" ;
     skos:editorialNote "Unused Inputs text:: or documents",
         "Unused Tools text::;Issue tracking system;",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System design" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -5776,8 +5721,7 @@ act:systemTest a ont:AbstractActivity,
         "Unused Outputs text::,  and ,  and expected output data",
         "Unused Tools text:: result about if  performs as designed.",
         "Unused Tools text::Test results documenting the performance of the system.",
-        "skos:scopeNote currently holding several fields. Could normalize",
-        "skos:scopeNote currently holding three fields. Could normalize" ;
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System Test",
         "System test" ;
@@ -6122,5 +6066,5 @@ inst:dodDsopScheme a skos:ConceptScheme ;
     dcterms:source <https://dodcio.defense.gov/Portals/0/Documents/Library/DevSecOpsActivitesToolsGuidebookTables.xlsx> ;
     dcterms:title "DoD DevSecOps Abstract Phase Activites and Tools Scheme" .
 
-[] rdfs:label "Script Version: 17" .
+[] rdfs:label "Script Version: 18" .
 
