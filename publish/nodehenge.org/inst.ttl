@@ -1803,12 +1803,6 @@ art:vulnerabilityFindings a ont:AbstractArtifact,
     ont:output tool:databaseSecurityScanAndTestTool ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:artifacts a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:artifactsReplication,
-        act:deliverReleasedArtifacts ;
-    skos:inScheme inst:dodDsopScheme .
-
 tool:assetInventoryManagement a ont:AbstractTool,
         skos:Concept ;
     ont:input art:itInfrastructureAsset ;
@@ -2213,13 +2207,13 @@ PW.4.2""" .
 
 act:artifactsReplication a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:artifacts ;
+    ont:activityTool tool:artifactRepository ;
     ont:input art:artifacts ;
     ont:output art:replicatedArtifacts ;
     ont:phaseActivity phase:release ;
     skos:definition "Replicate newly release artifacts to all regional artifact repositories" ;
     skos:editorialNote "Unused Outputs text::Artifacts in all regional artifact repositories",
-        "Unused Tools text:: repositories (release, regional)",
+        "Unused Tools text::Artifacts repositories (release, regional)",
         "skos:scopeNote currently holding three fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Artifacts replication" ;
@@ -2306,13 +2300,13 @@ PW.9.2""" .
 
 act:deliverReleasedArtifacts a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:artifacts ;
+    ont:activityTool tool:artifactRepository ;
     ont:input art:releasePackage ;
     ont:output art:releaseToRepo ;
     ont:phaseActivity phase:deliver ;
     skos:definition "Push released artifacts to the artifact repository" ;
     skos:editorialNote "Unused Outputs text::New release in the artifact repository",
-        "Unused Tools text:: repository",
+        "Unused Tools text::Artifacts repository",
         "skos:scopeNote currently holding three fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Deliver released artifacts" ;
@@ -4647,28 +4641,6 @@ Improve customer service""" ;
     skos:scopeNote """Notify security teams and/or administrators about detected events.
 Support automatic remediation of high-priority time-critical events.""" .
 
-tool:artifactRepository a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:artifactDeployment,
-        act:artifactDownload,
-        act:build,
-        act:configurationIdentification,
-        act:databaseArtifactDeployment,
-        act:databaseSchemaInstallation,
-        act:storeArtifacts,
-        act:userStoryReviewAndDemonstration ;
-    ont:input art:artifacts ;
-    ont:output art:versionControlledArtifacts ;
-    skos:definition """Separate binary control from source control to avoid external access to source control system.
-
-Improved build stability by reducing reliance on external repositories.
-
-Better quality software by avoiding outdated artifacts with known issues.""" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Artifact Repository" ;
-    skos:scopeNote "Binary artifact version control" .
-
 tool:operationsDashboard a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -4947,6 +4919,30 @@ PO.3.3,
 PO.5.1, 
 PO.5.2, 
 RV.1.1""" .
+
+tool:artifactRepository a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:artifactDeployment,
+        act:artifactDownload,
+        act:artifactsReplication,
+        act:build,
+        act:configurationIdentification,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation,
+        act:deliverReleasedArtifacts,
+        act:storeArtifacts,
+        act:userStoryReviewAndDemonstration ;
+    ont:input art:artifacts ;
+    ont:output art:versionControlledArtifacts ;
+    skos:definition """Separate binary control from source control to avoid external access to source control system.
+
+Improved build stability by reducing reliance on external repositories.
+
+Better quality software by avoiding outdated artifacts with known issues.""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Artifact Repository" ;
+    skos:scopeNote "Binary artifact version control" .
 
 act:testAudit a ont:AbstractActivity,
         skos:Concept ;
