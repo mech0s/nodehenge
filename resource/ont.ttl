@@ -36,3 +36,12 @@
 :phaseActivity a rdfs:Property;
     rdfs:subPropertyOf skos:related.
 
+:InheritedProperty a rdfs:Property;
+    rdfs:domain skos:Concept.
+
+# used when defining properties for which instance values should be flowed from broader concepts towards instances
+:BroaderInheritedProperty rdfs:subPropertyOf :InheritedProperty.
+
+# used when defining properties for which instance values should be flowed from type to instance
+:TypeInheritedProperty rdfs:subPropertyOf :InheritedProperty.
+
