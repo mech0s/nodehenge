@@ -15,10 +15,9 @@ phase:phasing a skos:OrderedCollection ;
 
 act:cooperativeAdversarialTests a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:adversarialTestTool ;
+    ont:activityTool tool:cooperativeAdversarialTestTool ;
     skos:definition "Continuous Security-related activity." ;
-    skos:editorialNote "Unused Tools text::Cooperative & ",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Cooperative & Adversarial Tests" ;
     skos:scopeNote "Continuous activity most relevant to Operate phase(s)." .
@@ -146,14 +145,14 @@ act:sustainmentAndChaosTesting a ont:AbstractActivity,
     skos:prefLabel "Sustainment and Chaos Testing" ;
     skos:scopeNote "Continuous activity most relevant to Operate phase(s)." .
 
+art:acceptanceCriteria a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:systemDesign ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:access a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:postDeploymentSecurityScan ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:aggregatedFilteredFormattedEventLog a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output tool:logAggregator ;
     skos:inScheme inst:dodDsopScheme .
 
 art:aggregatedFilteredFormattedEventLogRecord a ont:AbstractArtifact,
@@ -176,19 +175,9 @@ art:analysis a ont:AbstractArtifact,
     ont:output tool:chaosEngineeringTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:analyzeResults a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output tool:lintTool ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:apis a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:integrationTest ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:application a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:dynamicApplicationSecurityTestDastAndScan ;
     skos:inScheme inst:dodDsopScheme .
 
 art:applicationCode a ont:AbstractArtifact,
@@ -211,7 +200,7 @@ art:artifactsReleaseTag a ont:AbstractArtifact,
     ont:output act:releaseGoNoGoDecision ;
     skos:inScheme inst:dodDsopScheme .
 
-art:assessmentResults a ont:AbstractArtifact,
+art:assessment a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:operationalAssessments ;
     skos:inScheme inst:dodDsopScheme .
@@ -251,14 +240,14 @@ art:bomList a ont:AbstractArtifact,
     ont:input act:dependencyVulnerabilityChecking ;
     skos:inScheme inst:dodDsopScheme .
 
+art:bug a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:userEvaluationFeedback ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:bugReport a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:issueTrackingSystem ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:bugReports a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:userEvaluationFeedback ;
     skos:inScheme inst:dodDsopScheme .
 
 art:bugs a ont:AbstractArtifact,
@@ -281,11 +270,6 @@ art:businessLogic a ont:AbstractArtifact,
     ont:input tool:dataModelingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:chainInformation a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:riskManagement ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:changeManagementPlan a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:changeManagementPlanning ;
@@ -296,17 +280,12 @@ art:changeManagementProcess a ont:AbstractArtifact,
     ont:input act:devsecopsProcessDesign ;
     skos:inScheme inst:dodDsopScheme .
 
-art:changeRequest a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input tool:issueTrackingSystem ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:chaosScripts a ont:AbstractArtifact,
+art:chaos a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:sustainanbilityAndChaosTesting ;
     skos:inScheme inst:dodDsopScheme .
 
-art:checksumAndDigitalSignature a ont:AbstractArtifact,
+art:checksum a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:releasePackaging ;
     skos:inScheme inst:dodDsopScheme .
@@ -319,6 +298,11 @@ art:cmProcesses a ont:AbstractArtifact,
 art:cmToolSelection a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:configurationManagementCmPlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:cnssi a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:missionBasedCyberRiskAssessments ;
     skos:inScheme inst:dodDsopScheme .
 
 art:codeBaselines a ont:AbstractArtifact,
@@ -441,6 +425,11 @@ art:databaseEvents a ont:AbstractArtifact,
     ont:input act:databaseMonitoringAndSecurityAuditing ;
     skos:inScheme inst:dodDsopScheme .
 
+art:databaseLogs a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:logAggregator ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:databaseSecurityAuditLogs a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:logAggregator ;
@@ -454,16 +443,6 @@ art:databaseStatus a ont:AbstractArtifact,
 art:databaseTraffic a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:databaseMonitoringAndSecurityAuditing ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:definitions a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:databaseDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:dependencies a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:build ;
     skos:inScheme inst:dodDsopScheme .
 
 art:dependencyCheckingReport a ont:AbstractArtifact,
@@ -481,6 +460,11 @@ art:deploymentPlatformSelection a ont:AbstractArtifact,
     ont:output act:devsecopsProcessDesign ;
     skos:inScheme inst:dodDsopScheme .
 
+art:design a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:teamCollaborationSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:designDocumentation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:releaseGoNoGoDecision ;
@@ -489,11 +473,6 @@ art:designDocumentation a ont:AbstractArtifact,
 art:designIdeas a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:softwareSystemDesignTool ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:designNotes a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input tool:teamCollaborationSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:developedSourceCode a ont:AbstractArtifact,
@@ -506,7 +485,7 @@ art:developmentTool a ont:AbstractArtifact,
     ont:output act:systemDesign ;
     skos:inScheme inst:dodDsopScheme .
 
-art:devsecops a ont:AbstractArtifact,
+art:devsecopsEcosystemToolSelection a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:devsecopsProcessDesign ;
     skos:inScheme inst:dodDsopScheme .
@@ -521,6 +500,11 @@ art:devsecopsTools a ont:AbstractArtifact,
     ont:input act:configurationIdentification ;
     skos:inScheme inst:dodDsopScheme .
 
+art:digitalSignature a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:releasePackaging ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:documentBaselines a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:configurationIdentification ;
@@ -531,19 +515,9 @@ art:dynamicCodeScanReport a ont:AbstractArtifact,
     ont:output tool:dynamicApplicationSecurityTestDastTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:dynamicCodeWeaknessReport a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:dynamicApplicationSecurityTestDastAndScan ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:eac a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:configurationManagementTool ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:ecosystemToolSelection a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:devsecopsProcessDesign ;
     skos:inScheme inst:dodDsopScheme .
 
 art:ecosystemTools a ont:AbstractArtifact,
@@ -569,6 +543,11 @@ art:executableSystemApplication a ont:AbstractArtifact,
 art:externalDependencies a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemTest ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:featureChangeTickets a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
 art:featureRequest a ont:AbstractArtifact,
@@ -609,6 +588,11 @@ art:fuzzData a ont:AbstractArtifact,
 art:generatedApiDocumentation a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:documentation ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:goNoGoDecision a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:releaseGoNoGoDecision ;
     skos:inScheme inst:dodDsopScheme .
 
 art:hostingEnvironment a ont:AbstractArtifact,
@@ -676,12 +660,12 @@ art:issueTicket a ont:AbstractArtifact,
     ont:output tool:alertingAndNotification ;
     skos:inScheme inst:dodDsopScheme .
 
-art:issuesFeatureChangeTickets a ont:AbstractArtifact,
+art:issues a ont:AbstractArtifact,
         skos:Concept ;
     ont:output tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
-art:it a ont:AbstractArtifact,
+art:itAsset a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
@@ -694,6 +678,11 @@ art:itAssets a ont:AbstractArtifact,
 art:itHardwareInformation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:configurationManagementDatabaseCmdb ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:itInfrastructureAsset a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:configurationIdentification ;
     skos:inScheme inst:dodDsopScheme .
 
 art:kpi a ont:AbstractArtifact,
@@ -716,11 +705,6 @@ art:maskedData a ont:AbstractArtifact,
     ont:output tool:dataMaskingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:monitoringPolicy a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input tool:virtualizationManager ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:network a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:infosecContinuousMonitoringIscmTool ;
@@ -739,6 +723,11 @@ art:newVmInstanceParameters a ont:AbstractArtifact,
 art:nist80053RmfcontrolImplementation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:missionBasedCyberRiskAssessments ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:noGo a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:buildConfigurationControlAndAudit ;
     skos:inScheme inst:dodDsopScheme .
 
 art:nonComplianceFindings a ont:AbstractArtifact,
@@ -801,11 +790,6 @@ art:organizedTeamwork a ont:AbstractArtifact,
     ont:output tool:teamCollaborationSystem ;
     skos:inScheme inst:dodDsopScheme .
 
-art:package a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:releasePackaging ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:performanceAlert a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:alertingAndNotification ;
@@ -831,7 +815,17 @@ art:personnelActivities a ont:AbstractArtifact,
     ont:input tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:productBacklogUpdates a ont:AbstractArtifact,
+art:plan a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:configurationManagementCmPlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:policy a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:virtualizationManager ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:productBacklog a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:reviseProductBacklog ;
     skos:inScheme inst:dodDsopScheme .
@@ -841,12 +835,12 @@ art:production a ont:AbstractArtifact,
     ont:output act:deliveryResultsReview ;
     skos:inScheme inst:dodDsopScheme .
 
-art:projectCharter a ont:AbstractArtifact,
+art:project a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:projectReleasePlanning ;
     skos:inScheme inst:dodDsopScheme .
 
-art:projectConstraints a ont:AbstractArtifact,
+art:projectCharter a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:projectReleasePlanning ;
     skos:inScheme inst:dodDsopScheme .
@@ -859,11 +853,6 @@ art:projectGoal a ont:AbstractArtifact,
 art:properTestScripts a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:releasePackagingTool ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:provisionedAndConfiguredInfrastructure a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:infrastructureProvisioningAutomation ;
     skos:inScheme inst:dodDsopScheme .
 
 art:provisionedDeploymentInfrastructure a ont:AbstractArtifact,
@@ -886,14 +875,14 @@ art:regressionTestCases a ont:AbstractArtifact,
     ont:input act:regressionTest ;
     skos:inScheme inst:dodDsopScheme .
 
-art:releasePlan a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:projectReleasePlanning ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:releaseToRepo a ont:AbstractArtifact,
+art:release a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:deliverReleasedArtifacts ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:releasedPackage a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:releasePackaging ;
     skos:inScheme inst:dodDsopScheme .
 
 art:remediationLog a ont:AbstractArtifact,
@@ -911,14 +900,29 @@ art:replicatedArtifacts a ont:AbstractArtifact,
     ont:output act:artifactsReplication ;
     skos:inScheme inst:dodDsopScheme .
 
+art:repo a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:deliverReleasedArtifacts ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:reports a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:operationalTestAndEvaluation ;
     skos:inScheme inst:dodDsopScheme .
 
+art:request a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:issueTrackingSystem ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:requestedArtifacts a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:artifactDownload ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:requirementsDatabaseSystemDesign a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:testPlan ;
     skos:inScheme inst:dodDsopScheme .
 
 art:resourceAllocation a ont:AbstractArtifact,
@@ -929,6 +933,11 @@ art:resourceAllocation a ont:AbstractArtifact,
 art:responsibleConfigurationItems a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:configurationManagementCmPlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:results a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output tool:lintTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:reviewComment a ont:AbstractArtifact,
@@ -961,14 +970,14 @@ art:rootCauseAnalysis a ont:AbstractArtifact,
     ont:input tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
-art:runningApplication a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:manualSecurityTest ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:runningOperatingSystem a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:interactiveApplicationSecurityTestIastTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:runningSystemConfiguration a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:systemConfigurationMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:runningVm a ont:AbstractArtifact,
@@ -1001,24 +1010,9 @@ art:scriptedTestScenarios a ont:AbstractArtifact,
     ont:input tool:chaosEngineeringTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:security a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:softwareRequirementAnalysis ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:securityAndOperationsBestPractice a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:configurationManagementCmPlanning ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:securityAuditLogs a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:logPromotion ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:securityRisks a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:riskManagement ;
     skos:inScheme inst:dodDsopScheme .
 
 art:securityTest a ont:AbstractArtifact,
@@ -1046,14 +1040,14 @@ art:softwareComponentInformation a ont:AbstractArtifact,
     ont:input tool:configurationManagementDatabaseCmdb ;
     skos:inScheme inst:dodDsopScheme .
 
-art:softwareDevelopment a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:configurationManagementCmPlanning ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:softwareDevelopmentBestPractices a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:changeManagementPlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:softwareDevelopmentSecurityAndOperationsBestPractice a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:configurationManagementCmPlanning ;
     skos:inScheme inst:dodDsopScheme .
 
 art:softwareFactoryControls a ont:AbstractArtifact,
@@ -1071,7 +1065,12 @@ art:solutions a ont:AbstractArtifact,
     ont:input tool:issueTrackingSystem ;
     skos:inScheme inst:dodDsopScheme .
 
-art:stakeholderInputStakeholderFeedback a ont:AbstractArtifact,
+art:stakeholderFeedback a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:softwareRequirementAnalysis ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:stakeholderInput a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:softwareRequirementAnalysis ;
     skos:inScheme inst:dodDsopScheme .
@@ -1081,7 +1080,7 @@ art:staticCodeAnalysisReport a ont:AbstractArtifact,
     ont:output act:staticAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
-art:staticCodeWeakness a ont:AbstractArtifact,
+art:staticCodeWeaknessAndOrDynamicCodeWeaknessReport a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:dynamicApplicationSecurityTestDastAndScan ;
     skos:inScheme inst:dodDsopScheme .
@@ -1091,7 +1090,7 @@ art:statusReport a ont:AbstractArtifact,
     ont:output tool:databaseAutomationTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:supply a ont:AbstractArtifact,
+art:supplyChainInformation a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:riskManagement ;
     skos:inScheme inst:dodDsopScheme .
@@ -1099,11 +1098,6 @@ art:supply a ont:AbstractArtifact,
 art:surveys a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:userEvaluationFeedback ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:systemConfiguration a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:systemConfigurationMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
 art:systemDeploymentEnvironmentConfigurationPlan a ont:AbstractArtifact,
@@ -1261,6 +1255,11 @@ art:theSoftwareSystem a ont:AbstractArtifact,
     ont:output act:systemTest ;
     skos:inScheme inst:dodDsopScheme .
 
+art:to a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:deliverReleasedArtifacts ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:toolSelections a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:systemDesign ;
@@ -1321,6 +1320,11 @@ art:versionedControlledArtifacts a ont:AbstractArtifact,
     ont:output act:storeArtifacts ;
     skos:inScheme inst:dodDsopScheme .
 
+art:viewDefinitions a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:databaseDevelopment ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:vmImages a ont:AbstractArtifact,
         skos:Concept ;
     ont:input tool:releasePackagingTool ;
@@ -1346,11 +1350,6 @@ art:vulnerbilities a ont:AbstractArtifact,
     ont:output tool:infosecContinuousMonitoringIscmTool ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:adversarialTestTool a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:cooperativeAdversarialTests ;
-    skos:inScheme inst:dodDsopScheme .
-
 tool:apiSecurityTestTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:apiSecurityTests ;
@@ -1371,6 +1370,11 @@ tool:code a tool:AbstractTool,
     ont:activityTool act:complianceMonitoringCots ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:codeRepository a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommit ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:compliance a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:complianceMonitoringCots ;
@@ -1381,9 +1385,19 @@ tool:configurationIntegrationTestTool a tool:AbstractTool,
     ont:activityTool act:configurationIntegrationTesting ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:cooperativeAdversarialTestTool a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:cooperativeAdversarialTests ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:cybersecurityTestTools a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:persistentCyberOperationsTests ;
+    skos:inScheme inst:dodDsopScheme .
+
+tool:database a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:databaseTools a tool:AbstractTool,
@@ -1451,14 +1465,9 @@ tool:inventoryManagement a tool:AbstractTool,
     ont:activityTool act:assetInventoryToIncludeSboms ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:issue a tool:AbstractTool,
+tool:iscmIssueTrackingSystem a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:systemConfigurationMonitoring ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:managementSystem a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:userStoryReviewAndDemonstration ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:missionCyberRiskAssessmentTool a tool:AbstractTool,
@@ -1496,6 +1505,11 @@ tool:operationsTestingTool a tool:AbstractTool,
     ont:activityTool act:operationsTests ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:packagingTool a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:releasePackaging ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:persistentCyberOperationsTestTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:persistentCyberOperationsTests ;
@@ -1504,6 +1518,11 @@ tool:persistentCyberOperationsTestTool a tool:AbstractTool,
 tool:raspTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:runtimeApplicationSelfProtectionRasp ;
+    skos:inScheme inst:dodDsopScheme .
+
+tool:release a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:releasePackaging ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:requirementsManagementTool a tool:AbstractTool,
@@ -1546,6 +1565,11 @@ tool:softwareSystemDesignTools a tool:AbstractTool,
     ont:activityTool act:systemDesign ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:source a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:codeCommit ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:specificTestTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:testDevelopment ;
@@ -1561,7 +1585,7 @@ tool:staticCodeAnalysisTool a tool:AbstractTool,
     ont:activityTool act:staticAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:sub a tool:AbstractTool,
+tool:subSystem a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:integrationTest ;
     skos:inScheme inst:dodDsopScheme .
@@ -1569,11 +1593,6 @@ tool:sub a tool:AbstractTool,
 tool:sustainmentAndChaosTestingTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:sustainmentAndChaosTesting ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:system a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:integrationTest ;
     skos:inScheme inst:dodDsopScheme .
 
 tool:teamsCollaborationSystem a tool:AbstractTool,
@@ -1606,29 +1625,24 @@ tool:testScripts a tool:AbstractTool,
     ont:activityTool act:postDeploymentCheckout ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:theIntegratedUnits a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:softwareIntegrationTest ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:theSystem a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:systemTest ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:tool a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:variousPlanningTools a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:feedbackIncludingOperationalTestAndEvaluationIfAsNeeded ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:whetherTheIntegratedUnits a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:softwareIntegrationTest ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:work a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:userStoryReviewAndDemonstration ;
-    skos:inScheme inst:dodDsopScheme .
-
-tool:workManagementSystem a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:testPlan ;
     skos:inScheme inst:dodDsopScheme .
 
 act:acceptanceTest a ont:AbstractActivity,
@@ -1654,10 +1668,11 @@ act:configurationManagementPlanning a ont:AbstractActivity,
 
 act:operationalAssessments a ont:AbstractActivity,
         skos:Concept ;
-    ont:output art:assessmentResults ;
+    ont:output art:assessment ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Evaluation of a minimal capability fielding or early fielding capability in the unique theater of employment and/or for tailored use to support preliminary evaluation of operational effectiveness and suitability, while taking into equal consideration survivability and lethality effects" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "Unused Outputs text:: results",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Operational Assessments" ;
     skos:scopeNote "Baseline: AS REQUIRED",
@@ -1665,17 +1680,6 @@ act:operationalAssessments a ont:AbstractActivity,
         """SSDF: PO.3.1, 
 PO.3.2, 
 PO.3.3""" .
-
-act:testConfigurationControl a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:teamCollaborationSystem,
-        tool:trackingSystem ;
-    skos:definition "Continuous CM-related activity." ;
-    skos:editorialNote "Unused Tools text::; Issue ; CI/CD orchestrator",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test configuration control " ;
-    skos:scopeNote "Continuous activity most relevant to Test phase(s)." .
 
 art:acceptedReleasePackage a ont:AbstractArtifact,
         skos:Concept ;
@@ -1737,18 +1741,6 @@ art:dataModel a ont:AbstractArtifact,
     ont:output tool:dataModelingTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:database a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input tool:databaseAutomationTool ;
-    ont:output act:databaseDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:databaseLogs a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input tool:logAggregator,
-        tool:logPromotion ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:dependencyList a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:dependencyVulnerabilityChecking,
@@ -1767,10 +1759,10 @@ art:emails a ont:AbstractArtifact,
         tool:logAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
-art:goNoGoDecision a ont:AbstractArtifact,
+art:goNoGo a ont:AbstractArtifact,
         skos:Concept ;
-    ont:output act:buildConfigurationControlAndAudit,
-        act:releaseGoNoGoDecision ;
+    ont:output act:deliveryResultsReview,
+        act:userStoryReviewAndDemonstration ;
     skos:inScheme inst:dodDsopScheme .
 
 art:iac a ont:AbstractArtifact,
@@ -1845,12 +1837,6 @@ art:performanceStatistics a ont:AbstractArtifact,
     ont:output tool:operationsMonitoring ;
     skos:inScheme inst:dodDsopScheme .
 
-art:plan a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:devsecopsProcessDesign ;
-    ont:output act:configurationManagementCmPlanning ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:plans a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:designReview,
@@ -1863,16 +1849,16 @@ art:projectPlan a ont:AbstractArtifact,
         tool:projectManagementSystem ;
     skos:inScheme inst:dodDsopScheme .
 
-art:pushGoNoGoDecision a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:deliveryResultsReview,
-        act:userStoryReviewAndDemonstration ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:releaseNotes a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:releasePackaging,
         tool:releasePackagingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:releasePlan a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:devsecopsProcessDesign ;
+    ont:output act:projectReleasePlanning ;
     skos:inScheme inst:dodDsopScheme .
 
 art:remediationReport a ont:AbstractArtifact,
@@ -1887,28 +1873,34 @@ art:remediationReports a ont:AbstractArtifact,
         act:runtimeApplicationSelfProtectionRasp ;
     skos:inScheme inst:dodDsopScheme .
 
-art:report a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:output act:logAuditing,
-        act:sustainanbilityAndChaosTesting ;
-    skos:inScheme inst:dodDsopScheme .
-
 art:requirements a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:reviseProductBacklog,
         tool:testManagementTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:reviewComments a ont:AbstractArtifact,
+art:requirementsDatabase a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:performanceTests,
+        act:systemDesign ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:requirementsDatabaseAcceptanceCriteria a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:functionalTest,
+        act:systemTest ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:review a ont:AbstractArtifact,
         skos:Concept ;
     ont:output act:codeReview,
         act:designReview ;
     skos:inScheme inst:dodDsopScheme .
 
-art:runningDatabase a ont:AbstractArtifact,
+art:runningApplication a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input tool:databaseMonitoringTool,
-        tool:databaseSecurityAuditTool ;
+    ont:input act:dynamicApplicationSecurityTestDastAndScan,
+        act:manualSecurityTest ;
     skos:inScheme inst:dodDsopScheme .
 
 art:runningSoftwareApplication a ont:AbstractArtifact,
@@ -1927,6 +1919,12 @@ art:schedule a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:devsecopsProcessDesign ;
     ont:output act:projectReleasePlanning ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:security a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:riskManagement ;
+    ont:output act:softwareRequirementAnalysis ;
     skos:inScheme inst:dodDsopScheme .
 
 art:securityRequirements a ont:AbstractArtifact,
@@ -2057,24 +2055,27 @@ tool:alerting a tool:AbstractTool,
 
 tool:assetInventoryManagement a ont:AbstractTool,
         skos:Concept ;
-    ont:input art:itInfrastructureAsset ;
+    ont:input art:infrastructure ;
     ont:output art:assetInventory ;
     skos:definition "Increase situation awareness" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Asset inventory management" ;
     skos:scopeNote "Maintain a “real-time” inventory of all applications, software licenses, libraries, operating systems, and versioning information" .
 
-tool:ciCdOrchestrator a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:buildConfigurationControlAndAudit,
-        act:releaseGoNoGoDecision ;
-    skos:inScheme inst:dodDsopScheme .
-
 tool:complianceTool a tool:AbstractTool,
         skos:Concept ;
     ont:activityTool act:complianceMonitoringCots,
         act:complianceMonitoringResourcesServices ;
     skos:inScheme inst:dodDsopScheme .
+
+tool:configurationManagementTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:eac ;
+    ont:output art:configurationControl ;
+    skos:definition "Maintains integrity of the system" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Configuration Management Tool" ;
+    skos:scopeNote "Configuration control" .
 
 tool:cyberThreatIntelligenceSubscriptionS a ont:AbstractTool,
         skos:Concept ;
@@ -2176,6 +2177,12 @@ tool:vulnerabilityFindings a tool:AbstractTool,
         act:serviceSecurityTest ;
     skos:inScheme inst:dodDsopScheme .
 
+tool:workManagementSystem a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:testPlan,
+        act:userStoryReviewAndDemonstration ;
+    skos:inScheme inst:dodDsopScheme .
+
 act:manualSecurityTestingSuchAsPenetrationTest a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:networkSecurityTestTool,
@@ -2188,12 +2195,16 @@ act:manualSecurityTestingSuchAsPenetrationTest a ont:AbstractActivity,
     skos:prefLabel "Manual security testing (such as penetration test)" ;
     skos:scopeNote "Continuous activity most relevant to Test phase(s)." .
 
-art:acceptanceCriteria a ont:AbstractArtifact,
+act:testConfigurationControl a ont:AbstractActivity,
         skos:Concept ;
-    ont:input act:functionalTest,
-        act:systemTest ;
-    ont:output act:systemDesign ;
-    skos:inScheme inst:dodDsopScheme .
+    ont:activityTool tool:ciCdOrchestrator,
+        tool:issueTrackingSystem,
+        tool:teamCollaborationSystem ;
+    skos:definition "Continuous CM-related activity." ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test configuration control " ;
+    skos:scopeNote "Continuous activity most relevant to Test phase(s)." .
 
 art:analysisReport a ont:AbstractArtifact,
         skos:Concept ;
@@ -2230,21 +2241,14 @@ art:fuzzInputs a ont:AbstractArtifact,
         tool:interactiveApplicationSecurityTestIastTool ;
     skos:inScheme inst:dodDsopScheme .
 
-art:integrationTestInput a ont:AbstractArtifact,
+art:infrastructure a ont:AbstractArtifact,
         skos:Concept ;
-    ont:input act:applicationCodeDevelopment,
-        act:infrastructureCodeDevelopment,
-        act:securityCodeDevelopment ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:itInfrastructureAsset a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:configurationIdentification,
-        act:configurationManagementCmPlanning,
+    ont:input act:configurationManagementCmPlanning,
         tool:assetInventoryManagement ;
+    ont:output act:infrastructureProvisioningAutomation ;
     skos:inScheme inst:dodDsopScheme .
 
-art:otherTestInput a ont:AbstractArtifact,
+art:integrationTestInput a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:applicationCodeDevelopment,
         act:infrastructureCodeDevelopment,
@@ -2307,6 +2311,13 @@ art:softwareInstances a ont:AbstractArtifact,
         tool:softwareLicenseComplianceChecker ;
     skos:inScheme inst:dodDsopScheme .
 
+art:sourceCodeTestResults a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:output act:applicationCodeDevelopment,
+        act:infrastructureCodeDevelopment,
+        act:securityCodeDevelopment ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:sourceCodeWeaknessFindings a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:codeCommitLogging ;
@@ -2363,6 +2374,13 @@ phase:feedback a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Feedback" .
 
+tool:ciCdOrchestrator a tool:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:buildConfigurationControlAndAudit,
+        act:releaseGoNoGoDecision,
+        act:testConfigurationControl ;
+    skos:inScheme inst:dodDsopScheme .
+
 tool:complianceMonitor a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -2394,15 +2412,12 @@ Dependency mapping;
 Integration with other tools;
 Configuration auditing""" .
 
-tool:configurationManagementTool a ont:AbstractTool,
+tool:data a tool:AbstractTool,
         skos:Concept ;
-    ont:input art:eac,
-        art:sourceCode ;
-    ont:output art:configurationControl ;
-    skos:definition "Maintains integrity of the system" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Configuration Management Tool" ;
-    skos:scopeNote "Configuration control" .
+    ont:activityTool act:artifactDeployment,
+        act:databaseArtifactDeployment,
+        act:databaseSchemaInstallation ;
+    skos:inScheme inst:dodDsopScheme .
 
 tool:databaseTestToolSuite a ont:AbstractTool,
         skos:Concept ;
@@ -2479,13 +2494,6 @@ tool:softwareBillOfMaterialsSbomSoftwareCompositionAnalysisTool a ont:AbstractTo
     skos:prefLabel "Software Bill of Materials (SBOM) Software Composition Analysis Tool" ;
     skos:scopeNote "Software composition analysis (SCA) analyzes custom-built software applications to detect embedded software and detect if it is up-to-date, contains vulnerabilities or security flaws, or has licensing requirements" .
 
-tool:trackingSystem a tool:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:buildConfigurationControlAndAudit,
-        act:systemConfigurationMonitoring,
-        act:testConfigurationControl ;
-    skos:inScheme inst:dodDsopScheme .
-
 act:artifactDownload a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:artifactRepository ;
@@ -2535,31 +2543,16 @@ act:assetInventoryToIncludeSboms a ont:AbstractActivity,
         """SSDF: PS.3.2, 
 PW 4.1""" .
 
-act:codeCommit a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:sourceCodeRepository ;
-    ont:input art:sourceCode ;
-    ont:output art:versionControlledSourceCode ;
-    ont:phaseActivity phase:develop ;
-    skos:definition "Commit source code into version control system",
-        "Continuous CM-related activity." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Code commit" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Develop phase(s).",
-        "Relevance: Configuration Management",
-        "SSDF: PS.1.1, PW.4.4" .
-
 act:codeReview a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:codeQualityReviewTool ;
     ont:input art:sourceCode ;
-    ont:output art:reviewComments ;
+    ont:output art:review ;
     ont:phaseActivity phase:develop ;
     skos:definition "Continuous CM-related activity.",
         "Perform code review to all source code. Note that pair programming counts." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "Unused Outputs text:: comments",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Code review" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -2582,22 +2575,6 @@ act:configurationIntegrationTesting a ont:AbstractActivity,
         "Continuous activity most relevant to Deliver phase(s).",
         "Relevance: Testing",
         "SSDF: PO.4.1, PO.4.2, PS.2.1, PW.2.1, PW8.1, PW8.2" .
-
-act:deliverReleasedArtifacts a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:artifactRepository ;
-    ont:input art:releasePackage ;
-    ont:output art:releaseToRepo ;
-    ont:phaseActivity phase:deliver ;
-    skos:definition "Push released artifacts to the artifact repository" ;
-    skos:editorialNote "Unused Outputs text::New release in the artifact repository",
-        "Unused Tools text::Artifacts repository",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Deliver released artifacts" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: ",
-        "SSDF: PS.2.1, PS.3.1, PS.3.2, PW.4.1, PW.4.2" .
 
 act:projectTeamOnboardingPlanning a ont:AbstractActivity,
         skos:Concept ;
@@ -2626,6 +2603,22 @@ act:staticAnalysis a ont:AbstractActivity,
     skos:scopeNote "Baseline: REQUIRED",
         "Relevance: Testing",
         "SSDF: RV.1.2, RV.2.1, RV.3.1, RV.3.2, RV.3.3" .
+
+act:sustainanbilityAndChaosTesting a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:testManagementTool ;
+    ont:input art:chaos ;
+    ont:output art:evaluation ;
+    ont:phaseActivity phase:operate ;
+    skos:definition "Create the capability to continuously, but randomly, cause failures in the production system to test resiliency" ;
+    skos:editorialNote "Unused Inputs text:: scripts",
+        "Unused Outputs text::Report and ",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Sustainanbility and Chaos Testing" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: Testing",
+        "SSDF: PO.3.1, PO.3.2" .
 
 act:testConfigurationAudit a ont:AbstractActivity,
         skos:Concept ;
@@ -2669,6 +2662,14 @@ art:complianceReports a ont:AbstractArtifact,
         tool:complianceMonitor ;
     skos:inScheme inst:dodDsopScheme .
 
+art:database a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input tool:databaseAutomationTool,
+        tool:databaseMonitoringTool,
+        tool:databaseSecurityAuditTool,
+        tool:logPromotion ;
+    skos:inScheme inst:dodDsopScheme .
+
 art:expectedOutputData a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:unitTest ;
@@ -2690,6 +2691,14 @@ art:potentialThreats a ont:AbstractArtifact,
     ont:input act:developmentalCyberTests,
         act:operationalCyberTests ;
     ont:output act:threatModeling,
+        tool:threatModelingTool ;
+    skos:inScheme inst:dodDsopScheme .
+
+art:systemDesign a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:databaseDesign,
+        act:devsecopsProcessDesign,
+        act:threatModeling,
         tool:threatModelingTool ;
     skos:inScheme inst:dodDsopScheme .
 
@@ -2754,6 +2763,18 @@ tool:dataModelingTool a tool:AbstractTool,
     skos:prefLabel "Data modeling tool" ;
     skos:scopeNote "Model the interrelationship and flows between different data elements" .
 
+tool:databaseMonitoringTool a ont:AbstractTool,
+        skos:Concept ;
+    ont:input art:database ;
+    ont:output art:alerts,
+        art:logs,
+        art:warnings ;
+    skos:definition "Improve database operations continuity" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database monitoring tool" ;
+    skos:scopeNote """Baseline database performance and database traffic;
+Detect anomalies""" .
+
 tool:databaseSecurityScanAndTestTool a ont:AbstractTool,
         skos:Concept ;
     ont:input art:testData,
@@ -2799,7 +2820,7 @@ tool:lintTool a tool:AbstractTool,
     ont:activityTool act:build ;
     ont:input art:scripts,
         art:sourceCode ;
-    ont:output art:analyzeResults ;
+    ont:output art:results ;
     skos:definition """Improve code readability;
 Pre-code review;
 Finding (syntax) errors before execution for interpreted languages""" ;
@@ -2859,6 +2880,21 @@ tool:softwareLicenseComplianceChecker a tool:AbstractTool,
     skos:scopeNote """Inventory software license;
 Audit the compliance""" .
 
+tool:sourceCodeRepository a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:configurationIdentification ;
+    ont:input art:iac,
+        art:sourceCode ;
+    ont:output art:versionControlledSourceCode ;
+    skos:definition """Compare files, identify differences, and merge the changes if needed before committing.
+Keep track of application builds""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Source code repository" ;
+    skos:scopeNote """Source code version control
+Branching and merging
+Collaborative code review""" .
+
 tool:sourceCodeRepositorySecurityPlugin a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -2915,7 +2951,7 @@ tool:virtualizationManager a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
     ont:activityTool act:createLinkedCloneOfVmMasterImage ;
-    ont:input art:monitoringPolicy,
+    ont:input art:policy,
         art:vmInstanceSpecification ;
     ont:output art:runningVm ;
     skos:definition "Centralized VM instantiation, scaling, and monitoring" ;
@@ -2956,6 +2992,23 @@ act:chaosEngineering a ont:AbstractActivity,
         "Continuous activity most relevant to Operate phase(s).",
         "Relevance: Security",
         "SSDF: PO.3.1, PO.3.2" .
+
+act:codeCommit a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:codeRepository,
+        tool:source ;
+    ont:input art:sourceCode ;
+    ont:output art:versionControlledSourceCode ;
+    ont:phaseActivity phase:develop ;
+    skos:definition "Commit source code into version control system",
+        "Continuous CM-related activity." ;
+    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Code commit" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Develop phase(s).",
+        "Relevance: Configuration Management",
+        "SSDF: PS.1.1, PW.4.4" .
 
 act:codeCommitScan a ont:AbstractActivity,
         skos:Concept ;
@@ -3011,11 +3064,12 @@ act:deliveryResultsReview a ont:AbstractActivity,
         skos:Concept ;
     ont:input art:configurationResults,
         art:recommendations ;
-    ont:output art:production,
-        art:pushGoNoGoDecision ;
+    ont:output art:goNoGo,
+        art:production ;
     ont:phaseActivity phase:deliver ;
     skos:definition "Review of the release package and all associated artifacts, configuration results, and recommendations" ;
     skos:editorialNote "Unused Inputs text:: and ",
+        "Unused Outputs text:: Push  decision",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Delivery Results Review" ;
@@ -3084,6 +3138,24 @@ Analyze and correlate logs""" ;
         """SSDF: PO.3.1, 
 PO.3.2, 
 PO.3.3""" .
+
+act:logAuditing a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:logAggregator,
+        tool:logAnalysis,
+        tool:logAuditing ;
+    ont:input art:logs ;
+    ont:phaseActivity phase:monitor ;
+    skos:definition "Ensure possession of the logs and that aggregation is performed correctly" ;
+    skos:editorialNote "Unused Outputs text::Report",
+        "Unused Tools text::Log aggregatorLog analysis & auditing",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Log auditing" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: ",
+        """SSDF: PO 3.1, 
+PO.3.2""" .
 
 act:operationsTeamAcceptance a ont:AbstractActivity,
         skos:Concept ;
@@ -3170,22 +3242,6 @@ act:staticCodeScanBeforeCommit a ont:AbstractActivity,
         "Relevance: Security",
         "SSDF: PW.7.1, PW.7.2" .
 
-act:sustainanbilityAndChaosTesting a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:testManagementTool ;
-    ont:input art:chaosScripts ;
-    ont:output art:evaluation,
-        art:report ;
-    ont:phaseActivity phase:operate ;
-    skos:definition "Create the capability to continuously, but randomly, cause failures in the production system to test resiliency" ;
-    skos:editorialNote "Unused Outputs text:: and ",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Sustainanbility and Chaos Testing" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: Testing",
-        "SSDF: PO.3.1, PO.3.2" .
-
 act:threatModeling a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:threatModelingTool ;
@@ -3229,24 +3285,6 @@ art:recommendations a ont:AbstractArtifact,
         act:operationalCyberTests,
         act:systemSecurityMonitoring,
         tool:infosecContinuousMonitoringIscmTool ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:requirementsDatabase a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:functionalTest,
-        act:performanceTests,
-        act:systemDesign,
-        act:systemTest,
-        act:testPlan ;
-    skos:inScheme inst:dodDsopScheme .
-
-art:systemDesign a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:databaseDesign,
-        act:devsecopsProcessDesign,
-        act:testPlan,
-        act:threatModeling,
-        tool:threatModelingTool ;
     skos:inScheme inst:dodDsopScheme .
 
 art:testReport a ont:AbstractArtifact,
@@ -3323,25 +3361,11 @@ tool:complianceAsCodeIsReal a ont:AbstractTool,
     skos:prefLabel "Compliance-as-Code is real" ;
     skos:scopeNote "Monitor the state of compliance of deployed COTS against STIGs" .
 
-tool:databaseMonitoringTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
-    ont:input art:runningDatabase ;
-    ont:output art:alerts,
-        art:logs,
-        art:warnings ;
-    skos:definition "Improve database operations continuity" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database monitoring tool" ;
-    skos:scopeNote """Baseline database performance and database traffic;
-Detect anomalies""" .
-
 tool:databaseSecurityAuditTool a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
     ont:activityTool act:databaseMonitoringAndSecurityAuditing ;
-    ont:input art:runningDatabase ;
+    ont:input art:database ;
     ont:output art:alerts,
         art:auditLogs,
         art:warnings ;
@@ -3368,7 +3392,7 @@ tool:interactiveApplicationSecurityTestIastTool a ont:AbstractTool,
 tool:logPromotion a ont:AbstractTool,
         skos:Concept ;
     ont:input art:auditLogs,
-        art:databaseLogs,
+        art:database,
         art:eventLog,
         art:securityAuditLogs ;
     ont:output art:aggregatedFilteredFormattedEventLogRecord ;
@@ -3395,22 +3419,6 @@ Resource management
 Budget management
 Risk management""" .
 
-tool:sourceCodeRepository a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:codeCommit,
-        act:configurationIdentification ;
-    ont:input art:iac,
-        art:sourceCode ;
-    ont:output art:versionControlledSourceCode ;
-    skos:definition """Compare files, identify differences, and merge the changes if needed before committing.
-Keep track of application builds""" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Source code repository" ;
-    skos:scopeNote """Source code version control
-Branching and merging
-Collaborative code review""" .
-
 tool:staticApplicationSecurityTestSastTool a ont:AbstractTool,
         skos:Concept ;
     ont:input art:knownVulnerabilities,
@@ -3423,6 +3431,23 @@ Continuous assessment during development.""" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Static Application Security Test (SAST) tool" ;
     skos:scopeNote "SAST analyzes application static codes, such as source code, byte code, binary code, while they are in a non-running state to detect the conditions that indicate code weaknesses." .
+
+act:applicationCodeDevelopment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:ide ;
+    ont:input art:codeDevelopmentInput,
+        art:integrationTestInput,
+        art:unitTestInput ;
+    ont:output art:sourceCodeTestResults ;
+    ont:phaseActivity phase:develop ;
+    skos:definition "Application coding" ;
+    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Application code development" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        "SSDF: PO.1.2, PO.3.1" .
 
 act:capacityManagement a ont:AbstractActivity,
         skos:Concept ;
@@ -3497,17 +3522,36 @@ Database deployment topology""" ;
         "Relevance: ",
         "SSDF: PO.1.2, PO.3.1, PO.5.2, PW.1.1, PW.5.1" .
 
+act:deliverReleasedArtifacts a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:artifactRepository ;
+    ont:input art:releasePackage ;
+    ont:output art:release,
+        art:repo,
+        art:to ;
+    ont:phaseActivity phase:deliver ;
+    skos:definition "Push released artifacts to the artifact repository" ;
+    skos:editorialNote "Unused Outputs text::New release in the artifact repository",
+        "Unused Tools text::Artifacts repository",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Deliver released artifacts" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: ",
+        "SSDF: PS.2.1, PS.3.1, PS.3.2, PW.4.1, PW.4.2" .
+
 act:designReview a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:teamCollaborationSystem ;
     ont:input art:designDocuments,
         art:plans ;
     ont:output art:actionItems,
-        art:reviewComments ;
+        art:review ;
     ont:phaseActivity phase:plan ;
     skos:definition "Continuous CM-related activity.",
         "Review and approve plans and documents" ;
     skos:editorialNote "Unused Inputs text:: and ;",
+        "Unused Outputs text:: comments;",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Design review" ;
@@ -3606,17 +3650,36 @@ act:iacDeployment a ont:AbstractActivity,
         "Relevance: ",
         "SSDF: PO.3.2, PO.3.3" .
 
+act:infrastructureCodeDevelopment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:ide ;
+    ont:input art:codeDevelopmentInput,
+        art:integrationTestInput,
+        art:unitTestInput ;
+    ont:output art:sourceCodeTestResults ;
+    ont:phaseActivity phase:develop ;
+    skos:definition """System components and infrastructure orchestration coding
+Individual component configuration script coding.  Includes Database deploy and high availability configuration""" ;
+    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Infrastructure code development" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        "SSDF: PO.5.1, PW.8.2, PW.9.1" .
+
 act:infrastructureProvisioningAutomation a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:configurationAutomationTool,
         tool:configurationAutomationTools,
         tool:iac ;
     ont:input art:infrastructureConfigurationScriptsRecipesManifestsPlaybooks ;
-    ont:output art:provisionedAndConfiguredInfrastructure ;
+    ont:output art:infrastructure ;
     ont:phaseActivity phase:deploy ;
     skos:definition "Continuous CM-related activity.",
         "Infrastructure systems auto provisioning (such as software defined networking, firewalls, DNS, auditing and logging system, user/group permissions, etc.)" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "Unused Outputs text::Provisioned and configured  ",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Infrastructure provisioning automation" ;
     skos:scopeNote "Baseline: PREFERRED",
@@ -3645,24 +3708,6 @@ act:interoperabilityTests a ont:AbstractActivity,
         """SSDF: PO.3.1, 
 PO.3.2, 
 PO.3.3""" .
-
-act:logAuditing a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:logAggregator,
-        tool:logAnalysis,
-        tool:logAuditing ;
-    ont:input art:logs ;
-    ont:output art:report ;
-    ont:phaseActivity phase:monitor ;
-    skos:definition "Ensure possession of the logs and that aggregation is performed correctly" ;
-    skos:editorialNote "Unused Tools text::Log aggregatorLog analysis & auditing",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log auditing" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: ",
-        """SSDF: PO 3.1, 
-PO.3.2""" .
 
 act:operationalCyberTests a ont:AbstractActivity,
         skos:Concept ;
@@ -3703,6 +3748,23 @@ PO.4.2,
 PW.4.1,
 PW.4.2""" .
 
+act:riskManagement a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:teamCollaborationSystem ;
+    ont:input art:security,
+        art:supplyChainInformation,
+        art:systemArchitecture ;
+    ont:output art:riskManagementPlan ;
+    ont:phaseActivity phase:plan ;
+    skos:definition "Risk assessment" ;
+    skos:editorialNote "Unused Inputs text::;; risks",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Risk management" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: ",
+        "SSDF: PO.1.2, PO.3.1, PO.4.1, PW.1.1, PW.1.2, PW.2.1, RV.2.1" .
+
 act:rollForwardRollBack a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:backupManagement,
@@ -3720,6 +3782,25 @@ act:rollForwardRollBack a ont:AbstractActivity,
     skos:scopeNote "Baseline: PREFERRED",
         "Relevance: ",
         "SSDF: PO.3.1, PO.3.2" .
+
+act:securityCodeDevelopment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:ide ;
+    ont:input art:codeDevelopmentInput,
+        art:integrationTestInput,
+        art:unitTestInput ;
+    ont:output art:sourceCodeTestResults ;
+    ont:phaseActivity phase:develop ;
+    skos:definition "Continuous Security-related activity.",
+        "Security policy enforcement script coding" ;
+    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Security code development" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Develop phase(s).",
+        "Relevance: Security",
+        "SSDF: PO.1.2, PW.5.1, PW.6.1, PW.6.2" .
 
 art:testCases a ont:AbstractArtifact,
         skos:Concept ;
@@ -3740,6 +3821,20 @@ tool:ide a tool:AbstractTool,
         act:securityCodeDevelopment,
         act:testDevelopment ;
     skos:inScheme inst:dodDsopScheme .
+
+tool:logAggregator a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:logAnalysisAuditing,
+        act:logAuditing ;
+    ont:input art:auditLogs,
+        art:databaseLogs,
+        art:databaseSecurityAuditLogs,
+        art:eventLog ;
+    skos:definition "Improve investigations by correlating logs from multiple sources" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Log-aggregator" ;
+    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
 
 tool:logAnalysis a tool:AbstractTool,
         ont:AbstractTool,
@@ -3810,25 +3905,26 @@ tool:testCoverageTool a tool:AbstractTool,
     skos:prefLabel "Test coverage tool" ;
     skos:scopeNote "Measures how much code is exercised while the automated tests are running" .
 
-act:artifactDeployment a ont:AbstractActivity,
+act:build a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:artifactRepository,
-        tool:databaseAutomationTool,
-        tool:encryptionTool ;
-    ont:input art:artifacts,
-        art:data ;
-    ont:output art:runningDatabaseSystem ;
-    ont:phaseActivity phase:deploy ;
-    skos:definition "Artifacts deployment and data loading" ;
-    skos:editorialNote "Unused Inputs text:: in the repository;",
-        "Unused Tools text::;;Data masking or  if needed",
+        tool:buildTool,
+        tool:lintTool ;
+    ont:input art:sourceCode ;
+    ont:output art:binaryArtifacts,
+        art:buildReport ;
+    ont:phaseActivity phase:build ;
+    skos:definition "Compile and link" ;
+    skos:editorialNote "Unused Inputs text::;dependencies",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Artifact deployment" ;
-    skos:scopeNote "Baseline: PREFERRED",
+    skos:prefLabel "Build" ;
+    skos:scopeNote "Baseline: REQUIRED",
         "Relevance: ",
         """SSDF: PO.3.1, 
-PO.3.2""" .
+PO.3.2, 
+PO.3.3, 
+PO.4.1""" .
 
 act:complianceMonitoringCots a ont:AbstractActivity,
         skos:Concept ;
@@ -3851,47 +3947,6 @@ act:complianceMonitoringCots a ont:AbstractActivity,
         """SSDF: PO 3.1, 
 PO 3.2, 
 PO 3.3""" .
-
-act:databaseArtifactDeployment a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:artifactRepository,
-        tool:databaseAutomationTool,
-        tool:encryptionTool ;
-    ont:input art:artifacts,
-        art:data ;
-    ont:output art:runningDatabaseSystem ;
-    ont:phaseActivity phase:deploy ;
-    skos:definition "Database artifacts deployment and data loading" ;
-    skos:editorialNote "Unused Inputs text:: in the repository;",
-        "Unused Tools text::;;Data masking or  if needed",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database artifact deployment" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        """SSDF: PO.3.1, 
-PO.3.2""" .
-
-act:databaseSchemaInstallation a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:artifactRepository,
-        tool:databaseAutomationTool,
-        tool:encryptionTool ;
-    ont:input art:artifacts,
-        art:data ;
-    ont:output art:runningDatabaseSystem ;
-    ont:phaseActivity phase:deploy ;
-    skos:definition "Database software schema deploy/update." ;
-    skos:editorialNote "Unused Inputs text:: in the repository;",
-        "Unused Tools text::;;Data masking or  if needed",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database Schema installation " ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        """SSDF: PO.3.1,
-PO.3.2, 
-PO.3.3""" .
 
 act:databaseSecurityTest a ont:AbstractActivity,
         skos:Concept ;
@@ -4090,23 +4145,6 @@ act:regressionTestIncludesSmokeTests a ont:AbstractActivity,
         """SSDF: RV.8.1, 
 RV.8.2""" .
 
-act:riskManagement a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:teamCollaborationSystem ;
-    ont:input art:chainInformation,
-        art:securityRisks,
-        art:supply,
-        art:systemArchitecture ;
-    ont:output art:riskManagementPlan ;
-    ont:phaseActivity phase:plan ;
-    skos:definition "Risk assessment" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Risk management" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: ",
-        "SSDF: PO.1.2, PO.3.1, PO.4.1, PW.1.1, PW.1.2, PW.2.1, RV.2.1" .
-
 act:runtimeApplicationSelfProtectionRasp a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:raspTool ;
@@ -4259,7 +4297,7 @@ act:testDevelopment a ont:AbstractActivity,
 
 act:userEvaluationFeedback a ont:AbstractActivity,
         skos:Concept ;
-    ont:input art:bugReports,
+    ont:input art:bug,
         art:surveys,
         art:troubleTickets ;
     ont:phaseActivity phase:deploy,
@@ -4268,7 +4306,8 @@ act:userEvaluationFeedback a ont:AbstractActivity,
         phase:operate ;
     skos:definition "Collect and analyze user evaluations and/or feedback",
         "Continuous Test-related activity." ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "Unused Inputs text::; reports;",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "User Evaluation / Feedback" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4288,21 +4327,6 @@ art:warnings a ont:AbstractArtifact,
         tool:databaseSecurityAuditTool ;
     skos:inScheme inst:dodDsopScheme .
 
-tool:logAggregator a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:logAnalysisAuditing,
-        act:logAuditing ;
-    ont:input art:auditLogs,
-        art:databaseLogs,
-        art:databaseSecurityAuditLogs,
-        art:eventLog ;
-    ont:output art:aggregatedFilteredFormattedEventLog ;
-    skos:definition "Improve investigations by correlating logs from multiple sources" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Log-aggregator" ;
-    skos:scopeNote "Filter log files for events of interest (e.g., security), and transform into canonical format" .
-
 tool:loggingTool a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -4319,45 +4343,42 @@ Assist detection of advanced persistent threats and forensics.""" ;
     skos:prefLabel "Logging-tool" ;
     skos:scopeNote "Logging events for all user, network, application, and data activities" .
 
-act:applicationCodeDevelopment a ont:AbstractActivity,
+tool:releasePackagingTool a ont:AbstractTool,
         skos:Concept ;
-    ont:activityTool tool:ide ;
-    ont:input art:codeDevelopmentInput,
-        art:integrationTestInput,
-        art:otherTestInput,
-        art:unitTestInput ;
-    ont:output art:sourceCode,
-        art:testResults ;
-    ont:phaseActivity phase:develop ;
-    skos:definition "Application coding" ;
-    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
+    ont:input art:binaryArtifacts,
+        art:documentation,
+        art:infrastructureConfigurationScripts,
+        art:properTestScripts,
+        art:releaseNotes,
+        art:vmImages ;
+    ont:output art:releasePackage ;
+    skos:definition "Release package (such as a bundle of artifacts, self-extracting software installer, software tar file, etc.)" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Application code development" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        "SSDF: PO.1.2, PO.3.1" .
+    skos:prefLabel "Release packaging tool" ;
+    skos:scopeNote """Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, release notes as a package; generate checksum and digital signature for the package.
 
-act:build a ont:AbstractActivity,
+The package may be prepared for a specific installer or it is a self-extracting installer itself.""" .
+
+act:artifactDeployment a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:artifactRepository,
-        tool:buildTool,
-        tool:lintTool ;
-    ont:input art:dependencies,
-        art:sourceCode ;
-    ont:output art:binaryArtifacts,
-        art:buildReport ;
-    ont:phaseActivity phase:build ;
-    skos:definition "Compile and link" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+        tool:data,
+        tool:databaseAutomationTool,
+        tool:encryptionTool ;
+    ont:input art:artifacts,
+        art:data ;
+    ont:output art:runningDatabaseSystem ;
+    ont:phaseActivity phase:deploy ;
+    skos:definition "Artifacts deployment and data loading" ;
+    skos:editorialNote "Unused Inputs text:: in the repository;",
+        "Unused Tools text::;; masking or  if needed",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Build" ;
-    skos:scopeNote "Baseline: REQUIRED",
+    skos:prefLabel "Artifact deployment" ;
+    skos:scopeNote "Baseline: PREFERRED",
         "Relevance: ",
         """SSDF: PO.3.1, 
-PO.3.2, 
-PO.3.3, 
-PO.4.1""" .
+PO.3.2""" .
 
 act:codeCommitLogging a ont:AbstractActivity,
         skos:Concept ;
@@ -4402,6 +4423,27 @@ act:complianceScan a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: RV.1.2" .
 
+act:databaseArtifactDeployment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:artifactRepository,
+        tool:data,
+        tool:databaseAutomationTool,
+        tool:encryptionTool ;
+    ont:input art:artifacts,
+        art:data ;
+    ont:output art:runningDatabaseSystem ;
+    ont:phaseActivity phase:deploy ;
+    skos:definition "Database artifacts deployment and data loading" ;
+    skos:editorialNote "Unused Inputs text:: in the repository;",
+        "Unused Tools text::;; masking or  if needed",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database artifact deployment" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        """SSDF: PO.3.1, 
+PO.3.2""" .
+
 act:databaseComponentTest a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:databaseTestTools,
@@ -4423,6 +4465,28 @@ act:databaseComponentTest a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: RV.8.1, RV.8.2" .
 
+act:databaseSchemaInstallation a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:artifactRepository,
+        tool:data,
+        tool:databaseAutomationTool,
+        tool:encryptionTool ;
+    ont:input art:artifacts,
+        art:data ;
+    ont:output art:runningDatabaseSystem ;
+    ont:phaseActivity phase:deploy ;
+    skos:definition "Database software schema deploy/update." ;
+    skos:editorialNote "Unused Inputs text:: in the repository;",
+        "Unused Tools text::;; masking or  if needed",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database Schema installation " ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        """SSDF: PO.3.1,
+PO.3.2, 
+PO.3.3""" .
+
 act:documentation a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:buildTool,
@@ -4443,46 +4507,29 @@ act:documentation a ont:AbstractActivity,
         "Relevance: ",
         "SSDF: PO.1.1, PO.1.2, PO.1.3, PW.7.2" .
 
-act:infrastructureCodeDevelopment a ont:AbstractActivity,
+act:dynamicApplicationSecurityTestDastAndScan a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:ide ;
-    ont:input art:codeDevelopmentInput,
-        art:integrationTestInput,
-        art:otherTestInput,
-        art:unitTestInput ;
-    ont:output art:sourceCode,
-        art:testResults ;
-    ont:phaseActivity phase:develop ;
-    skos:definition """System components and infrastructure orchestration coding
-Individual component configuration script coding.  Includes Database deploy and high availability configuration""" ;
-    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
+    ont:activityTool tool:dastToolOrIastTool ;
+    ont:input art:fuzzInputs,
+        art:runningApplication,
+        art:underlyingOs ;
+    ont:output art:mitigationRecommendations,
+        art:staticCodeWeaknessAndOrDynamicCodeWeaknessReport,
+        art:vulnerability ;
+    ont:phaseActivity phase:test ;
+    skos:definition "Perform DAST or IAST testing to the software system" ;
+    skos:editorialNote "Unused Inputs text:: and ; ",
+        "Unused Outputs text::,  and recommended mitigation",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Infrastructure code development" ;
+    skos:prefLabel "Dynamic application security test (DAST) and scan" ;
     skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        "SSDF: PO.5.1, PW.8.2, PW.9.1" .
-
-act:releasePackaging a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:releasePackagingTool ;
-    ont:input art:binaryArtifacts,
-        art:documentation,
-        art:releaseNotes,
-        art:scripts ;
-    ont:output art:checksumAndDigitalSignature,
-        art:package ;
-    ont:phaseActivity phase:build ;
-    skos:definition "Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, checksum, digital signatures, and release notes as a package." ;
-    skos:editorialNote "Unused Outputs text::Released  with ",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Release packaging" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: ",
-        """SSDF: PS.2.1, 
-PS.3.1, 
-PS.3.2""" .
+        "Relevance: Security",
+        """SSDF: RV.1.2, 
+RV.2.1, 
+RV.3.1, 
+RV.3.2, 
+RV.3.3""" .
 
 act:reviseProductBacklog a ont:AbstractActivity,
         skos:Concept ;
@@ -4492,7 +4539,7 @@ act:reviseProductBacklog a ont:AbstractActivity,
         art:improvements,
         art:requirements,
         art:vulnerabilities ;
-    ont:output art:productBacklogUpdates ;
+    ont:output art:productBacklog ;
     ont:phaseActivity phase:feedback ;
     skos:definition "Update the product backlog with new features, improvements, bugs, vulnerabiliy remediations, and performance improvements based upon collected metrics " ;
     skos:editorialNote "Unused Outputs text::Updates to the Product Backlog",
@@ -4502,27 +4549,6 @@ act:reviseProductBacklog a ont:AbstractActivity,
     skos:scopeNote "Baseline: REQUIRED",
         "Relevance: ",
         "SSDF: PO.1.1, PO.1.2; PO.1.3, PO.3.1, PO.4.1, RV.2.2, RV.3.1, RV.3.2, RV.3.3, RV.3.4" .
-
-act:securityCodeDevelopment a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:ide ;
-    ont:input art:codeDevelopmentInput,
-        art:integrationTestInput,
-        art:otherTestInput,
-        art:unitTestInput ;
-    ont:output art:sourceCode,
-        art:testResults ;
-    ont:phaseActivity phase:develop ;
-    skos:definition "Continuous Security-related activity.",
-        "Security policy enforcement script coding" ;
-    skos:editorialNote "Unused Inputs text::Developer coding and appropriate unit, integration, etc. testing input",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Security code development" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Develop phase(s).",
-        "Relevance: Security",
-        "SSDF: PO.1.2, PW.5.1, PW.6.1, PW.6.2" .
 
 act:testDeployment a ont:AbstractActivity,
         skos:Concept ;
@@ -4544,6 +4570,28 @@ act:testDeployment a ont:AbstractActivity,
         "Continuous activity most relevant to Plan, Develop phase(s).",
         "Relevance: Testing",
         "SSDF: PW.1.3" .
+
+act:testPlan a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:teamCollaborationSystem,
+        tool:testToolSuite,
+        tool:testingTool,
+        tool:workManagementSystem ;
+    ont:input art:requirementsDatabaseSystemDesign,
+        art:requirementsDocuments ;
+    ont:output art:testPlans ;
+    ont:phaseActivity phase:plan ;
+    skos:definition "Continuous Test-related activity.",
+        "Plan testing, including validating Acceptance Criteria, specifying Component Tests, Component integration Tests, and Software Integration Tests" ;
+    skos:editorialNote "Unused Inputs text::Requirements database or documents, system design",
+        "Unused Tools text::Test tool suite, ",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Test Plan" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Plan phase(s).",
+        "Relevance: Testing",
+        "SSDF: PO.1.1, PO.1.2, PO.1.3, PW.8.1, PW.8.2" .
 
 act:unitTest a ont:AbstractActivity,
         skos:Concept ;
@@ -4570,6 +4618,28 @@ act:unitTest a ont:AbstractActivity,
         "Relevance: Testing",
         "SSDF: PW.8.1, PW.8.2" .
 
+act:userStoryReviewAndDemonstration a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:artifactRepository,
+        tool:testEnvironment,
+        tool:workManagementSystem ;
+    ont:input art:artifactRepository,
+        art:testEnvironment,
+        art:userStory ;
+    ont:output art:goNoGo ;
+    ont:phaseActivity phase:release ;
+    skos:definition "Continuous Test-related activity.",
+        "Review of the user story, including description and acceptance criteria, and a demonstration of the completed work." ;
+    skos:editorialNote "Unused Inputs text::, , and .",
+        "Unused Outputs text::Push  decision",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "User Story Review and Demonstration" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Continuous activity most relevant to Release phase(s).",
+        "Relevance: Testing",
+        "SSDF: " .
+
 art:requirementsDocuments a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:functionalTest,
@@ -4584,7 +4654,7 @@ art:requirementsDocuments a ont:AbstractArtifact,
 
 tool:infosecContinuousMonitoringIscmTool a ont:AbstractTool,
         skos:Concept ;
-    ont:input art:it,
+    ont:input art:itAsset,
         art:knownVulnerabilities,
         art:network,
         art:personnelActivities ;
@@ -4611,24 +4681,6 @@ Provide browse, filter, search, visualize, analysis capabilities
 Generate findings, assessments and recommendations.
 Provide recommendations and/or tools for remediating any non-compliant IT asset and/or IT workload.
 """ .
-
-tool:releasePackagingTool a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:releasePackaging ;
-    ont:input art:binaryArtifacts,
-        art:documentation,
-        art:infrastructureConfigurationScripts,
-        art:properTestScripts,
-        art:releaseNotes,
-        art:vmImages ;
-    ont:output art:releasePackage ;
-    skos:definition "Release package (such as a bundle of artifacts, self-extracting software installer, software tar file, etc.)" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Release packaging tool" ;
-    skos:scopeNote """Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, release notes as a package; generate checksum and digital signature for the package.
-
-The package may be prepared for a specific installer or it is a self-extracting installer itself.""" .
 
 act:apiSecurityTests a ont:AbstractActivity,
         skos:Concept ;
@@ -4702,30 +4754,25 @@ act:componentTest a ont:AbstractActivity,
 RV.8.2""",
         "SSDF: RV.8.1, RV.8.2" .
 
-act:dynamicApplicationSecurityTestDastAndScan a ont:AbstractActivity,
+act:devsecopsProcessDesign a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:dastToolOrIastTool ;
-    ont:input art:application,
-        art:fuzzInputs,
-        art:underlyingOs ;
-    ont:output art:dynamicCodeWeaknessReport,
-        art:mitigationRecommendations,
-        art:staticCodeWeakness,
-        art:vulnerability ;
-    ont:phaseActivity phase:test ;
-    skos:definition "Perform DAST or IAST testing to the software system" ;
-    skos:editorialNote "Unused Inputs text::Running  and ; ",
-        "Unused Outputs text::,  and/or  and recommended mitigation",
+    ont:activityTool tool:teamCollaborationSystem ;
+    ont:input art:changeManagementProcess,
+        art:releasePlan,
+        art:schedule,
+        art:systemDesign ;
+    ont:output art:deploymentPlatformSelection,
+        art:devsecopsEcosystemToolSelection,
+        art:devsecopsProcessFlowChart ;
+    ont:phaseActivity phase:plan ;
+    skos:definition "Design the DevSecOps process workflows that are specific to this project" ;
+    skos:editorialNote "Unused Inputs text::Change management process;; & ",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Dynamic application security test (DAST) and scan" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: Security",
-        """SSDF: RV.1.2, 
-RV.2.1, 
-RV.3.1, 
-RV.3.2, 
-RV.3.3""" .
+    skos:prefLabel "DevSecOps process design" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: ",
+        "SSDF: PO.1.1" .
 
 act:manualSecurityTest a ont:AbstractActivity,
         skos:Concept ;
@@ -4790,8 +4837,8 @@ act:projectReleasePlanning a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:projectManagementSystem,
         tool:teamCollaborationSystem ;
-    ont:input art:projectCharter,
-        art:projectConstraints ;
+    ont:input art:project,
+        art:projectCharter ;
     ont:output art:projectPlan,
         art:releasePlan,
         art:schedule,
@@ -4799,7 +4846,8 @@ act:projectReleasePlanning a ont:AbstractActivity,
     ont:phaseActivity phase:plan ;
     skos:definition """Project task management
 Release planning""" ;
-    skos:editorialNote "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:editorialNote "Unused Inputs text:: constraints",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Project/Release planning" ;
     skos:scopeNote "Baseline: REQUIRED",
@@ -4850,51 +4898,6 @@ act:softwareFactoryRiskContinuousMonitoring a ont:AbstractActivity,
         "Relevance: Security",
         "SSDF: PS.3.2" .
 
-act:testPlan a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:teamCollaborationSystem,
-        tool:testToolSuite,
-        tool:testingTool,
-        tool:workManagementSystem ;
-    ont:input art:requirementsDatabase,
-        art:requirementsDocuments,
-        art:systemDesign ;
-    ont:output art:testPlans ;
-    ont:phaseActivity phase:plan ;
-    skos:definition "Continuous Test-related activity.",
-        "Plan testing, including validating Acceptance Criteria, specifying Component Tests, Component integration Tests, and Software Integration Tests" ;
-    skos:editorialNote "Unused Inputs text:: or documents, ",
-        "Unused Tools text::Test tool suite, ",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Test Plan" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Plan phase(s).",
-        "Relevance: Testing",
-        "SSDF: PO.1.1, PO.1.2, PO.1.3, PW.8.1, PW.8.2" .
-
-act:userStoryReviewAndDemonstration a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:artifactRepository,
-        tool:managementSystem,
-        tool:testEnvironment,
-        tool:work ;
-    ont:input art:artifactRepository,
-        art:testEnvironment,
-        art:userStory ;
-    ont:output art:pushGoNoGoDecision ;
-    ont:phaseActivity phase:release ;
-    skos:definition "Continuous Test-related activity.",
-        "Review of the user story, including description and acceptance criteria, and a demonstration of the completed work." ;
-    skos:editorialNote "Unused Inputs text::, , and .",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "User Story Review and Demonstration" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Continuous activity most relevant to Release phase(s).",
-        "Relevance: Testing",
-        "SSDF: " .
-
 art:logs a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:capacityManagement,
@@ -4921,26 +4924,78 @@ art:mitigationRecommendations a ont:AbstractArtifact,
         tool:staticApplicationSecurityTestSastTool ;
     skos:inScheme inst:dodDsopScheme .
 
-act:devsecopsProcessDesign a ont:AbstractActivity,
+act:buildConfigurationControlAndAudit a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:teamCollaborationSystem ;
-    ont:input art:changeManagementProcess,
-        art:plan,
-        art:schedule,
-        art:systemDesign ;
-    ont:output art:deploymentPlatformSelection,
-        art:devsecops,
-        art:devsecopsProcessFlowChart,
-        art:ecosystemToolSelection ;
-    ont:phaseActivity phase:plan ;
-    skos:definition "Design the DevSecOps process workflows that are specific to this project" ;
-    skos:editorialNote "Unused Inputs text::Change management process;;Release  & ",
+    ont:activityTool tool:ciCdOrchestrator,
+        tool:issueTrackingSystem,
+        tool:teamCollaborationSystem ;
+    ont:input art:buildResults,
+        art:dependencyCheckingReport,
+        art:sastReport ;
+    ont:output art:actionItems,
+        art:noGo,
+        art:versionControlledBuildReport ;
+    ont:phaseActivity phase:build ;
+    skos:definition "Continuous CM-related activity.",
+        """Track build results, SAST and dependency checking report;
+""" ;
+    skos:editorialNote "Unused Inputs text::;;Dependency checking report",
+        "Unused Outputs text::; ;Go/ decision",
+        "Unused Tools text::;Issue tracking system;",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "DevSecOps process design" ;
+    skos:prefLabel "Build configuration control and audit" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Build phase(s).",
+        "Relevance: Configuration Management",
+        "SSDF: PS 3.2" .
+
+act:databaseDevelopment a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:databaseTools,
+        tool:ide ;
+    ont:input art:dataModel ;
+    ont:output art:dataDefinition,
+        art:testData,
+        art:testDataGenerationScripts,
+        art:testScripts,
+        art:triggers,
+        art:viewDefinitions ;
+    ont:phaseActivity phase:develop ;
+    skos:definition """Implement the data model using data definition language or data structure supported by the database;
+Implement triggers, views or applicable scripts;
+Implement test scripts, test data generation scripts.""" ;
+    skos:editorialNote "Unused Outputs text::Database artifacts (including , , , ,  generation scripts, , etc.)",
+        "Unused Tools text:: or tools come with the database software",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database development" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Relevance: ",
+        "SSDF: PO.3.1" .
+
+act:releasePackaging a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:packagingTool,
+        tool:release ;
+    ont:input art:binaryArtifacts,
+        art:documentation,
+        art:releaseNotes,
+        art:scripts ;
+    ont:output art:checksum,
+        art:digitalSignature,
+        art:releasedPackage ;
+    ont:phaseActivity phase:build ;
+    skos:definition "Package binary artifacts, VM images, infrastructure configuration scripts, proper test scripts, documentation, checksum, digital signatures, and release notes as a package." ;
+    skos:editorialNote "Unused Outputs text:: with  and ",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Release packaging" ;
     skos:scopeNote "Baseline: REQUIRED",
         "Relevance: ",
-        "SSDF: PO.1.1" .
+        """SSDF: PS.2.1, 
+PS.3.1, 
+PS.3.2""" .
 
 act:sbomSoftwareCompositionAnalysis a ont:AbstractActivity,
         skos:Concept ;
@@ -4969,7 +5024,7 @@ act:softwareIntegrationTest a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:testManagementTool,
         tool:testReport,
-        tool:whetherTheIntegratedUnits ;
+        tool:theIntegratedUnits ;
     ont:input art:testCases,
         art:testData,
         art:testPlan,
@@ -4980,7 +5035,7 @@ act:softwareIntegrationTest a ont:AbstractActivity,
     skos:definition "Continuous Test-related activity.",
         "Testing where software modules are integrated logically and tested as a group",
         "Tests where individual software modules are combined and tested as a group" ;
-    skos:editorialNote "Unused Tools text:: about  performed as designed.",
+    skos:editorialNote "Unused Tools text:: about whether  performed as designed.",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Software Integration Test" ;
@@ -5070,33 +5125,6 @@ tool:operationsDashboard a tool:AbstractTool,
     skos:prefLabel "Operations dashboard" ;
     skos:scopeNote "Provide operators a visual view of operations status, alerts, and actions." .
 
-act:buildConfigurationControlAndAudit a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:ciCdOrchestrator,
-        tool:issueTrackingSystem,
-        tool:teamCollaborationSystem,
-        tool:trackingSystem ;
-    ont:input art:buildResults,
-        art:dependencyCheckingReport,
-        art:sastReport ;
-    ont:output art:actionItems,
-        art:goNoGoDecision,
-        art:versionControlledBuildReport ;
-    ont:phaseActivity phase:build ;
-    skos:definition "Continuous CM-related activity.",
-        """Track build results, SAST and dependency checking report;
-""" ;
-    skos:editorialNote "Unused Inputs text::;;Dependency checking report",
-        "Unused Tools text::; Issue ; CI/CD orchestrator",
-        "Unused Tools text::;Issue tracking system;",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Build configuration control and audit" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Build phase(s).",
-        "Relevance: Configuration Management",
-        "SSDF: PS 3.2" .
-
 act:configurationIdentification a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:artifactRepository,
@@ -5122,30 +5150,59 @@ Establish system baselines""" ;
         "Relevance: Configuration Management",
         "SSDF: PO.2.1, PS.1.1, PW.2.1, PW.4.1, PW.4.2, PW.6.2" .
 
-act:databaseDevelopment a ont:AbstractActivity,
+act:configurationManagementCmPlanning a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:databaseTools,
-        tool:ide ;
-    ont:input art:dataModel ;
-    ont:output art:dataDefinition,
-        art:database,
-        art:definitions,
-        art:testData,
-        art:testDataGenerationScripts,
-        art:testScripts,
-        art:triggers ;
-    ont:phaseActivity phase:develop ;
-    skos:definition """Implement the data model using data definition language or data structure supported by the database;
-Implement triggers, views or applicable scripts;
-Implement test scripts, test data generation scripts.""" ;
-    skos:editorialNote "Unused Outputs text:: artifacts (including , , view , ,  generation scripts, , etc.)",
-        "Unused Tools text:: or tools come with the database software",
+    ont:activityTool tool:issueTrackingSystem,
+        tool:teamCollaborationSystem ;
+    ont:input art:infrastructure,
+        art:softwareDevelopmentSecurityAndOperationsBestPractice,
+        art:softwareSystemComponents ;
+    ont:output art:cmProcesses,
+        art:cmToolSelection,
+        art:plan,
+        art:responsibleConfigurationItems,
+        art:taggingStrategy ;
+    ont:phaseActivity phase:plan ;
+    skos:definition """Plan the configuration control process;
+Identify configurations items""" ;
+    skos:editorialNote "Unused Inputs text::;IT infrastructure asset;",
+        "Unused Outputs text:: and ;;;",
+        "Unused Tools text::;Issue tracking system",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database development" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Relevance: ",
-        "SSDF: PO.3.1" .
+    skos:prefLabel "Configuration management (CM) planning" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: Configuration Management",
+        "SSDF: PO.3.1, PO.3.3, PO.4.1, PO.4.2, PW.2.1" .
+
+act:integrationTest a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:bothSystem,
+        tool:subSystem ;
+    ont:input art:apis,
+        art:requirementsDocuments,
+        art:testPlan ;
+    ont:output art:expectedOutputData,
+        art:integrationTestScripts,
+        art:test,
+        art:testInputData,
+        art:theSoftwareUnits ;
+    ont:phaseActivity phase:build ;
+    skos:definition "Continuous Test-related activity.",
+        "Develops the integration test scripts and execute the scripts to test one or more software units as a group with the interaction between the units as the focus." ;
+    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; Acceptance criteria;  for integrated systems",
+        "Unused Outputs text::,  under ,  input data, and expected output data",
+        "Unused Tools text::Includes  & ",
+        "Unused Tools text::Test results documenting the functioning of the system.",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Integration Test",
+        "Integration test" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Test phase(s).",
+        "Relevance: Testing",
+        """SSDF: PW.8.1, 
+PW.8.2""" .
 
 art:alerts a ont:AbstractArtifact,
         skos:Concept ;
@@ -5196,62 +5253,6 @@ tool:databaseAutomationTool a tool:AbstractTool,
     skos:prefLabel "Database automation tool" ;
     skos:scopeNote "Automate database tasks, such as deployments, upgrades, discovering and troubleshooting anomalies, recovering from failures, topology changes, running backups, verifying data integrity, and scaling." .
 
-act:configurationManagementCmPlanning a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:issueTrackingSystem,
-        tool:teamCollaborationSystem ;
-    ont:input art:itInfrastructureAsset,
-        art:securityAndOperationsBestPractice,
-        art:softwareDevelopment,
-        art:softwareSystemComponents ;
-    ont:output art:cmProcesses,
-        art:cmToolSelection,
-        art:plan,
-        art:responsibleConfigurationItems,
-        art:taggingStrategy ;
-    ont:phaseActivity phase:plan ;
-    skos:definition """Plan the configuration control process;
-Identify configurations items""" ;
-    skos:editorialNote "Unused Inputs text::, ;IT infrastructure asset;",
-        "Unused Outputs text:: and ;;;",
-        "Unused Tools text::;Issue tracking system",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Configuration management (CM) planning" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: Configuration Management",
-        "SSDF: PO.3.1, PO.3.3, PO.4.1, PO.4.2, PW.2.1" .
-
-act:integrationTest a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:bothSystem,
-        tool:sub,
-        tool:system ;
-    ont:input art:apis,
-        art:requirementsDocuments,
-        art:testPlan ;
-    ont:output art:expectedOutputData,
-        art:integrationTestScripts,
-        art:test,
-        art:testInputData,
-        art:theSoftwareUnits ;
-    ont:phaseActivity phase:build ;
-    skos:definition "Continuous Test-related activity.",
-        "Develops the integration test scripts and execute the scripts to test one or more software units as a group with the interaction between the units as the focus." ;
-    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; Acceptance criteria;  for integrated systems",
-        "Unused Outputs text::,  under ,  input data, and expected output data",
-        "Unused Tools text::Includes  & ",
-        "Unused Tools text::Test results documenting the functioning of the system.",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Integration Test",
-        "Integration test" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Test phase(s).",
-        "Relevance: Testing",
-        """SSDF: PW.8.1, 
-PW.8.2""" .
-
 act:performanceTests a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:operationalMonitoringTools,
@@ -5282,30 +5283,6 @@ PO.3.2,
 PO.3.3""",
         "SSDF: PO.3.1, PO.3.2" .
 
-act:softwareRequirementAnalysis a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:issueTrackingSystem,
-        tool:requirementsTool,
-        tool:teamCollaborationSystem ;
-    ont:input art:operationMonitoringFeedback,
-        art:stakeholderInputStakeholderFeedback,
-        art:testFeedback ;
-    ont:output art:featureRequirements,
-        art:performanceRequirements,
-        art:privacyRequirements,
-        art:requirementsDocuments,
-        art:security ;
-    ont:phaseActivity phase:plan ;
-    skos:definition "Gather the requirements from all stakeholders" ;
-    skos:editorialNote "Unused Inputs text::Stakeholder inputs or feedback;;",
-        "Unused Outputs text:::-  requirments",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Software requirement analysis" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Relevance: ",
-        "SSDF: PO.1.1, PO.1.2, PO.1.3" .
-
 act:systemPerformanceMonitoring a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:alerting,
@@ -5325,8 +5302,8 @@ act:systemPerformanceMonitoring a ont:AbstractActivity,
 Baselining system performance;
 Detect anomalies""" ;
     skos:editorialNote "Unused Outputs text::Performance KPI measures;; or ",
+        "Unused Tools text::; ;  and ; ",
         "Unused Tools text::Issue tracking systemAlerting and notification",
-        "Unused Tools text::Operation monitoring; ;  and ; Operations dashboard",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "System performance monitoring" ;
@@ -5361,35 +5338,30 @@ Better quality software by avoiding outdated artifacts with known issues.""" ;
     skos:prefLabel "Artifact Repository" ;
     skos:scopeNote "Binary artifact version control" .
 
-act:databaseMonitoringAndSecurityAuditing a ont:AbstractActivity,
+act:softwareRequirementAnalysis a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:alertingNotificationSystem,
-        tool:databaseMonitoringTool,
-        tool:databaseSecurityAuditTool,
-        tool:issueTrackingSystem,
-        tool:operationsDashboard,
-        tool:securityComplianceTool ;
-    ont:input art:databaseActivities,
-        art:databaseEvents,
-        art:databaseTraffic ;
-    ont:output art:alerts,
-        art:logs,
-        art:warnings ;
-    ont:phaseActivity phase:monitor ;
-    skos:definition "Continuous Security-related activity.",
-        "Database performance and activities monitoring and auditing" ;
-    skos:editorialNote "Unused Inputs text::, event, and activities",
-        "Unused Outputs text::; and ",
-        "Unused Tools text::;;Issue tracking system;Alerting and notification;",
+    ont:activityTool tool:issueTrackingSystem,
+        tool:requirementsTool,
+        tool:teamCollaborationSystem ;
+    ont:input art:operationMonitoringFeedback,
+        art:stakeholderFeedback,
+        art:stakeholderInput,
+        art:testFeedback ;
+    ont:output art:featureRequirements,
+        art:performanceRequirements,
+        art:privacyRequirements,
+        art:requirementsDocuments,
+        art:security ;
+    ont:phaseActivity phase:plan ;
+    skos:definition "Gather the requirements from all stakeholders" ;
+    skos:editorialNote "Unused Inputs text::Stakeholder inputs or feedback;;",
+        "Unused Outputs text:::-  requirments",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Database monitoring and security auditing" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Continuous activity most relevant to Monitor phase(s).",
-        "Relevance: Configuration Management",
-        """SSDF: PO 3.1, 
-PO 3.2, 
-PO 3.3""" .
+    skos:prefLabel "Software requirement analysis" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Relevance: ",
+        "SSDF: PO.1.1, PO.1.2, PO.1.3" .
 
 act:systemSecurityMonitoring a ont:AbstractActivity,
         skos:Concept ;
@@ -5411,6 +5383,7 @@ act:systemSecurityMonitoring a ont:AbstractActivity,
 Security vulnerability assessment
 System security compliance scan""" ;
     skos:editorialNote "Unused Outputs text::;; and ; and ",
+        "Unused Tools text:: (ISCM)",
         "Unused Tools text::;Issue tracking system;Alerting and notification;",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
@@ -5470,6 +5443,68 @@ PW.2.1""",
         """SSDF: PO.2.1, 
 PS.2.1, PW.1.2, PW.2.1""" .
 
+act:databaseMonitoringAndSecurityAuditing a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:alertingNotificationSystem,
+        tool:database,
+        tool:databaseSecurityAuditTool,
+        tool:issueTrackingSystem,
+        tool:operationsDashboard,
+        tool:securityComplianceTool,
+        tool:tool ;
+    ont:input art:databaseActivities,
+        art:databaseEvents,
+        art:databaseTraffic ;
+    ont:output art:alerts,
+        art:logs,
+        art:warnings ;
+    ont:phaseActivity phase:monitor ;
+    skos:definition "Continuous Security-related activity.",
+        "Database performance and activities monitoring and auditing" ;
+    skos:editorialNote "Unused Inputs text::, event, and activities",
+        "Unused Outputs text::; and ",
+        "Unused Tools text:: monitoring ; security audit ;Issue tracking system;Alerting and notification;",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Database monitoring and security auditing" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Continuous activity most relevant to Monitor phase(s).",
+        "Relevance: Configuration Management",
+        """SSDF: PO 3.1, 
+PO 3.2, 
+PO 3.3""" .
+
+act:systemConfigurationMonitoring a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:alerting,
+        tool:alertingNotificationSystem,
+        tool:iscm,
+        tool:iscmIssueTrackingSystem,
+        tool:issueTrackingSystem,
+        tool:notification,
+        tool:operationsDashboard ;
+    ont:input art:configurationBaseline,
+        art:runningSystemConfiguration ;
+    ont:output art:alerts,
+        art:complianceReport,
+        art:recommendedActions,
+        art:warnings ;
+    ont:phaseActivity phase:monitor ;
+    skos:definition "Continuous CM-related activity.",
+        "System configuration (infrastructure components and software) compliance checking, analysis, and reporting" ;
+    skos:editorialNote "Unused Outputs text::;; and ",
+        "Unused Tools text::;  and ; ",
+        "Unused Tools text::;Issue tracking system;Alerting and notification;",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "System configuration monitoring" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Continuous activity most relevant to Monitor phase(s).",
+        "Relevance: Configuration Management",
+        """SSDF: PO.3.1, 
+PO.3.2, 
+PO.3.3""" .
+
 art:artifacts a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:artifactDeployment,
@@ -5488,11 +5523,82 @@ art:artifacts a ont:AbstractArtifact,
         tool:nonSecurityComplianceScanTool ;
     skos:inScheme inst:dodDsopScheme .
 
+art:sourceCode a ont:AbstractArtifact,
+        skos:Concept ;
+    ont:input act:build,
+        act:codeCommit,
+        act:codeReview,
+        act:dynamicAnalysis,
+        act:staticAnalysis,
+        act:staticApplicationSecurityTestAndScan,
+        act:staticApplicationSecurityTestSastAndScan,
+        act:staticCodeScanBeforeCommit,
+        tool:codeQualityReviewTool,
+        tool:integratedDevelopmentEnvironmentIdeSecurityPlugins,
+        tool:lintTool,
+        tool:sourceCodeRepository,
+        tool:staticApplicationSecurityTestSastTool ;
+    ont:output tool:integratedDevelopmentEnvironmentIde ;
+    skos:inScheme inst:dodDsopScheme .
+
+act:functionalTest a ont:AbstractActivity,
+        skos:Concept ;
+    ont:activityTool tool:functionalTestTool,
+        tool:functionalTestingTool ;
+    ont:input art:requirementsDatabaseAcceptanceCriteria,
+        art:requirementsDocuments,
+        art:testData,
+        art:testPlan,
+        art:testScenarios ;
+    ont:output art:expectedOutputData,
+        art:functionalTestScripts,
+        art:test,
+        art:testInput,
+        art:textResults,
+        art:theSoftwareUnits ;
+    ont:phaseActivity phase:build,
+        phase:develop ;
+    skos:definition "Continuous Test-related activity.",
+        "Functional tests determine if code is acting in accordance with the pre-determined requirements." ;
+    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; Acceptance criteria",
+        "Unused Outputs text::,  under ,  input, and expected output data",
+        "Unused Tools text::Test report documenting the performance of the integrated unit.",
+        "skos:scopeNote currently holding several fields. Could normalize" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Functional Test",
+        "Functional test" ;
+    skos:scopeNote "Baseline: REQUIRED",
+        "Continuous activity most relevant to Test phase(s).",
+        "Relevance: Testing",
+        """SSDF: PW.8.1, 
+PW.8.2""",
+        "SSDF: PW.8.1, PW.8.2" .
+
+phase:operate a ont:Phase,
+        skos:Concept ;
+    ont:phaseActivity act:businessOperations,
+        act:capacityManagement,
+        act:chaosEngineering,
+        act:cyberOtE,
+        act:logging,
+        act:missionBasedCyberRiskAssessments,
+        act:performanceTests,
+        act:persistentCyberOperationsTests,
+        act:rollForwardRollBack,
+        act:sbomSoftwareCompositionAnalysis,
+        act:softwareFactoryRiskContinuousMonitoring,
+        act:sustainanbilityAndChaosTesting,
+        act:testAudit,
+        act:userEvaluationFeedback ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Operate" .
+
 act:missionBasedCyberRiskAssessments a ont:AbstractActivity,
         skos:Concept ;
     ont:activityTool tool:missionCyberRiskAssessmentTool,
         tool:riskAssessmentTool ;
-    ont:input art:fips199SystemCategorization,
+    ont:input art:cnssi,
+        art:fips199SystemCategorization,
         art:informationTypes,
         art:nist80053RmfcontrolImplementation ;
     ont:output art:riskAssessment ;
@@ -5508,7 +5614,7 @@ act:missionBasedCyberRiskAssessments a ont:AbstractActivity,
     skos:definition "An assessment of risks based upon the stated mission of the system or platform",
         "Continuous Security-related activity." ;
     skos:editorialNote "Unused Inputs text::NIST 800-53 RMF Control ImplementationsFIPS 199 system categorization",
-        "Unused Inputs text::NIST 800-53 RMF Control ImplementationsFIPS 199 system categorizationCNSSI 1253",
+        "Unused Inputs text::NIST 800-53 RMF Control ImplementationsFIPS 199 system categorization 1253",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Mission Based Cyber Risk Assessments",
@@ -5540,91 +5646,43 @@ RV.3.3, """,
         "SSDF: PW.7.2, RV.1.1, RV.1.2, RV.2.1, RV.3.1, RV.3.2, RV.3.3 ",
         "SSDF: PW.7.2, RV.1.1, RV.1.2, RV.2.1, RV.3.1, RV.3.2, RV.3.3, " .
 
-act:systemConfigurationMonitoring a ont:AbstractActivity,
+act:systemTest a ont:AbstractActivity,
         skos:Concept ;
-    ont:activityTool tool:alerting,
-        tool:alertingNotificationSystem,
-        tool:iscm,
-        tool:issue,
-        tool:issueTrackingSystem,
-        tool:notification,
-        tool:operationsDashboard,
-        tool:trackingSystem ;
-    ont:input art:configurationBaseline,
-        art:systemConfiguration ;
-    ont:output art:alerts,
-        art:complianceReport,
-        art:recommendedActions,
-        art:warnings ;
-    ont:phaseActivity phase:monitor ;
-    skos:definition "Continuous CM-related activity.",
-        "System configuration (infrastructure components and software) compliance checking, analysis, and reporting" ;
-    skos:editorialNote "Unused Inputs text::Running ;",
-        "Unused Outputs text::;; and ",
-        "Unused Tools text::;  ;  and ; ",
-        "Unused Tools text::;Issue tracking system;Alerting and notification;",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "System configuration monitoring" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Continuous activity most relevant to Monitor phase(s).",
-        "Relevance: Configuration Management",
-        """SSDF: PO.3.1, 
-PO.3.2, 
-PO.3.3""" .
-
-phase:operate a ont:Phase,
-        skos:Concept ;
-    ont:phaseActivity act:businessOperations,
-        act:capacityManagement,
-        act:chaosEngineering,
-        act:cyberOtE,
-        act:logging,
-        act:missionBasedCyberRiskAssessments,
-        act:performanceTests,
-        act:persistentCyberOperationsTests,
-        act:rollForwardRollBack,
-        act:sbomSoftwareCompositionAnalysis,
-        act:softwareFactoryRiskContinuousMonitoring,
-        act:sustainanbilityAndChaosTesting,
-        act:testAudit,
-        act:userEvaluationFeedback ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Operate" .
-
-act:functionalTest a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:functionalTestTool,
-        tool:functionalTestingTool ;
-    ont:input art:acceptanceCriteria,
-        art:requirementsDatabase,
+    ont:activityTool tool:test,
+        tool:testManagementTool,
+        tool:theSystem ;
+    ont:input art:requirementsDatabaseAcceptanceCriteria,
         art:requirementsDocuments,
         art:testData,
         art:testPlan,
         art:testScenarios ;
     ont:output art:expectedOutputData,
-        art:functionalTestScripts,
-        art:test,
-        art:testInput,
-        art:textResults,
-        art:theSoftwareUnits ;
+        art:externalDependencies,
+        art:systemTestScripts,
+        art:testInputData,
+        art:testResults,
+        art:theSoftwareSystem ;
     ont:phaseActivity phase:build,
-        phase:develop ;
+        phase:test ;
     skos:definition "Continuous Test-related activity.",
-        "Functional tests determine if code is acting in accordance with the pre-determined requirements." ;
-    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; ",
-        "Unused Outputs text::,  under ,  input, and expected output data",
-        "Unused Tools text::Test report documenting the performance of the integrated unit.",
+        "System test uses a set of tools to test the complete software system and its interaction with users or other external systems. Includes interoperability test, which demonstrates the system's capability to exchange mission critical information and services with other systems.",
+        "Test where the entire system is tested as a whole" ;
+    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; Acceptance criteria",
+        "Unused Outputs text::,  and ,  and expected output data",
+        "Unused Tools text:: result about if  performs as designed.",
+        "Unused Tools text::Test results documenting the performance of the system.",
         "skos:scopeNote currently holding several fields. Could normalize" ;
     skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Functional Test",
-        "Functional test" ;
-    skos:scopeNote "Baseline: REQUIRED",
-        "Continuous activity most relevant to Test phase(s).",
+    skos:prefLabel "System Test",
+        "System test" ;
+    skos:scopeNote "Baseline: PREFERRED",
+        "Baseline: REQUIRED",
+        "Continuous activity most relevant to Build phase(s).",
         "Relevance: Testing",
         """SSDF: PW.8.1, 
 PW.8.2""",
-        "SSDF: PW.8.1, PW.8.2" .
+        """SSDF: RV.8.1, 
+RV.8.2""" .
 
 phase:build a ont:Phase,
         skos:Concept ;
@@ -5695,77 +5753,6 @@ act:systemDesign a ont:AbstractActivity,
         "Relevance: ",
         "SSDF: PO.1.1, PO.1.2, PO.1.3" .
 
-act:systemTest a ont:AbstractActivity,
-        skos:Concept ;
-    ont:activityTool tool:test,
-        tool:testManagementTool,
-        tool:theSystem ;
-    ont:input art:acceptanceCriteria,
-        art:requirementsDatabase,
-        art:requirementsDocuments,
-        art:testData,
-        art:testPlan,
-        art:testScenarios ;
-    ont:output art:expectedOutputData,
-        art:externalDependencies,
-        art:systemTestScripts,
-        art:testInputData,
-        art:testResults,
-        art:theSoftwareSystem ;
-    ont:phaseActivity phase:build,
-        phase:test ;
-    skos:definition "Continuous Test-related activity.",
-        "System test uses a set of tools to test the complete software system and its interaction with users or other external systems. Includes interoperability test, which demonstrates the system's capability to exchange mission critical information and services with other systems.",
-        "Test where the entire system is tested as a whole" ;
-    skos:editorialNote "Unused Inputs text::; Requirement documents and/or database; ",
-        "Unused Outputs text::,  and ,  and expected output data",
-        "Unused Tools text:: result about if  performs as designed.",
-        "Unused Tools text::Test results documenting the performance of the system.",
-        "skos:scopeNote currently holding several fields. Could normalize" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "System Test",
-        "System test" ;
-    skos:scopeNote "Baseline: PREFERRED",
-        "Baseline: REQUIRED",
-        "Continuous activity most relevant to Build phase(s).",
-        "Relevance: Testing",
-        """SSDF: PW.8.1, 
-PW.8.2""",
-        """SSDF: RV.8.1, 
-RV.8.2""" .
-
-tool:issueTrackingSystem a tool:AbstractTool,
-        ont:AbstractTool,
-        skos:Concept ;
-    ont:activityTool act:buildConfigurationControlAndAudit,
-        act:changeManagementPlanning,
-        act:configurationManagementCmPlanning,
-        act:configurationManagementPlanning,
-        act:databaseMonitoringAndSecurityAuditing,
-        act:softwareRequirementAnalysis,
-        act:systemConfigurationMonitoring,
-        act:systemDesign,
-        act:systemPerformanceMonitoring,
-        act:systemSecurityMonitoring ;
-    ont:input art:bugReport,
-        art:changeRequest,
-        art:featureRequest,
-        art:rootCauseAnalysis,
-        art:solutions ;
-    ont:output art:issueResolutionTrackingHistory,
-        art:issuesFeatureChangeTickets ;
-    skos:definition """Easy to detect defect trends
-Improve software product quality
-Reduce cost and improve Return on Investment (ROI)""" ;
-    skos:inScheme inst:dodDsopScheme ;
-    skos:prefLabel "Issue tracking system" ;
-    skos:scopeNote """Bugs and defect management;
-Feature and change management;
-Prioritization management;
-Assignment management;
-Escalation management;
-Knowledge base management""" .
-
 tool:testManagementTool a tool:AbstractTool,
         ont:AbstractTool,
         skos:Concept ;
@@ -5819,28 +5806,6 @@ speed""" ;
 Generate test report
 Specific tool varies depending on the type of tests, software application, and programming language""" .
 
-art:sourceCode a ont:AbstractArtifact,
-        skos:Concept ;
-    ont:input act:build,
-        act:codeCommit,
-        act:codeReview,
-        act:dynamicAnalysis,
-        act:staticAnalysis,
-        act:staticApplicationSecurityTestAndScan,
-        act:staticApplicationSecurityTestSastAndScan,
-        act:staticCodeScanBeforeCommit,
-        tool:codeQualityReviewTool,
-        tool:configurationManagementTool,
-        tool:integratedDevelopmentEnvironmentIdeSecurityPlugins,
-        tool:lintTool,
-        tool:sourceCodeRepository,
-        tool:staticApplicationSecurityTestSastTool ;
-    ont:output act:applicationCodeDevelopment,
-        act:infrastructureCodeDevelopment,
-        act:securityCodeDevelopment,
-        tool:integratedDevelopmentEnvironmentIde ;
-    skos:inScheme inst:dodDsopScheme .
-
 phase:test a ont:Phase,
         skos:Concept ;
     ont:phaseActivity act:apiSecurityTests,
@@ -5886,6 +5851,40 @@ phase:plan a ont:Phase,
     skos:inScheme inst:dodDsopScheme ;
     skos:prefLabel "Plan" .
 
+tool:issueTrackingSystem a tool:AbstractTool,
+        ont:AbstractTool,
+        skos:Concept ;
+    ont:activityTool act:buildConfigurationControlAndAudit,
+        act:changeManagementPlanning,
+        act:configurationManagementCmPlanning,
+        act:configurationManagementPlanning,
+        act:databaseMonitoringAndSecurityAuditing,
+        act:softwareRequirementAnalysis,
+        act:systemConfigurationMonitoring,
+        act:systemDesign,
+        act:systemPerformanceMonitoring,
+        act:systemSecurityMonitoring,
+        act:testConfigurationControl ;
+    ont:input art:bugReport,
+        art:featureRequest,
+        art:request,
+        art:rootCauseAnalysis,
+        art:solutions ;
+    ont:output art:featureChangeTickets,
+        art:issueResolutionTrackingHistory,
+        art:issues ;
+    skos:definition """Easy to detect defect trends
+Improve software product quality
+Reduce cost and improve Return on Investment (ROI)""" ;
+    skos:inScheme inst:dodDsopScheme ;
+    skos:prefLabel "Issue tracking system" ;
+    skos:scopeNote """Bugs and defect management;
+Feature and change management;
+Prioritization management;
+Assignment management;
+Escalation management;
+Knowledge base management""" .
+
 art:testScenarios a ont:AbstractArtifact,
         skos:Concept ;
     ont:input act:chaosEngineering,
@@ -5929,7 +5928,7 @@ tool:teamCollaborationSystem a tool:AbstractTool,
         act:testConfigurationControl,
         act:testDeployment,
         act:testPlan ;
-    ont:input art:designNotes,
+    ont:input art:design,
         art:documentation,
         art:teamMeetings ;
     ont:output art:organizedTeamwork,
@@ -6035,7 +6034,6 @@ art:testResults a ont:AbstractArtifact,
         act:testConfigurationAudit,
         tool:testManagementTool ;
     ont:output act:apiSecurityTests,
-        act:applicationCodeDevelopment,
         act:chaosEngineering,
         act:complianceTests,
         act:componentTest,
@@ -6044,7 +6042,6 @@ art:testResults a ont:AbstractArtifact,
         act:databaseSecurityTest,
         act:formalQualificationTests,
         act:humanSystemsIntegrationTests,
-        act:infrastructureCodeDevelopment,
         act:interactiveApplicationSecurityTestsIast,
         act:interoperabilityTests,
         act:missionOrientedDevelopmentalTests,
@@ -6052,7 +6049,6 @@ art:testResults a ont:AbstractArtifact,
         act:persistentCyberOperationsTests,
         act:postDeploymentCheckout,
         act:regressionTestIncludesSmokeTests,
-        act:securityCodeDevelopment,
         act:serviceFunctionalTest,
         act:serviceSecurityTest,
         act:softwareIntegrationTest,
@@ -6066,5 +6062,5 @@ inst:dodDsopScheme a skos:ConceptScheme ;
     dcterms:source <https://dodcio.defense.gov/Portals/0/Documents/Library/DevSecOpsActivitesToolsGuidebookTables.xlsx> ;
     dcterms:title "DoD DevSecOps Abstract Phase Activites and Tools Scheme" .
 
-[] rdfs:label "NODEHENGE.ORG Script Version: 20" .
+[] rdfs:label "NODEHENGE.ORG Script Version: 22" .
 
