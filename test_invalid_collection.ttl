@@ -1,0 +1,9 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:myCollection a skos:OrderedCollection ;
+    skos:memberList ( "a literal member" ex:nonExistentMember ) .
+
+ex:member1 a skos:Concept . # This exists, but is not in the list.
+# ex:nonExistentMember is not defined anywhere.

@@ -1,0 +1,6 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:myScheme a skos:ConceptScheme .
+ex:concept1 skos:inScheme ex:myScheme . # Not explicitly typed as skos:Concept

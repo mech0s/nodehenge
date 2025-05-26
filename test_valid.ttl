@@ -1,0 +1,13 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:myScheme a skos:ConceptScheme .
+ex:concept1 a skos:Concept ;
+    skos:inScheme ex:myScheme .
+
+ex:myCollection a skos:OrderedCollection ;
+    skos:memberList ( ex:member1 ex:member2 ) .
+
+ex:member1 a skos:Concept .
+ex:member2 a skos:Concept .
