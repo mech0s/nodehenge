@@ -9,7 +9,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tool: <http://nodehenge.org/inst/tool#> .
 
-phase:phasing a skos:OrderedCollection ;
+phase:phasing a skos:Concept ;
+    a skos:OrderedCollection ;
     skos:inScheme inst:dodDsopScheme ;
     skos:memberList ( phase:plan phase:develop phase:build phase:test phase:release phase:deliver phase:deploy phase:operate phase:monitor phase:feedback ) .
 
